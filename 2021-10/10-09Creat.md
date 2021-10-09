@@ -33,7 +33,7 @@ one to many 관계인것임ㅋ 블로그가 기준이 되어 one 이고,
 
 ####CRUD 코드 해집어 보기
 #CREAT
-
+```java
 
 @PostMapping("/api/comments")
 public void addComments(
@@ -44,6 +44,9 @@ public void addComments(
         commentService.creatComment(requestDto, userId);
 
     }
+
+
+```
 
 우리가 ajx를 통해서 받은 Json형태의 데이터들이  
 ("/api/comments") url로 "POST"형식의 요청이 들어 오게 되면
@@ -61,18 +64,24 @@ requestDto와 userId를 서비스에다가 함께 보내준다.
 
 
 
-자 이제 서비스 부분을 살펴보자
 
->public Comment creatComment(CommentRequestDto requestDto, Long userId) {  
-// 받은 dto로 db에 넣을 객체 만들기  
- requestDto.setUserId(userId);  
-Comment comment = new Comment (requestDto)
-            commentRepository.save(comment);  
-            Blog blog = blogRepository.findById(comment.getPostId()).orElse(null);;  
-            blog.getCommentList().add(comment);  
-            blogRepository.save(blog);    
-            return comment;  
-        }
+
+자 이제 서비스 부분을 살펴보자
+```java
+
+public Comment creatComment(CommentRequestDto requestDto, Long userId) {  
+            // 받은 dto로 db에 넣을 객체 만들기  
+             requestDto.setUserId(userId);  
+            Comment comment = new Comment (requestDto)
+                        commentRepository.save(comment);  
+                        Blog blog = blogRepository.findById(comment.getPostId()).orElse(null);;  
+                        blog.getCommentList().add(comment);  
+                        blogRepository.save(blog);    
+                        return comment;  
+                    }
+
+```
+
 
 컨트롤러에서 commentService.creatComment(requestDto, userId); 이부븐을 인텔리제이를 통하여   
 바로 메소드를 만들어 주었다. 
@@ -86,8 +95,10 @@ requestDto에다가 usdfId를 넣어 셋팅 해주고, requestDto를 넣은 Comm
 commetRepository.save(comment)통해서 새로운 Entity를 레파지 토리에 save해준다  
 여기서 느끼는 jpa의 편리함이다.
 다음은
-
->            Blog blog = blogRepository.findById(comment.getPostId()).orElse(null);;
+```java
+ Blog blog = blogRepository.findById(comment.getPostId()).orElse(null);;
+```
+          
 
 이 부분이 좀 이해하기 어려웠다.
 여기가 이제 게시글에다가 댓글을 남겼을대 댓글이 가진 postId를 이용해서 해당 게시물을 가져오는  
@@ -104,15 +115,76 @@ add된 blog는 Repo에 save시키고
 return값은 comment로 반환한다. return 값?;;;
 
 
+- 아주 중요하면서 또 기본적이지만 놓친 부분
 
 
+아 그리고 또 놓친 부분이 있다
+
+```java
+            Comment comment = new Comment (requestDto)
+```
+이렇게 우리가 comment라는 새로운 객체를 requestDto를 넣어서 만들때, 이 requestDto가 들어간 생성자가 필요하다.
+comment class로 들어가서 파라미터를 requestDto로만 받는 생성자가 필요하다.
+
+```java
+ public Comment(CommentRequestDto requestDto){
+
+        this.content = requestDto.getContent();
+        this.userId = requestDto.getUserId();
+        this.postId = requestDto.getPostId();
+
+    }
+```
 
 
+publiv void addComments 부분을 보면 
+void 는 return값을 내리지 않는다
+여기 왜 리턴 없냐고 승준님에게 물어본게 기억난다.
+
+우리가 이렇게 만들고, ARC로 테스트를 하고싶을때, 데이터를 입력하고
+포스트를 해줄때 엄격한 방식이 정해져있다.
+이것은 이해라기보다는 암기에 가깝다고 보면 된다.
+
+$.ajax부분을 가져와 보겠다.
+
+```js
+function writeComment(id) {
+    console.log(id)
+
+    let content = $('#ucomment').val();
+    let postId = id;
 
 
+    console.log(content)
+    let data = {'content': content, 'postId': postId};
+    console.log(data)
+    $.ajax({
+        type: "POST",
+        url: "/api/comments",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+        success: function (response) {
+            alert('댓글 등록이 완료되었습니다');
+            window.location.href = 'http://localhost:8080/'
 
+            }
+        }
+    )
+}
+```
+버튼을 누르면 댓글이 입력되는 function이다.
+에이젝스를 통해서 데이터를 쏳아 올릴때
+contentType과 data를 이제 살펴보자.
+contentType은 "application/json"으로 스프링이 이미 정해놓은 프레임 워크이다
+데이터는 Json방식으로 오고 간다.
 
-
+제이슨 쓰는 방식은
+```js
+{
+    "title":"웹개발 종합반"
+}
+```
+이런 형식으로 오고간다.
 
 
 
