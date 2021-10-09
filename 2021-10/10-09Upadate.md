@@ -24,8 +24,16 @@ CRUD중 나는 기본 프로젝트 할때에도 수정부분이 어려워서 사
   사용자가 입력한 정보를 가져와야하지 @RequestBody를 통해 제이슨 형식의 데이터를 가져오고, 이정보는 requestDto를 거쳐서 들어오게 된다.
   @AuthenticationPrincipal 을 통해 로그인된 사용자 입력 정보도 함께 들어오게 된다.
         근데 왜 Long 타입일까..? 고민해봐야 할 부분이다.****
+-답을 생각해보니 자바 메소드의 구조를 생각해보니 답이 잘 나왔다.  
 
-    여기서 CommentRequesdto로 들어 오는것은 변경하는 내용이다 
+<center><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcEzjKR%2FbtqxXJLFwy9%2FRCM4kvwi9Iv3uip7S0aeVk%2Fimg.jpg" width="500" height="300"/></center>
+
+
+
+리턴값이 id이기 때문에, Long인것이다.
+
+
+여기서 CommentRequesdto로 들어 오는것은 변경하는 내용이다    
 a를 b로 변경한다면, b가 지금 requestDto로 들어오게 되는것이다.
 
 
@@ -52,6 +60,8 @@ a를 b로 변경한다면, b가 지금 requestDto로 들어오게 되는것이�
 
 이곳을 통해 나는 일반 {id} 포스트 아이디가 아닌, 딜리트 함수를 실행할때 들어가는 파라미터 값 확인해봐라  
 comment의 id값을 들고 올 수 있었다.
+
+자바스크립트가 진짜 지금도 이해하기 어렵다;;;_;;;;
 
 
 ```java
