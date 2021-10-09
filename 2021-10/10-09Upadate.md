@@ -27,6 +27,8 @@ CRUD중 나는 기본 프로젝트 할때에도 수정부분이 어려워서 사
 
     여기서 CommentRequesdto로 들어 오는것은 변경하는 내용이다 
 a를 b로 변경한다면, b가 지금 requestDto로 들어오게 되는것이다.
+
+
 - 여기서 궁금한 부분! 예전 update를 만들때는 수정되는 글의 아이디 값을 같이 들고와서 url을 "/api/comments/{id}"해서 파라밑어
 넣는 곳에다가 @Pathvariable을 통해 Long id를 가져 왔는데, 여기 코멘트 수정하는 부분은 아 쓰다 보니까  
  function editComment(id)를 보면 id를 가져와서 url로 쏘아 올리지 않고, data값을 통해서 가져왔다.
@@ -34,6 +36,24 @@ a를 b로 변경한다면, b가 지금 requestDto로 들어오게 되는것이�
  그래서 여기 requestDto에는 위의 데이터인 postId값과, 댓글의 내용content 두가지 내용을 담고 있고,   
  정리하자면 여기 메소드에서는 commment의 content와 postId와 userDetail댓글 작성자의 정보를 담고 있는 것이다.
  이것을 다시 service로 넘겨 주자 !
+
+********************윗부분은 내가 잘못생각했다.  
+지금 들고온 requestDto는 아이디값과, content를 가지고 있는데 여기서 id값은 postId가 아니라 코멘트의 id값이다.
+어떻게 이렇게 되었냐?
+
+자바스크립트를 다시 가져와보면 우리가 addHTMl을 하는 과정에 있어서 append를 html에 표시하고 있다.
+
+이부분은 진짜 사실 좀 복잡하긴 하다;
+
+코드 한줄로 일단
+```java
+ <button id = "${id}-delete"  onclick="deleteComment(${commentList[i]['id']})">댓글삭제</button>
+```
+
+이곳을 통해 나는 일반 {id} 포스트 아이디가 아닌, 딜리트 함수를 실행할때 들어가는 파라미터 값 확인해봐라  
+comment의 id값을 들고 올 수 있었다.
+
+
 ```java
 
 
@@ -77,3 +97,25 @@ requestDto사용자가 입력값에서,getContent를 통해 content만을 가져
 이렇게 정성스럽게 탄생한 comment는 save를 통해 commentRepository에 다시 넣어 준다.
 
 return값은 아무 값이나? 빼줘도 되기 때문에 랜덤으로 그냥 1L 라고 아이디 값을 빼주었다.
+
+
+마지막으로 댓글의 작성자가 아닌 사람은 해당 댓글을 수정하지 못하게 하는 코드를 리뷰해보자 !
+
+```java
+    if(comment.getUserId().equals(userDetails.getUser().getId())) {
+            comment.setContent(requestDto.getContent());//여기가 무슨일 하는지 모르겠음
+```
+comment작성자를 getUserId()를 통해서 뽑아온다.  
+그리고 userDetails즉 지금 현재 로그인 된 사용자를 getUser로 뽑아오고, getId를해서 사용자의 Id를 뽑아온다.
+
+이렇게 comment작성자의 Id와 현재 로그인된 사용자의 Id가 일치 하면,  
+comment에다가 setContent의 내용을 셋팅 해준다.  
+else문을 통해서 반대과정도 처리 하고 싶으나 어떻게 해야할지 잘 모르겠다.
+else해서 alert를 통해 "해당 댓글을 수정할 수 없습니다 " 해주고싶은데 음 아직은 잘 모르겠네
+sout을 뿌려줄수도 없고;;허허 이렇게 하면 사용자 쪽에서 확인이 안되자냐...
+
+
+
+
+
+
