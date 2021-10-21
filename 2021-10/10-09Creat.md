@@ -26,7 +26,7 @@ one to many 관계인것임ㅋ 블로그가 기준이 되어 one 이고,
 
 
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 댓글은 1줄로 끝나는것이 아니니 List 자료형으로 들고오게 된다.
 
