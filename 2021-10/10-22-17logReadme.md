@@ -149,7 +149,8 @@ findByPostIdAndUserId 날릴때 id가 원래 소문자에서 대문자가 되는
 계속 오류가 났다.
 
 급하게 Post와 User entity의 @Id값을 모두 id로 바꾸니 해결이 되었다.  
-
+- 변경후 코드 
+ `  Heart heart =heartRepository.findByPostIdAndUserId(post.getId(), user.getId()).orElse(null);`
 
 하지만 내가 이렇게 바꾼다 한들..     
 이걸 배포로 넘겨주니 프론트 단에서도 변수명을 다 바꿔줘야는 another변수가 생겨 버렸고 이것은 이미 금요일 배포 해야 하는 당일이였다...ㅜㅜ  
