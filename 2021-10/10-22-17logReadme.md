@@ -146,7 +146,7 @@ public class HeartService {
 
 오류 캡쳐
 
-![img_1.png](img_1.png)
+![2021-10-22 (2)_LI](https://user-images.githubusercontent.com/80088918/138433365-6407230a-6634-43fe-8bcb-359c34683e33.jpg)
 
         Heart heart =heartRepository.findByPostIdAndUserId(post.getPostId(), user.getUserId()).orElse(null);
 
