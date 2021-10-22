@@ -151,7 +151,7 @@ findByPostIdAndUserId 날릴때 id가 원래 소문자에서 대문자가 되는
 급하게 Post와 User entity의 @Id값을 모두 id로 바꾸니 해결이 되었다.  
 - 변경후 코드  
 - Post와 User의 @Id 값을 모두 id;로 변경  
--  `  Heart heart =heartRepository.findByPostIdAndUserId(post.getId(), user.getId()).orElse(null);` 로 
+-  `  Heart heart =heartRepository.findByPostIdAndUserId(post.getId(), user.getId()).orElse(null);`   getId()로 수정  
  
 
 하지만 내가 이렇게 바꾼다 한들..     
