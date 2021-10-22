@@ -1,9 +1,7 @@
 
-# 17log(velog clone coding) 프론트엔드
+# 17log(velog clone coding) Back-end
 
 
-
-Front-End는 React, Back-End는 Spring으로 velog를 클론코딩하였습니다.
 
 velog의 기본적인 기능으로 로그인, 회원가입, 게시물 작성, 댓글 작성,삭제을 구현 하였습니다.
 
