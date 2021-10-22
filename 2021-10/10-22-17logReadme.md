@@ -1,23 +1,13 @@
 
 # 17log(velog clone coding) 프론트엔드
 
-## ✨ 17log 소개
 
-![image](/public/img/thumbnail.png)
 
 Front-End는 React, Back-End는 Spring으로 velog를 클론코딩하였습니다.
 
 velog의 기본적인 기능으로 로그인, 회원가입, 게시물 작성, 댓글 작성,삭제을 구현 하였습니다.
 
 
-## 📰 상세 페이지
-
-![image](/public/img/1.png)
-![image](/public/img/2.png)
-![image](/public/img/3.png)
-![image](/public/img/4.png)
-![image](/public/img/5.png)
-![image](/public/img/6.png)
 
 
 ## ⏳ 팀 프로젝트 기간
