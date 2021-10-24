@@ -44,6 +44,7 @@ public class Main {
         int x;
         System.out.println("계산결과는 : ");
         System.out.println(i/j);
+        //0으로는 숫자를 나눌수 없기 때문에 오류를 발생시킴
         System.out.println("이 구문은 출력이 안됨");
     }    
 }
