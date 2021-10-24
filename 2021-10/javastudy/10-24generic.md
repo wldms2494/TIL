@@ -218,8 +218,7 @@ public class GenericDemo {
      Person p1 = new Person("부장님?");
      //우리가 기대하는 info는 grade 나 rank가 오는 것임
      //하지만 여기에다가 만약에 String 값을 집어 넣는다면?
-     //문법적으로는 문제가 되지가 않음 왜냐면 info는 지금 Object로 모든 데이터 타입이 올수 있게 되어버렸기 때문  
-     // 하지만 이 코드는 컴파일시 검출되지 않음.
+    
      
      
      //그럼 일단 , Person의 info값을 가져와보자   
