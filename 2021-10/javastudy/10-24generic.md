@@ -1,7 +1,8 @@
 예외처리
 ======   
 프로그램이 실행 중 어떤 원인에 의해서 오작동을 하거나 비정상적으로 종료되는 경우,  
-이러한 결과를 초래하는 원인을 프로그램 에러 또는 오류라고 한다.
+이러한 결과를 초래하는 원인을 프로그램 에러 또는 오류라고 한다.  
+
 크게크게  발생 시점에 따라 - >컴파일에러, 런타임에러, 논리적에러(실행까지 했으나 의도와 다르게 동작)  
 
 런타임에러(자바 실행시 발생할수 있는 에러  -> Error(심각한오류) 와 Exception(비교적 덜 심각한 오류)
@@ -53,8 +54,8 @@ public class Main {
 
 ```
 계산 결과는 Exception in thread "main" java.lang.ArithmeticException: / by zero
-        at org.opentutorials.javatutorials.exception.Calculator.divide(Main.java:45)
-```
+at project.Main.main(Main.java:20)
+ ```
  
 ArithmeticException - 예외적인 산술 조건이 발생하면 발생하는 예외. 컴퓨터 바보..
 
@@ -80,8 +81,9 @@ public class Main {
     }
 }
 ```
-결과는 다음과 같다.
-` 0으로 나눌수 없습니다  : /by zero`
+결과는 다음과 같다.  
+
+` 0으로 나눌수 없습니다  : /by zero`  
 
 "/by zero"보다 더 자세한 예외 정보를 얻고 싶다면?
 
@@ -210,7 +212,6 @@ class Person{
     public Object info; 
     //studentInfo데이터타입과 EmployeeInfo의 공통 데이터 조상인, 즉 모든 클래스의 조상인 Object를 가져온다.
     // 어떠한 클래스의 instance도 올수있다
-    //자바는 데이터 타입에 굉장히 엄격함. int도 오게하고, String 도 줄 수 있을순 없을까? 그래서 도입된것이 generic
     Person(Object info){ this.info = info; }
 }
 public class GenericDemo {
@@ -218,8 +219,7 @@ public class GenericDemo {
      Person p1 = new Person("부장님?");
      //우리가 기대하는 info는 grade 나 rank가 오는 것임
      //하지만 여기에다가 만약에 String 값을 집어 넣는다면?
-     //문법적으로는 문제가 되지가 않음 왜냐면 info는 지금 Object로 모든 데이터 타입이 올수 있게 되어버렸기 때문  
-     // 하지만 이 코드는 컴파일시 검출되지 않음.
+    
      
      
      //그럼 일단 , Person의 info값을 가져와보자   
@@ -285,5 +285,3 @@ public class GenericDemo {
 3) 비슷한 기능을 지원하는 경우 코드의 재사용성이 높아진다.
 
 
-열거형
-=======
