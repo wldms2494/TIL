@@ -53,8 +53,8 @@ public class Main {
 
 ```
 계산 결과는 Exception in thread "main" java.lang.ArithmeticException: / by zero
-        at org.opentutorials.javatutorials.exception.Calculator.divide(Main.java:45)
-```
+at project.Main.main(Main.java:20)
+      ```
  
 ArithmeticException - 예외적인 산술 조건이 발생하면 발생하는 예외. 컴퓨터 바보..
 
