@@ -146,7 +146,7 @@ public class HeartService {
 
 오류 캡쳐
 
-![img_1.png](img_1.png
+![img_1.png](img_1.png)
 
         Heart heart =heartRepository.findByPostIdAndUserId(post.getPostId(), user.getUserId()).orElse(null);
 
