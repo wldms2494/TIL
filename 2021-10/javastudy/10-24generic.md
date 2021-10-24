@@ -211,7 +211,6 @@ class Person{
     public Object info; 
     //studentInfo데이터타입과 EmployeeInfo의 공통 데이터 조상인, 즉 모든 클래스의 조상인 Object를 가져온다.
     // 어떠한 클래스의 instance도 올수있다
-    //자바는 데이터 타입에 굉장히 엄격함. int도 오게하고, String 도 줄 수 있을순 없을까? 그래서 도입된것이 generic
     Person(Object info){ this.info = info; }
 }
 public class GenericDemo {
