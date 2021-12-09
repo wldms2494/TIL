@@ -5,7 +5,6 @@
 Array and LinkedList
 ====================
 
-
 # LinkedList 
 
 크기가 정해저 있지 않은 데이터의 공간,
@@ -29,7 +28,71 @@ ex) 캡슐 호텔.
 <img src = "https://user-images.githubusercontent.com/80088918/145353081-0639aba4-a562-4f19-a87c-11d320c297fc.png">
 
 
+```java
+import java.util.*;
 
+public class Main  {
+  public static void main(String[] args) {
+
+    ArrayList list1 = new ArrayList(10);
+    list1.add(new Integer(5));
+    list1.add(new Integer(4));
+    list1.add(new Integer(2));
+    list1.add(new Integer(0));
+    list1.add(new Integer(1));
+    list1.add(new Integer(3));
+
+    ArrayList list2 = new ArrayList(list1.subList(1, 4));
+
+    print(list1, list2);
+
+    System.out.println("=============");
+
+//Collections는 클래스임
+//Collection은 인터페이스 
+    Collections.sort(list1); // 오름 차순으로 정렬
+    Collections.sort(list2);
+    print(list1, list2); // sorted
+
+    //지정된 객체가 list에 담겨있는지 확인
+    System.out.println("list1.containsAll((list2)) : " + list1.containsAll((list2)));
+
+    list2.add("B");
+    list2.add("C");
+    list2.add(3, "A");
+    list2.set(3, "AA");
+
+    //추가함으로서, 뒤의 원소들이 하나씩 밀린다
+    //set이랑 add (index, element)는 같은 것인가?
+
+    print(list1, list2);
+    System.out.println();
+
+    for (int i = list2.size() - 1; i >= 0; i--) {
+      if (list1.contains(list2.get(i))) {
+        list2.remove(i);
+      }
+      System.out.println("배열 삭제");
+      print(list1, list2);
+    }
+
+    for (int i = 0; i<list2.size()-1;i++) {
+      if (list1.contains(list2.get(i))) {
+        list2.remove(i);
+      }
+      System.out.println("내가 아는 for");
+      print(list1, list2);
+    }
+  }
+  
+  static void print (ArrayList list1, ArrayList list2) {
+
+    System.out.println("list1 : " + list1);
+    System.out.println("list2 : " + list2);
+  }
+}
+
+```
 # StringBuilder
 String과 String을 합칠때 사용  
 문자열을 더할 때 새로운 객체를 생성하는 것이 아니라 기존의 데이터에 더하는 방식을 사용하기 때문에
