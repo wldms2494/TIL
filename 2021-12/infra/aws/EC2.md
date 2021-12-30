@@ -26,3 +26,5 @@ ec2는 __가상화__ 와 __종량제__ 라는 큰 특징이 있다.
 <img src="https://user-images.githubusercontent.com/80088918/147669199-2009ee6d-a79e-42e3-9bf4-32eed3b07ce8.png">
 
 종량제 : 사용자의 증감에 따라 클라우드 컴퓨팅을 이용하면 유연하게 컴퓨터를 늘렸다 줄였다가 할 수 있음.
+
+참조 : 생활코딩- https://opentutorials.org/course/2717/11294
