@@ -1,7 +1,7 @@
 ## 디스크 
 db에서 가장 많이 사용되는 것이 디스크이다.  
 대부분 교제에서는 HDD(Hard Disk Drive)를 칭하고 있지만,  
-디스크를 필자는 SSD(Solid State Drive)와 HDD(Hard Disk Drive) 모두를 표현하는 말이라고 가정하겠다.  
+여기서 디스크는 SSD(Solid State Drive)와 HDD(Hard Disk Drive) 모두를 표현하는 말이라고 가정하겠다.  
 아직은 HDD로 저장된 데이터가 많아서 해당 내용을 디비에서 배우는 것으로 보인다.  
 
 ## Disk의 Read
