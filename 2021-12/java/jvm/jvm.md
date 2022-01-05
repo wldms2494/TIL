@@ -16,8 +16,21 @@ Java Byte Code(JVM이 이해할 수 있는 기계어)를 운영체제에 맞게 
 시스템 메모리를 관리하면서 자바 기반 애플리케이션을 위해 이식 가능한 실행 환경을 제공한다.  
 
 
+<img src = "https://user-images.githubusercontent.com/80088918/148188224-e47d35db-e96e-4d72-bbfb-f048ea688f7e.png">
+javac.exe -> 컴파일러. 자바 코드를 바이트코드로 컴파일  
+java.exe -> 인터프리터. 컴파일러가 생성한 바이트 코드를 해석하고 실행  
+javadoc.exe -> 자동 문서 생성기, (???) 소스파일에 있는 주석을 이용하여 JAVA API문서와 같은 형식의 문서를 자동으로 생성  
+jar.exe -> 압축 프로그램 . 클래스 파일과 프로그램의 실행에 관련된 파일을 하나의 자르 파일로 (.jar) 압축하거나 압축해제함.  
 
 
+JDK와 JRE의 차이???  
+JDK를 설치했다면.. JRE도 같이 설치 된다. JDK만 설치하면 모두 설최되는것..  
+JRE는 컴파일된 자바를 실행시킬수 있는 자바환경이다.  
+만약 JRE만 설치 되어 있다면.. 읽기 전용이 되는것임  
+JDK가 설치되야 쓰고 읽는게 가눙!
+
+JDK = JRE + 개발에 필요한 실행파일(dev tools)  
+JRE = JVM + 클래스 라이브러리(JAVA API)
 # Java language - JVM - OS
 <img src = "https://user-images.githubusercontent.com/80088918/147938970-3122dcd6-f690-43d1-b866-fccab600719b.png">
 
