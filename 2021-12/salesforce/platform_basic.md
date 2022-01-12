@@ -21,3 +21,14 @@ A solid AppExchange strategy helps ensure that you’re getting the highest valu
 - how many user need this app?
 - what's ur budget?
 - what your timelime?
+3. when you find an app that you need , download ur app in test evironment( like sandbox https://help.salesforce.com/s/articleView?id=sf.create_test_instance.htm&type=5)
+4. if you're choosing between multiple apps, 
+
+
+after you installed your first app, Apps are installed using sth called a package. to find the package,  
+1. From Setup, search and select Installed Packages in the Quick Find box .  
+2. Click the name of the package you installed. It will be the same name from the AppExchange download page.  
+3. Click View Components to see more information about the package. The Package Details page shows you all the components, including custom fields, custom objects, and Apex classes in the package. This information helps you determine whether you have any conflicts in your own customizations.  
+
+quiz : what you supposed to enter in quick find box in set up after you down load the app ? installed package
+
