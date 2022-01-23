@@ -1,0 +1,87 @@
+### how to configure my user's access to my Salesforce records
+#### recruitment(process of idenfiying interviewing, hiring people, and i was confuesd with team building !)
+
+예를 들어서, 
+suppose you're building a recruiting app that contains info about open poositions, cadidates, and jop application
+the app will store confidential data, such as social security numbers, salary amounts, and applicant review that should only be exposed to specific types of user.
+for such this app! it's important to secure the sensitive data without making it harder for recruiters, hiring managers and interview to do their jobs.
+
+
+salesfore provids a flexible, layerd!!! sharing model that makes it easy to assign different data sets to different sets of users.
+This ensures you can balance security and convenience, minimizing the risk of stolen or misused data while making sure that all users can easily access the data they need..
+
+salesfoce includes simple to configure security controls that make it easy to specify which users can view, create, edit or delete any record or field in the app.
+you can configure acess at the level of the org, objects, field or individual records.
+layerd???
+what level we have then
+
+## levels of data access
+- you can configure access to data in salesforce at fout main levels.
+
+__Organization__
+At the highest level, (젤 높은 레벨이라면 뭐 젤 접근 뚤려있다는고냐, 제일 빡세다는고냐!)
+you can secure access to your organization by maintaining a list of authorized users, setting password policies, and limiting login access to certain hourse and certain locations.
+
+__Objects__
+세일즈포스에서 테이블?을 의미하는 옵젝트
+object-level security provids the simplest way to control which users have access to which data.
+by setting __permissions__ on a particular type of object, you can prevent a group of users from creating, viewing, editing or deleting any records of that object
+그니까 crue를 펄미션을 통해 제어하는거지
+그 펄미션을 가지고 있는 유저는 access가 permission에 의해 control됨
+for example, you can use object permissions to ensure that interviewrs can view positions and job application but not edit or delete them.
+
+__field__
+필드단의 제어는 어떻게 가능할것인가?
+you can yser field-level security to restrict access to certain fields, **even for object a user hass access to**
+for example, you can make the salary field in a position object invisible to interviewrs but visible to hiring managers and recruiters
+옵젝트는 권한이 있지만.. 필드단에서 제어하는거라
+인터뷰 하는 사람한테는 연봉 필드가 안보이지만 하이어링 메니저한테는 보인다.
+옵젝트안의 특정필드에만 권한 주고 안주고를 이야기 하나보당
+뭐가 제일 센지 안센지가 좀 햇갈리는듯
+
+__Records__
+to control data with greater precision(정도!!!), you can allow particular users to view an object, but then restrict the individual object records they're allowed to see
+for example, record-level access allows interviews to see and edit their own reviews, without exposing the reviews of other interviewers.
+you can manage record-level access in the following ways.
+
+레코드 안에서도 또 level이 나뉘는구낭
+- organization wide defaults  
+
+Organization–wide defaults specify the default level of access users have to each others' records. 
+You use organization–wide sharing settings to lock down your data to the most restrictive level, 
+and then use the other sharing tools to selectively give access to other users. 
+For example, you can give all employees access to an object called Candidate to allow anyone to add a candidate to the database. 
+But you can restrict access to Positions so that anyone can see the jobs available but only the employees with the proper permissions can edit them.
+
+- role hierarchies  
+Role hierarchies open up access to those higher in the hierarchy so they inherit access to all records owned by users below them in the hierarchy. 
+Role hierarchies don't have to match your organization chart exactly.
+Instead, each role in the hierarchy represents a level of data access that a user or group of users needs.
+For example, you can restrict access to Candidates by setting the organization–wide default to Private, 
+but allow recruiters to view and edit the candidate records that they own. 
+Recruiters can't see candidate records they don't own 
+because recruiters are all at the same level in the role hierarchy.
+However, hiring managers (더 높은가봄ㅋ)can be given read/write access to all candidate records 
+**because they are at a higher level in the role hierarchy than recruiters.**
+
+- sharing rules  
+Sharing rules enable you to make automatic exceptions to organization–wide defaults for particular groups of users, (org difault를 특정 유저 그룹한테는 예외적으러 적용안시킨다는가봄)
+to give them access to records they don't own or can't normally see.
+Sharing rules, like role hierarchies, 
+**are only used to give more users access to records—they can't be stricter than your organization–wide default settings.**
+For example, you can allow all employees to view Positions, but use sharing rules to grant full editing access to employees in a role or group called Hiring Managers.
+used by administrators to automatically grant users within a given group or role access to records owned by a specific group of users. 
+- manual sharing  
+Manual sharing allows owners of particular records to share them with other users. 
+**Although manual sharing isn't automated like organization–wide sharing settings, role hierarchies, or sharing rules,** 
+it can be useful in some situations, for example, if a recruiter going on vacation needs to temporarily assign ownership of a job application to another employee.
+롤하랴키 orgdefault Sharing ruld은 자동적으로 적용되는것지만
+manual Sharing은 특정유저에게 권한을 줘야할때 인위적으로 적용시키는고임
+
+
+
+오늘은 전체적 그림만 보고 더 상세하게 알아봐야합니당
+
+quiz
+<img src="https://user-images.githubusercontent.com/80088918/150682572-10051655-0992-448a-88dd-b454edcf7041.png">  
+역시 정독하면 문제는 짱 쉽당 ㅎ
