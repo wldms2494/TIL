@@ -1,0 +1,116 @@
+like other custom fields, custom pickist's also field name ends with __c.
+Restricted Picklists
+Restricted picklists keep users from adding new values (either through the API or other apps). This restriction is useful for keeping your data consistent. Imagine someone working in an app that loads data into your picklist and entering a typo into the list (for example, Vamilla).
+
+If you don’t restrict the values on a picklist, you can get records with values like “Vamilla” instead of “Vanilla” or added values you just don’t want to see. With a restricted picklist, your picklist data stays clean.
+
+
+
+1. Universal containers created a custom object called component to capture details about products sold. what approach should an app builder take to show component as a related list on product?
+A . Created junction object to relate component and product. Add the component related list to the product page layout.
+B . Create a master-detail- relationship on product to component. Add the component related list to the product page layout.
+C . Create a roll-up on product. Add the component related list to the product page layout.
+D . Create a lookup relationship on component to product. Add the component related list to the product page layout.
+
+B(X)
+answer : a
+
+2. Universal Containers wants to deliver purchased containers to remote construction address. In these cases the customers will supply UC with the coordinates to the location.
+
+What type of field should the app builder use to capture this information?
+A . Number
+B . Goelocation
+C . Text
+D . External Lookup
+
+B(X)
+ANSWER : D
+ what????????????
+ 
+ 
+3. What option is available to an App Builder when defining an object-specific Create Record custom action? Choose 2 answers
+A . Pre-Defining field values on the target object.
+B . Redirecting the end user to the detail page of the target object
+C . Specifying the fields and layout of the action.
+D . Allowing the end user to choose the record type
+
+여기는 1도 이해 안감
+
+
+4. Universal Containers has two teams: Sales and Services. Both teams interact with the same records. Sales users use ten fields on the Account record. Services users use three of the same fields as the Sales team, but also have five of their own, which the sales team does not use.
+
+What is the minimum configuration necessary to meet this requirement?
+A . One profile, two record types, one page layout
+B . Two profiles, two record types, two page layouts
+C . One profile, one record type, one page layout.
+D . Two profiles, one record type, two page layouts
+
+D (x)
+B
+
+5. Universal Containers has deployed custom tabs through change sets, without including the profiles, to Production (Enterprise Edition).
+
+Which statement is true in regards to the visibility of custom tabs?
+A . Custom tabs are default on for all users.
+B . Custom tabs are default off for all users.
+C . Custom tabs are exposed for all users.
+D . Custom tabs are hidden for all users.
+
+
+B(x)
+D 근데 defalut off 랑 숨겨진건 어떻게 다른걸깡ㅅㅇ
+
+6. Universal containers needs to flag Leads with one or more business areas. They need to add a field to capture these to the Lead records. There is no need to report on this field.
+
+What is the appropriate field type?
+A . Picklist
+B . Picklist (multi-select)
+C . Text area
+D . Radio Buttons (multi select)
+
+A(X)
+B
+
+7. Representatives at Cloud Kicks use Salesforce to record information for new Leads. When new prospects are added, an outbound message is sent to the data warehouse with the Lead’s information.
+
+Which automation tool should an app builder use to meet this requirement?
+A . Create a workflow rule with an outbound message as the action.
+B . Design an approval process that sends an outbound message.
+C . Create a process using Process Builder to send an outbound message.
+D . Use Lightning Flow to send an outbound message.
+b는 모조곤아님!!
+D?(X)
+A!!!!!아니 나도 action이라곤 생각했는데 lightning flow 에서 action넣으면 되는것 아님?
+outbound message가 모엇임.?
+
+
+8. universal containers has several large customers that sell their products through dealers. Each customer and dealer has an individual rep who works directly with uc and each is billed separately.
+
+How can an app builder implement these requirements?
+A . Create a single account record, add each rep as a contact and create a custom dealer object
+B . Create both customer and dealer as accounts, add each rep as a contact on the corresponding account and create an account hierarchy.
+C . Create a single parent record, add each rep as a contact to the parent account and add each dealer as a child record
+D . Create both customer and dealer as accounts, create account teams on each account and associate the dealer records with the parent account.
+C
+왜냐면.. 일단 dealer가 account 옵젝에 들어가는게 이상해서 b랑d는 패스
+
+정답 b...
+
+9.What is recommended to refresh a fullsandbox?
+A . After UAT sign-off.
+B . Whenever a new production used is added.
+C . After a major production release.
+D . Within 3 hours of when it is needed.
+B(X)
+A!!!!!!!!!아니 어떻게 다틀리지??????????
+
+10. When configuring a record type, an App Builder can configure the available value of a picklist field for the page layout.
+
+Which opportunity standard field is available to be configured directly in the Opportunity record type? Choose 2 answers
+A . Forecast Category
+B . Lead Source
+C . Type
+D . Stage
+c, d..(x)
+b, c
+
