@@ -80,3 +80,21 @@ chat 은 synchronousdlai 이며 이는 대화가 동시에 일어남을 의미�
  Customer responses go directly to the agent who initiates an outbound message when logged in or to an available agent logged in to Omni-Channel. 
  Outbound messages do not count toward your Omni-Channel capacity.
  
+# prepare for outbound messaging
+아웃바운드 메세지 준비하기
+
+adding multiple channels is the second stage of the general setup process for service cloud
+여러개의 채널을 더하는것은 서비스클라우드의 일반적인 셋업에서 두번째 단계이다
+having set up case management(case 관리 셋업)은 첫번째 단계이다.!
+if the right case field, notifications, and routing processes are not implemented, 
+it doesnt matter if agents message customers because they'll be too busy to trying to figure out how to capture the right info and determine who should work each case
+그래서 case management가 우선적으로 행해져야 한다는 말인듯.
+
+before maria se up outbound messaging, she presents the service team with messaging options.
+
+do we want to automates some of our messages?
+-> yes, let's automate outbound whatsApp messages with templates to let our customers know when our agents are working on theirs cases. we can automate those messaging templates with the __Process Builder__
+Do we need to create bots to automate interactions or update records?
+-> yes, we could definitely use our exisiting Einstein Bots implementation to automatically thank customers who respond to our outbound whatsapp messages and to display a list of meny options based on the solar panels that they purchased.
+
+<img src = ""https://user-images.githubusercontent.com/80088918/151106123-e5a0b90f-1191-41e9-b5ff-e877673de700.png>
