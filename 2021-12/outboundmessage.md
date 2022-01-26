@@ -98,3 +98,9 @@ Do we need to create bots to automate interactions or update records?
 -> yes, we could definitely use our exisiting Einstein Bots implementation to automatically thank customers who respond to our outbound whatsapp messages and to display a list of meny options based on the solar panels that they purchased.
 
 <img src = ""https://user-images.githubusercontent.com/80088918/151106123-e5a0b90f-1191-41e9-b5ff-e877673de700.png>
+# turn on outbound messaging
+# Rollout Outbound Messaging 
+Start with a small test of trial customers. Begin with a specific location or allow only some customers to message you, such as VIP or Platinum Support customers. See what works best for those customers before beginning a larger rollout.
+Create a library of templates or automated messages for agents. Build a wiki of text-friendly phrases and emoticons that match your brand and streamline frequent responses to customers.
+Train your agents. Teach agents how to initiate conversations with customers from the Service Console and how to use templates or automated messages to deliver consistent customer experiences.
+<img src = "https://user-images.githubusercontent.com/80088918/151109308-570d5df8-964f-44de-94a2-6616a08ddf08.png">
