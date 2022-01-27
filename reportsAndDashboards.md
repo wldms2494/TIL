@@ -65,4 +65,4 @@ reports display only records that meet the criteria defined in the report type. 
 out of the box , salesforce provides a set of predefined satadard report types
 
 <img src = "https://user-images.githubusercontent.com/80088918/151279566-b2642d2a-29a3-4d2c-b3a5-18e5e0edd68e.png">
-2번의 답은 B였음
+2번의 답은 A였음
