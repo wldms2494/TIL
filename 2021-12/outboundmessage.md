@@ -93,7 +93,11 @@ it doesnt matter if agents message customers because they'll be too busy to tryi
 before maria se up outbound messaging, she presents the service team with messaging options.
 
 do we want to automates some of our messages?
--> yes, let's automate outbound whatsApp messages with templates to let our customers know when our agents are working on theirs cases. we can automate those messaging templates with the __Process Builder__
+-> yes, let's automate outbound whatsApp messages with templates to let our customers know when our agents are working on theirs cases. we can automate those messaging templates with the __Process Builder__근데
+여기서 진짜 나는 프로세스 필더를 통해서 아웃바운드 메세지를 보내는 줄 알았지만. 이것은 자동화에 관한 이야기이다
+여러 검색결과로 oubound message는 workflow를 통해 보낸다. 별표별표
+workflow rules같은경우에는 workflow의 템플릿 같은 
+
 Do we need to create bots to automate interactions or update records?
 -> yes, we could definitely use our exisiting Einstein Bots implementation to automatically thank customers who respond to our outbound whatsapp messages and to display a list of meny options based on the solar panels that they purchased.
 
