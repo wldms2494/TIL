@@ -1,3 +1,18 @@
+object relationships
+it's time to take things to the next level with object relationships. Object relationships are a special field type that connects two objects together
+if a sales rep opens an account, they've probably been talking to a few people at that account's company. They be probably mad contacts like executives or IT managers and sotred those contact's info in salesforce.
+and it does make sense, then, that there should be a relationship between the Account object and the Contact object . And there is !
+there!! is!
+ lets see
+ when u look at ac account record in salesforce. you can see that there's section for contacts on the Related tab. You can also see that there's a button that lets you quickly add a contact to account.
+ 
+ account and Contact relationship is an example of a standard relationship in salesforce. but just like objects and field, you can build custom relationships as well
+ wouldn't it be great if all the custom object made on home showed up on its record in salesforce
+
+so
+there are two main types of relationships : lookup and master detail 
+
+
 look up relationship 과 master-detail relationship 알자
 =======================
 salesforce developer 사이트에 마치 내 심정과 같은 분이 글을 올려주셨다  
@@ -42,6 +57,12 @@ Thank you,
  
  
  # master-detail relationship
+ while lookup relationships are fairly casual, master detail relationships are bit tighter. in this type of relationship, one object is the master and another is the detail. the master object controls certain behaviors of the detail object, like who can view the details's data
+ 
+ for example., let's say the owner of a property wanted to take thier home off the market.
+ dreamhouse wouldnt want to keep any offers made on that property . 
+ 
+ 
  - access to a detail record is inherited from the mastser record.
  디테일 레코드로의 접근은 마스터 레코드로 부터 상속된다. 
  
@@ -75,6 +96,11 @@ Thank you,
  나는 부모자식이란 느낌이 많이 와닿아서 원투매니 문제가 나올때는 계속 master-detail을 골랐는데
  신중하게 생각해야겠군
  
+ 
+ 
+ 
+ 
+ 
  이제 룩업!!
  최근에 넷플릭스에서 본 don't look up 영화 생각나네
  # lookup relationship 
@@ -98,7 +124,7 @@ Thank you,
  뭐 자식것도 삭제해라
  
  이런말인듯 4이 말이 삭제해라 아니라 이정도인줄만 알았는데 해석해보니 굉장히 상세했구만?
- 
+ Lookup relationships can be one-to-one or one-to-many. The Account to Contact relationship is one-to-many because a single account can have many related contacts. For our DreamHouse scenario, you could create a one-to-one relationship between the Property object and a Home Seller object.
  
 #### look up relationship
 - parent is not required field by default (부모는 디폴트로는 required가 아니다) 
@@ -119,7 +145,23 @@ Thank you,
 아 정리하니까 이제 좀 이해가 되는 옵젝트들의 관계 ㅜ^ㅜ
 
 
+here are more info to help you differentiate between lookup and master-detail 
 
+typically, you use lookup relationship when objects are only related in some cases.
+sometimes a contact is associated with specific account, but sometimes it's just contact,.
+Object in lookup relationships usually work as stand-alone objects and haver thier own tabs in the user interface
+
+in master relationship , the detail of object doesn't work as stand alone.
+it;s highly dependent of the master. (???)
+in fact , if a record on the master object is deleted, all its related detail records are deleted as well. 
+when you're creating master-detail relationships, you always create the relationship field on the detail object
+
+
+plus ! 
+
+you could run into third relationship type called a hierarchical relationship. Hierarchical relationships are a special type of lookup relationship.
+the main difference is that hierarchical relationships are onlyu available on the __User__ object. You can use them for thing like creating management chains between users
+..
 
  
  
