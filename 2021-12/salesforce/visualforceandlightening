@@ -1,0 +1,8 @@
+visualforce page - HTML like markup language for designing the pages and apex code to handle the db operations.
+Visualforce was designed to follow a Page-Centric model
+when the user needed to perform some kind of operations, like Save a record, it would send that request to the salesforce Servers and then reloaded the entire page with the new state of the UI
+all backend processing is done with Apex Code on the Server-Side.
+
+Lightning was designed to follow an App-Centric model
+this essentially means that it has been designed to create self-contained components that build on the top of each other. To put this in perpective with Visualforce you would send an interation to the Saelsforce server and then update the entire page.
+However, with Lightninng, you can send an interaction to the Salesforce servers and then update a specific component.
