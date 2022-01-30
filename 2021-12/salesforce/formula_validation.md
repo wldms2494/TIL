@@ -176,3 +176,8 @@ What formula should an app builder use to create this new field?
 (B). CASESAFEID(Id)
 (C). TEXT(Id)
 (D). VALUE(Id
+
+
+https://www.passagetechnology.com/passage-technology-blog/2017/9/15/roll-up-solution-when-a-roll-up-summary-field-can-not-be-used-and-process-builder-does-not-fire-on-delete
+
+what's difference between roll-up summary and cross object formula ?
