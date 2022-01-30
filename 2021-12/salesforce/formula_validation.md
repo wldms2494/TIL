@@ -169,4 +169,10 @@ AND(
 <> 
 not equal!
 
-
+NO.327 Universal Containers needs the 18-digit record ID from Opportunity records when exporting
+data to Excel in order to ensure each record is treated uniquely.
+What formula should an app builder use to create this new field?
+(A). ISNUMBER(Id)
+(B). CASESAFEID(Id)
+(C). TEXT(Id)
+(D). VALUE(Id
