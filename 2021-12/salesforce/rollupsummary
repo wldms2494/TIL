@@ -1,0 +1,34 @@
+roll-up summary
+
+calculates values from related records, such as those in related list.
+you can create roll-up summary field to display a value in master record based on the values of fields in detail record.
+
+
+ and also rolll-up summary is a feature of salesforce enabled only after have a master detail relationship between obejct.
+ it gives us the options of having SUM, MIN, Max of a field in all the child records or COUNT the num or child records
+
+As Salesforce.com has limitations on almost everything available we have limits for Rollup Summaries as well!! We can configure a maximum of 25 Rollup Summaries  .
+The maximum number of master detail relationships on an object can be two.
+
+it's important to know that having too many roll-up summary fields can impact your org's performance
+in general, first try to set up your reports to make theses calculations before requesting a limit increase
+
+While increases can be submitted to Support, the maximum hard-coded limit for roll-up summary fields is 40 per object and cannot be increased above that.
+
+
+NO.350 To increase adoption, Universal Containers is proposing changes to its Salesforce data
+model to allow easier visibility for sales reps into key metrics. The proposal has three custom objects
+related to the Account object, one with a master-detail, and two that are not. Each of these objects
+has 15 fields they would like to summarize on the Account object.
+What are two considerations for this proposal?
+Choose 2 answers
+a) roll-up summaries allow max, min, sum, count, and avg
+b) an object can have 20 object refrence
+c) an object can have 25 roll-up summaries
+d) roll-up summaries are limited to master- detail relationships
+
+
+Answer: C,D
+
+a) only max, min sum, cound what is avg?
+b) objec can have 2 object refrence?
