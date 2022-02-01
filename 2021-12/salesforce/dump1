@@ -44,3 +44,18 @@ Invocable processes are modular processes that start only when another process t
 For example, several criteria nodes in your “Account” process each evaluate some conditions, including whether the account is high value. 
 Move those criteria nodes, without the high-value condition that they have in common, into a “Top Account” invocable process. 
 Then configure your ”Account” process to invoke the “Top Account” process if the account is high value.
+
+What is a key consideration when using unmanaged packages? Choose 2 answers
+(A). A namespace is not required to create an unmanaged package.
+(B). The person who created the unmanaged package can change or update installed components
+(C). The person who created the unmanaged package has no control over the installed components
+(D). A namespace is required to create an unmanaged package.
+
+네임스페이스는 패키징 컨텍스트에서 네임스페이스 접두사는 패키지와 해당 내용을 다른 AppExchange 개발자의 것과 구별하는 1에서 15자의 영숫자 ID입니다.
+네임스페이스 접두사는 대/소문자를 구분하지 않습니다. 예를 들어, ABC와 abc는 동일한 것으로 인식합니다. 
+네임스페이스 접두사는 모든 Salesforce 조직 전체에서 전역적으로 고유해야 합니다. 
+관리 패키지를 사용자가 독점적으로 제어할 수 있게 합니다.
+
+그래서 네임스페이스는 manage package가 필요한거지 unmanagemage 는 필요 없음 
+https://help.salesforce.com/s/articleView?id=sf.register_namespace_prefix.htm&type=5
+
