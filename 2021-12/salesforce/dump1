@@ -22,3 +22,25 @@ You can now upsert records into Salesforce using the external ID field rather th
 
 b -> external id is not case-sensitive(대소문자구분) - for example. "XYZ" will be matched with "xyz"
 C - > external ID fields must be custom text, number or email fields.
+
+
+
+NO.359 An app builder needs to create new automation on an object.
+What best practice should the app builder follow when building out automation7
+(A). One Workflow rule per object.
+(B). One Flow per object.
+(C). One invocable process per object.
+(D). One record change process per object.
+
+이고 모임? 
+엡빌더는 오브젝트에 자동화를 하나 만들려고 하는데, 앱빌더가 자동화 구축할때 젤하기 좋은 연습이 모냐고?
+플로우 아님?
+
+근데 invocable process는 처음 들어봄 (invocable 뜻을 찾다가.. 몬가 명확하게 때리는 의미를 못찾겠는데 약간 호출 가능한 이정도로 이해할련다 ) 
+
+invocable processes
+Just like a process can call flows, a process can call other processes. 
+Invocable processes are modular processes that start only when another process tells them to.
+For example, several criteria nodes in your “Account” process each evaluate some conditions, including whether the account is high value. 
+Move those criteria nodes, without the high-value condition that they have in common, into a “Top Account” invocable process. 
+Then configure your ”Account” process to invoke the “Top Account” process if the account is high value.
