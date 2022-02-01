@@ -32,3 +32,20 @@ Answer: C,D
 
 a) only max, min sum, cound what is avg?
 b) objec can have 2 object refrence?
+
+
+What Is true statement regarding roll up summary fields. Select 2.
+(A). Roll up summary fields can only be created on the master of master-detail relationship
+(B). The roll up summary field inherits the field level security of the child object.
+(C). Multi select picklist files can be used in the field column of the field column of roll up summary
+filters.
+(D). Changes to the value of a roll up summary field can trigger assignment rules to run
+
+C->you can't use long text area, multi-select picklist , Description fields, system fields likst Last Activity , cross-object formula fields, and lookup fields in the column of roll-up summary filters
+D -> changes to the value of a rollup summary field can trigger assignment rules to run. 뭔소리야 
+if a roll-up summary field is part of the criteria in an assignment rule, the fields new value is used to evaluate whether to reassign the record.
+Answer: A,D
+
+
+
+
