@@ -1,0 +1,173 @@
+하루남았다 주륵.. 망했오
+
+
+UC wants to standardize their business logic. They want to ensure that workflow order is
+guaranteed to the same each time. Which feature can be used to accomplish this? Select 2
+process builder, visual workflow
+
+32 Universal Containers has separated business requirements for consumer and Business
+Opportunities. The sales team work with both types of Opportunities. The app builder created two
+record types on the Opportunity Object. Which action can now be performed? Choose 2 answers
+(A). Prevent access to secure data fields by sales process.
+(B). Specify a different page layout by sales process.
+(C). Enable field validation by sales process.
+(D). Create unique Opportunity stages by sales process.
+
+b,c
+
+36 What is a true statement in regards to creating custom report types?
+(A). When the primary object is a custom object and is deleted, then the report type and any reports
+created from it must be deleted manually.
+(B). The detail object in a master- detail relationship cannot be added as a secondary object on a
+custom report type
+(C). Once a report type is saved with a standard or custom primary object, the primary object cannot
+be changed for that report type.
+(D). Any object can be chosen unless the object is no visible to the person creating the report type
+through security settings
+
+C
+
+UVC sells to three different types of organizations. Partner, Enterprise, and Small Business.
+Some of the information collected about each organization overlaps; however, there are also unique
+attributes to each type of organization that need to be tracked, some of which are required. What
+Solution meets these requirements?
+(A). Three Account record types, each with its own page layout to display the relevant fields for that
+type of organization
+(B). Three custom objects for the three organization types, each with custom fields that pertain to
+that type of organization
+(C). A Partner Community for partner organization records, and two lead record types for Enterprise
+and Small Business organizations
+(D). Three different sections on an Account page layout, with each section displaying the relevant
+fields for that organization.
+Answer: A
+
+
+NO.39 An app builder has downloaded a component from the AppExchange successfully; however,
+they are unable to add it to the Lightning home page.
+IT Certification Guaranteed, The Easy Way!
+9
+Which two reasons can be preventing the app builder from being able to add the custom
+component?
+Choose 2 answers
+(A). My Domain must be deployed to add custom components to the page with the App Builder.
+(B). A custom tab must be created to add custom components to the page with the App Builder.
+(C). The component requires a developer permission to add it to the page with the App Builder.
+(D). The component is tagged for record pages instead of home pages and is not showing up in the
+App Builder.
+Answer: A,D
+
+
+NO.41 What tools you need to use to migrate Metadata to Two Different Production Orgs? (3)
+(A). Change Set
+(B). Force.Com Migration Tool
+(C). Unmanaged Package
+(D). Force.Com IDE
+(E). Data Loader
+Answer: B,C,D
+
+NO.43 UV has a customer base where many customers have the same or similar company names.
+(A). Update the account search layout list view filter settings.
+(B). Update the account search layout search results columns displayed.
+(C). Update the account search layout search filter fields.
+(D). Update the account search layout accounts tab columns displayed
+
+NO.43 UV has a customer base where many customers have the same or similar company names.
+(A). Update the account search layout list view filter settings.
+(B). Update the account search layout search results columns displayed.
+(C). Update the account search layout search filter fields.
+(D). Update the account search layout accounts tab columns displayed
+d
+
+NO.50 An App Builder is loading the data into salesforce. To link the new records back to the legacy
+system, a field will be used to track the legacy ID on the account object. For future data loads this ID
+will be used when upserting records. Which field attribute should be selected? Choose 2 answers
+
+unique, external ID
+
+NO.51 When a user creates an account report, the user does not see industry as an available field in
+the report builder. However, this same user is able to see in the account page layout. What scenario
+would cause this?
+(A). The user uses a custom report type which does not include the industry field
+(B). The industry field has no record values in the account.
+(C). The industry field is not enabled for the particular record type
+(D). The user does not have industry field visibility in the field level security
+a
+
+NO.54 Universal containers wants to provide a different view for its users when they access an
+Account record in Salesforce1 instead of the standard web version. How can this be accomplished?
+Choose 2 answers
+(A). By adding a mobile layout and assigning it to a profile.
+(B). By adding quick actions in the publisher section.
+(C). By adding actions in the Salesforce1 action bar section.
+(D). By adding Visualforce page to the mobile cards section
+
+ad
+
+NO.56 What is true when changing the following field types? (Choose 3)
+(A). No data is lost when changing Picklist to Multipicklist
+(B). Data is lost when changing Number to Currency
+(C). Rollup summary fields will stop calculate if Master Detail is changed to lookup
+(D). No data is lost when converting Text to auto number
+(E). Data can be lost when changing from Rich Text to Long Text
+Answer: A,D,E
+
+NO.65 What rules can be used to Opportunity object? (2)
+(A). Auto-response
+(B). Validation
+(C). Assignment
+(D). Workflow
+Answer: B,d
+
+6 Universal Containers stores invoices in SAP. Users want to view invoice data on the related
+Account records in Salesforce. How can this be achieved? Choose 2 answers
+(A). Create a custom Invoice object and connect to SAP using Data Loader.
+(B). Create an external object connected to an invoice table in SAP.
+(C). Use SAP data export functions to load data directly in Salesforce
+(D). Connect to an OData Publisher Service for SAP databases
+Answer: B,D
+
+NO.72 What is a section of the Lightning App Builder Tool? Choose 3 Answer
+A). Canvas
+(B). Mini Page Layout
+(C). Selected Publisher Actions
+(D). Mobile Cards
+(E). Components
+Answer: A,C,E
+
+NO.74 Universal container sales reps can modify fields on an opportunity until it isclosed. Only the
+sales operations team can modify the post close follow up date andpost close followup comments
+fields. How to make this happen?
+(A). Use field-level security to mark fields as read-only on the sales profile
+(B). Use field-level security on page layouts to restrict editing fields
+(C). Use record types with field sets and restrict editing fields using field-level security
+(D). Use multiple record types, page layouts, and profiles
+Answer: B
+
+O.85 Which of the following can be source of report chart placed in page layout?(Choose 2)
+(A). Summary
+(B). Joined
+(C). Tabular
+(D). Matrix
+Answer: A,D
+
+86 Due to the complexity of the Universal Containers sandbox release schedule and
+requirements, it is advised that change sets are used as often as possible to migrate from one
+environment to another.
+Which three common items can an app builder move when using a change set?
+Choose 3 answers
+
+(A). Web-to-lead
+(B). Standard fields
+(C). Custom object
+(D). Apex class
+(E). Custom field
+Answer: C,D,E
+
+7 An admin is trying to add a custom VF page to the mobile app quick navigation menu but
+can't. What might be the problem?
+(A). The VF page references / fields that the user can't access
+(B). The menu configuration has not been set up correctly for the VF page
+(C). The smart search is not enabled for the VF page
+(D). A tab has not been created for the VF page
+Answer: D
+
