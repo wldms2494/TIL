@@ -1,0 +1,109 @@
+Roll up summary 필드 타입 구하는 문제
+
+NO.62 An app builder wants to streamline the user experience by reflecting summarized calculation
+of specific fields on various objects.
+Which three fields types should be used in roll-up summary fields to accomplish this?
+Choose 3 answer
+(A). Percent
+(B). Checkbox
+(C). Currency
+(D). Date
+(E). Time
+
+퍼센트, 커런시, 데이트
+
+NO.104 What type of field can be referenced by a Roll-up Summary field using SUM? Choose 3
+answers
+(A). Formula
+(B). Currency
+(C). Number
+(D). Percent
+(E). Date
+Answer: B,C,D
+여기서는 커런시, 넘버, 퍼센트 ( not date)
+
+he types of fields you can calculate in a roll-up summary field depend on the type of calculation.
+계산 타입에 따라,  roll-up summary filed에서 사용할 수 있는 타입이 결정 됨.
+
+For example,
+Number, currency, and percent fields are available when you select SUM as the roll-up type.
+Number, currency, percent, date, and date/time fields are available when you select MIN or MAX as the roll-up type.
+
+#### NO.161 Which two solutions prevent a formula field from being refrenced by a Roll-Up summary field
+롤업 서머리 필드에 의해서 포뮬라가 참조되는것을 막기 위한 솔루션은 무엇인가요?
+(A) A cross object workflow updating a field referenced by the formula field
+(b) a cross object field reference in the formula field
+(c) the CASE() function in the formula field
+(d) the NOW()function in the formula field
+답은 bd, d는 확실히 알겠는데 ( 롤업 요약 필드에 NOW 또는 TODAY와 같이 즉석에서 값을 파생하는 개체 간 필드 참조 또는 함수가 포함되어 있지 않으면 수식 필드 값을 계산할 수 있습니다)
+a랑b는 잘 모르겠음
+
+#### NO.274 Which statements are true regarding Roll-Up Summary fields? (select all thatapply)
+(a) once created, you cannot change the detail object selected or delete any field referenced in your roll-up summary definition.
+롤업 서머리가 한번 만들어지면, 디테일 오브젝트를 바꾸거나, 필드 참조를 바꿀 수 없다.
+(b) because roll-up summary fields are not displayed on edit pages, you can use them in validation rules.
+(c) validation errors can display when saving either the edtail or master record.
+(d) advanced currency management has no affect on roll-up summary fields
+
+답은 abc!
+
+여기까지 롤업 서머리
+
+
+
+1번부터 100번까지
+
+3번까지는 앞에서 완료
+
+NO.4 Identify the standard Lightning components. (Choose 3 answers)
+(A). Visualforce Page
+(B). Dashboards
+(C). List View
+(D). Rich Text
+(E). Reports
+
+NO.5 What should an app builder consider when choosing a template for a new Lightning record
+page?
+(A). The template is unable to be changed after the initial save.
+(B). To view the record page, users need "View All Data" permissions for the object.
+(C). A Page structure will automatically adapt to the device being used to view the record page.
+(D). Select a new template for each type of device users use to view the record page.
+
+NO.6 Which type of field cannot be universally required?
+(A). Lookup
+(B). Email
+(C). Text
+(D). Summary
+
+NO.7 Manage at Universal Containers want a quick to create additional accounts to form a hierarchy
+from a parent account record. They want to auto-populate five fields based on the parent to make it
+easier for users to create the child accounts quickly.
+(A). Custom Global Quick Action
+(B). Custom Global Quick Account.
+(C). Custom action on Account
+(D). Custom link on Account
+
+NO.8 At Universal Containers, each admin and developer use a separate developer pro sandbox.
+Configuration and code are then migrated to a partial data sandbox for combination and initial
+testing. Once approved the configuration and code are then migrated to a full sandbox for final toad
+and regression testing before going to production.
+When should the full sandbox be refreshed?
+(A). After user acceptance testing is complete.
+(B). After each push from the partial data sandbox.
+(C). After each major release to production.
+(D). After a new user is added to production
+
+NO.9 Universal Containers require different fields to be filled out at each stage of the Opportunity
+sates process.
+What configuration steps can an app builder use to meet this requirement?
+(A). Set page layout required fields based on the current stage.
+(B). Create a Process Builder to prompt the User for field information.
+(C). Define record types and page layouts for each stage.
+(D). Add the Path component to the Lightning record page.
+
+NO.10 The director of Marketing has asked the AppBuilder to create a formula field that tracks how many days have elapsed(경과) since a contact was sent a marketing commumication. the director is only interested in whole units.
+(a) Datevalue()
+(b) Today()
+(c) Now()
+(d) Date()
+
