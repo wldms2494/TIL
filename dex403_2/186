@@ -838,16 +838,39 @@ What can be causing the delay?
 (C). Dependent fields are included in the change set.
 (D). Roles are included in the change set.
 
+NO.279 The Training team at UVC uses a custom Training object to track their customer trainings. An
+App Builder needs to create a relationship between the Training object and the related Student's
+record. A private sharing model is in place for both Students and Training. Which two statements are
+true when creating a Student lookup field on the Training object? Choose 2 answers
+(A). On Student Record, users can set up Roll-up summary fields on Training records
+(B). On Training record, users can only delete students, if they have access to it
+(C). Cross-object field updates between Training and Student records are not supported
+(D). On Training record, the Student Lookup field can be made optional
 
 
 
+NO.280 A business user wants a quick way to edit a record's status and enter a custom due date
+field from the record's feed in Salesforce1 Mobile App. What could be used to accomplish this?
 
+(a) custom button
+(b) custom url formula field
+(c) custom action
+(d) custom quick access link
 
+NO.281 Universal Containers wants to deliver purchased containers to remote construction address.
+In these cases the customers will supply UC with the coordinates to the location.
+What type of field should the app builder use to capture this information?
+(A). Number
+(B). Goelocation
+(C). Text
+(D). External Lookup
 
-
-
-
-
+NO.282 UC would like to embed a chart of all related opportunities, by stage, on the account details
+page. Which type of report should use
+(A). A summary report on the opportunity object
+(B). A tabular report on the account object
+(C). A tabular report on the opportunity object
+(D). A summary report on the account object
 
 
 
