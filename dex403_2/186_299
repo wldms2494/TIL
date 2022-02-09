@@ -873,6 +873,177 @@ page. Which type of report should use
 (D). A summary report on the account object
 
 
+NO.283 Universal Containers uses Contracts for agreements with customers. A sales manager is
+required to provide approval for contracts and director approval for any contract over $10,000.
+Which two options should an app builder use to ensure all contracts route for the correct approval
+and also prevent the sales rep from making changes to the record while it is being approved7 Choose
+2 answers
+(A). Create an approval process on the Contract object with criteria set on a second approval step set
+as 'Amount__c > 10,000' and set the approver as director.
+(B). Create an approval process on the Contract object and set the field for 'Next Automated
+Approver Determined By' as Manager'.
+(C). Create a validation rule on the Contract object that prevents updates to the contract record while
+it is being reviewed.
+(D). Create an approval process on the Contract object with one step for each sales manager that sets
+the approver as the director.
+
+NO.284 Which three standard component types are available in the Lightning App Builder? Choose 3
+answers
+(A). Plain Text
+(B). Filter Text
+(C). Rich Text
+(D). Report details
+(E). Recent Items
+
+
+NO.285 You want to use an External Data Object Table from Heroku carrying Product Category
+information. The data need to be included in Salesforce and searchable. What do you have to do
+before you can use the connection. (Choose 2)
+(A). URL / choose the URL
+(B). Press "validate and sync"
+(C). Choose "include as index field"
+(D). Choose "include in Salesforce searches" option
+
+NO.286 A customer service representative at Cloud Kicks wants to be able to collect information
+from customers using a prompts. Once the questions are completed, an email should be sent to the
+customer with a feedback form.
+What should be used to accomplish this?
+(A). Einstein Next Best Action
+(B). Lightning Flow
+(C). Process Builder
+(D). Apex Trigger
+
+
+NO.287 A new custom object is being created with a private sharing setting. The business wants to
+share individual records with specific people or group of people on a case by case basis. What options
+does the business user have to manually share individual records? Choose 3 answers
+(A). Public Groups
+(B). Permission Sets
+(C). Roles
+(D). Profiles
+(E). Users
+
+NO.288 Ursa Major Solar is ramping up(늘리다) the sales team to meet increased demand. As part of the
+short ramp up for these new reps, the manager wants to provide a help guide to enable reps to easily
+get help where needed during the different sales processes.
+Which solution should an app builder recommend?
+(A). Flow
+(B). Journey Builder
+(C). Chatter Publisher
+(D). Path
+
+
+NO.289 universal containers has implemented multi currency. There are several products that
+universal containers sells exclusively in europe and the UK. Opportunities for these products need to
+be written in euros or british pounds. Which solution should an app builder recommend ?
+(A). Create a new page layout for these products that shows only the EUR and GRP currencies in the
+opportunity currency picklist.
+(B). Create a new record type for these products and include only the EUR and GBP currencies from
+the opportunity currency picklist
+(C). Create a new sales process that includes only the EUR and GBP currencies for these products.
+(D). Create a new validation rule that allows only EUR or GBP to be selected from all active currencies
+when an opportunity is created for these products.
+
+
+
+NO.290 Sales rep at universal containers use salesforce on their mobile devices. They want a way to
+add new contacts quickly and then follow up later to complete the additional information necessary.
+What mobile should an app builder recommend?
+Answer:
+(a) customize the mobile meny to move contacts to the top
+(b) add a compact layot to contacts
+(c) build a global action to create contacts
+(d) use path and set pre-defined values
+
+
+NO.291 Which objects can be members of a campaign? Choose 2 answers
+(A). Contact
+(B). Account
+(C). Opportunity
+(D). Lead
+
+
+
+NO.292 What metadata can be made manually in production without deployment? (Choose 2)
+(A). Apex class
+(B). Visualforce
+(C). Apex trigger
+(D). Reports and Dashboards
+
+
+NO.293 A new field has been added to the Applicant object that is part of an unmanaged package. A
+recruiter ran the Position with or without Applicants report and noticed that the new field was
+missing as an option to add as a column.
+How should an app builder troubleshoot this issue?
+(A). Adjust the field level security to include in the report type.
+(B). Check Allow Reports for the position and applicant objects.
+(C). Add the field to the custom report type field layout.
+(D). Update the profile with the Manage Public Reports permission.
+
+
+NO.294 A sales manager would like to look at an account record and view charts of all of the related
+open opportunities. Closed/won opportunities, and open cases. How many report charts can be
+added to the account page layout to meet this requirement?
+(A). 3
+(B). 2
+(C). 1
+(D). 4
+
+
+NO.295 An app builder wants to create a report to compare the number of support cases in each
+status (New, In-progress, or Closed) and by priority (Critical, High, Medium, or Low).
+What solution should be used for the report?
+(A). Grouping
+(B). Bucket Columns
+(C). Custom Report Type
+(D). Filters
+
+NO.296 An app builder installed a custom Lightning component from AppExchange and has
+deployed My Domain.
+What should be done next in order to configure the component for use in a record page?
+(A). Edit a record page using Lightning App Builder > Drag the component onto the page.
+(B). Edit a record page using the Page Layout editor > Drag the component onto the page.
+(C). Edit a record page using the Page Layout editor > Drag the Visualforce component onto the page.
+(D). Edit a record page using App Manager > Drag the component onto the page.
+
+NO.297 Universal Containers is using a custom app to record performance review info for their
+employees. The performance review should be visible to the employee and the employee's manager,
+as well as the HR director. How can this be configured? Choose 1 answer.
+(A). Set the org wide default for Performance Review to private and use grant access using
+hierarchies to give visibility to the employee's manager and HR director
+(B). Use manager sharing to enable sharing with the employee's manager and HR director
+(C). Set the org wide default for Performance Review to private, do not use grant access using
+hierarchies and use manual sharing for the employee manager and HR director
+(D). Set the org wide default for Performance Review to private and add a criteria based sharing rule
+to share performance review records with a public group that includes the employee managers and
+HR director
+
+c라는데 좀 부족하지 않나...
+
+
+
+
+NO.298 Duplicate management for leads has been implemented at universal containers but it seems
+duplicate leads are still being created. The org wide default is set to "Private" for leads.
+Which two actions help prevent duplicate leads from being created?
+Choose 2 answers.
+(A). Change OWD for leads for public read
+(B). Change the lead matching rule to block on create
+(C). Change the lead duplicate rule details to bypass sharing rules
+(D). Change OWD for leads to public edit
+
+
+NO.299 What is a true statement in regard to managing access to reports and dashboards?
+Choose 2 answers
+(A). Users with the "Manage Public Reports" permission can organize reports by creating custom
+report folders and sending invitations to users to access them.
+(B). Users must have certain permissions to access public, hidden, or shared folders.
+(C). Users with the "Manage Public Reports" and "Create and Customize Reports"permissions can
+create custom reports that all users canview.
+(D). Users that want to grant access to personal folders can manually share a personal folder with a
+user or publicgroup.
+
+
 
 
 
