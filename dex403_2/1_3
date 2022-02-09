@@ -9,7 +9,6 @@ What does an app builder need to have in the criteria to ensure the process runs
 (C). [Lead].Owner:Queue.OwnerId Is Null = True
 (D). NOT(ISBLANK([Lead].OwnerId))
 
-Answer: D
 
 NO.2 Universal containers is importing 1000 records into Salesforce. They want to avoid any
 duplicate records from being created during the import. How can these requirements be met?
@@ -21,7 +20,6 @@ Wizard and import the file.
 File, and run a mass delete to purge any duplicates.
 (D). After importing all of the custom objects, review all records created and manually merge or
 delete and duplicate record
-Answer: A   
 
 NO.3 What is a true statement regarding case assignment rules? (Choose 3 answers)
 (A). They allow cases to be assigned to a queue
@@ -29,4 +27,3 @@ NO.3 What is a true statement regarding case assignment rules? (Choose 3 answers
 (C). A predefined Case Team is mandatory for each rule entry
 (D). They allow for more than one rule entry for each assignment rule
 (E). Salesforce processes case assignment rules before workflow rules
-Answer: A,DE
