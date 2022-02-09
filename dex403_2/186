@@ -1,0 +1,178 @@
+오늘은 주로 테스트 코드 작성에 대한 교육을 들었다 
+한숨의 번벅이였지만 짜릿했다........ㅎ
+
+NO.186 Universal Containers wants to test code against a subnet of production data that is under 5
+GB, Additionally, Universal Containers wants to refresh this sandbox every weekend.
+Which type of sandbox should be used to accomplish this?
+(A). Full
+(B). Developer
+(C). Developer Pro
+(D). partial Copy
+
+소름! 단박에 테스트 코드에 대한 문제가 나오다니 !!!
+
+NO.187 What type of field can be used to filter a report chart that has been added to page Layout?
+(A). Formula field
+(B). Matching ID field
+(C). Standard field
+(D). Name field
+
+
+NO.188 The services manager wants to make sure the team enters case priority consistently.
+What feature can an app builder use to accomplish this?
+(A). Path
+(B). Flow
+(C). Next Best Action
+(D). In-App Guidance
+
+
+NO.189 At Universal Containers, the Account object has a Master-Detail relationship with an Invoice
+custom object. The App Builder would like to change to a lookup field, but is not able to do so. What
+could be causing this?
+(A). The invoice must have at least one Master-Detail field for reporting.
+(B). The Account record includes Invoice roll-up summary fields.
+(C). The Invoice records have existing values in the Account.
+(D). The Account is included in the workflow on the Invoice object.
+
+
+No 190 Uc has a customer base where many customers have the same or similar company names. which functionallity should be configured to improve an end user's search experience?
+(a) update the account search layouts view filtersettings
+(b) update the account search layouts search result columns displayed
+(c) update the account search  filter fields
+(d) update the account search  layouts accounts tab column displayed
+
+
+NO.191 What may occur if workflow rules are reevaluated after a field change by afield update?
+(A). A recursive loop potentially results in exceeding organizational limits.
+(B). Cross-object workflow rules result in re-evaluation after field change.
+(C). Workflow rules trigger validation rules on field updates.
+(D). Workflow rules trigger more workflow rules to be re-evaluated.
+
+
+
+NO.192 Universal Containers wants to its sales team to only see the accounts that they own.
+Separate Month American and Environment manufacturing teams should only see accounts in their
+respective regions. The Inside sales team needs to see all accounts in Salesforce.
+How should an app builder accomplish this?
+(A). Set the organization--Wide Default to publish for accounts. Create profiles for each Marketing
+Team, and create an inside Sales Team role that is at the top of the Role Hierarchy.
+(B). Set the Organization-Wide Default to private for accounts. Create permission setts for each
+Marketing Team, and create an Inside Sales team Profile with the ''View All'' setting for accounts.
+(C). Set the Organization Team profile Default to Private for accounts. Create criteria-based sharing
+rules for each Marketing Team. and create an inside Sales Team profile with the ''View All'' setting for
+accounts.
+(D). Set the Organization-wide Default to public for accounts. Create criteria-based sharing rules for
+each Marketing Team, and create an Inside Sales Team permission set with the ''View All'' Setting for
+accounting for accounts.
+(E). Set the Organization Team profile Default to Private for accounts. Create criteria-based sharing
+rules for each Marketing Team. and create an inside Sales Team profile with the ''View All'' setting for
+accounts.
+(F). Set the Organization-wide Default to public for accounts. Create criteria-based sharing rules for
+each Marketing Team, and create an Inside Sales Team permission set with the ''View All'' Setting for
+accounts.
+
+
+NO.193 Accounts at Universal Containers are currently readable by all users but editable only by
+their owners. Management wants to designate some Accounts as VIP Accounts. Only Account owners
+should have read access to these VIP accounts.
+Which two actions should an app builder take to meet the requirements?
+Choose 2 answers
+
+(A). Implement a sharing rule.
+(B). Configure a permission set.
+(C). Set up an Account Team.
+(D). Change organization-wide defaults
+
+
+NO.194 The appraisal team at DreamHouse Realty wants to leverage Salesforce mobile app.
+What are three things an app builder should do to optimize mobile experience?
+Choose 3 answers
+(A). Use Global Actions to make it easy to perform vital functionality on mobile.
+(B). Avoid using default field values so that the user is required to fill in all fields on the screen.
+(C). Minimize the amount of formula fields and lookup fields to reduce page load time.
+(D). Create individual customized layouts for different phone operating systems.
+(E). Put the most important fields in the compact layout so they are easy to find.
+
+NO.195 Universal Containers has a Lightning record page that supports both the mobile app and
+desktop. An app builder has downloaded a custom Lightning component from AppExchange, but
+users are unable to view the component on mobile devices.
+What can be the issue?
+(A). The record page needs to be activated.
+(B). The component has been developed for Desktop Pages.
+(C). The component needs to be activated.
+(D). The record page template is unable to support mobile devices.
+
+
+
+NO.196 What is a use case for approval processes? Choose 2 answers.
+(A). Approve expense reports automatically when less than $50.
+(B). Update the PTO record field with the user's manager.
+(C). Require the CFO to review the salary range for all job offers.
+(D). Ensure an opportunity that has at least one product added
+
+
+NO.197 At Universal containers, all US Sales reps should be able to view the US Team dashboard,
+however, only the US sales directors should be able to see the data in the component and view its
+source report. How can an app builder ensure the proper access is granted?
+(A). Make the US Sales Director the running user and share the dashboard folder with the role US
+Sales Rep
+(B). Make the dashboard dynamic and give US Sales Reps the view my teams dashboard permission
+(C). Share the dashboard folder with roles and subordinates of the US Sales Director and share the
+report folder with the role of US Sales Director
+(D). Share the dashboard with the public group US Sales Reps and share the dashboard source
+reports folder with the US Sales Director profile
+
+NO.198 Universal Containers has a junction object called Invoices with a primary Master-Detail
+relationship with Accounts and a secondary Master-Detail relationship with Contacts. The app builder
+has a requirement to change the primary Master-Detail relationship to Lookup.
+What happens to the Master-Detail relationship with Contacts?
+(A). The Contacts Master-Detail values are cleared from invoices.
+(B). The Contacts Master-Detail also converts to Lookup.
+(C). The Contacts Master-Detail field is deleted from the object.
+(D). The Contacts Master-Detail becomes the primary.
+
+
+NO.199 Which setting is available to customize Salesforce1 mobile app for branding? Choose 3
+answers
+(A). Header and search bar color.
+(B). The image on loading page
+(C). Background color on loading page.
+(D). Notification and search icon
+(E). Action bar color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
