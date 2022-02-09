@@ -725,6 +725,118 @@ the App Builder to accomplish this with the fewest fields possible?
 
 
 
+NO.200 DreamHouse Realty (DR) is expanding into subsidized housing by partnering with local
+government entitles. DR uses Sales Cloud and has enabled field history tracking on the Opportunity
+object. Due to increased Information requirements, the App Dev team is changing Text Area (Long)
+fields to Rich Text fields to allow for up to 1,000 characters and better descriptions.
+Which two considerations should be made by the team?
+Choose 2 answers
+(a) rich text field values of all length are displayed fully in reports
+(b) data loss may occur when changing custom field types
+(c) field history trankcing records value changes of 255 characters or less
+(d) audit trail is available REST API extracsts
+
+NO.201 Ursa Major Solar's sales team has been struggling to enter data on mobile since rollout; the
+team dislikes scrolling through all of the fields to input only the necessary data.
+How could the app builder solve this with minimal impact to desktop users?
+(A). Filter components by device using Form Factor.
+(B). Reorder the fields to make sense for the reps when in the field.
+(C). Update the training documentation with better screenshots.
+(D). Deselect the phone radio button on the Lightning record page assignment.
+
+
+NO.202 universal containers is migrating its sales operations from a legacy system that was used.
+opportunities need to be imported with the proper country currency. Which two steps should an app
+builder configure to meet these requirements ?
+Choose 2 answers.
+(A). Include the currency ISO code in all currency fields in the import file.
+(B). Use Data Loader to import the records.
+(C). Include the currency ISO Code Column in the import file.
+(D). Use import the currency ISO Code Column in the import file.
+(E). Use Import Wizard to import the records
+
+
+NO.203 UC has a requirement that an opportunity should have a field showing the value of its
+associated account's billing state. This value should not change after the opportunity has been
+created. Is there a recommended solution to configure this automated behavior?
+(A). Formula field
+(B). Apex
+(C). Workflow
+(D). Roll-up summary field
+
+
+
+NO.206 Northern Trail Outfitters uses a custom object to track travel requests. Rangers want to
+have automatic posts on a record whenever a travel request has been approved.
+Which feature should be used to accomplish this?
+(A). Auto-response rule
+(B). Workflow rule
+(C). Feed tracking
+(D). Feed quick action
+automatically post !! 
+
+
+NO.207 Universal Containers's app builder has been tasked with replacing workflow rules and Apex
+triggers with Process Builders where possible.
+What are two important considerations an app builder should know before the project is started?
+Choose 2 answers
+(A). Avoid generating infinite loops.
+(B). Apex has a different SOQL query limit than Flow.
+(C). Create a process for each workflow rule.
+(D). Combine actions when possible.
+
+
+NO.208 Ann app builder has been to display an overdue date that is two months after a tasks due
+date. Which approach should the app builder take?
+(A). Use process builder and set overdue date equal to DueDate + ((365/12)*2)
+(B). Create a formula field using DueDate + 60
+(C). Use process builder and set overdue Date equal to DueDate + 60
+(D). Create a formula field using the ADDMONTHS () function
+
+
+NO.209 Universal Container installs an unmanaged package. Which of the following are true:
+(choose 2)
+(A). Unmanaged packages can be upgraded
+(B). Unmanaged packages don't have a version number
+(C). Tests are executed during deployment
+(D). Unmanaged packages have a namespace prefix
+(E). Components of unmanaged packages can be edited
+
+
+NO.210 What metadata changes can be made directly in a production environment without
+deploying from sandbox? Choose 2 answer
+
+(a) apex trrigers
+(b) visualforce pages
+(c) validation rules
+(d) apex classes
+
+NO.211 Universal Containers wants to streamline its data capture process by linking fields together.
+They wish to do this so that the available value on dependents fields are driven by value selected on
+controlling fields. Which consideration supports the stated requirements? Choose 3 answers
+(A). The import wizard only allows value to be imported into a dependent picklist if they match the
+appropriate controlling field
+(B). Custom picklist field can be either controlling or dependent field
+(C). Multi select picklist can be dependent picklist but not controlling fields
+(D). Standard and custom picklist fields can be dependent fields.
+(E). Checkbox fields can be controlling fields but not dependent fields
+
+NO.212 Universal Containers introduces a custom object called Service, which has a lookup to
+Account. Field enter Service using the Salesforce1 mobile app. Operators create new Service records
+when viewing Account name which needs to automatically display the current Account. How can this
+be accomplished?
+(A). Create an action in the Service object and add it to the Account page layout
+(B). Create an action in the Service object and add it to the Service page layout
+(C). Create an action in the Account object and add it to the Service page layout.
+(D). Create an action in the Account object and add it to the Account page layout
+
+NO.213 Cloud Kicks (CK) switched to Lightning Experience and started using Chatter across its global
+workforce to support its fast-paced sales cycle. CK loves Chatter but struggle with gathering feedback
+from core team members, including understanding who is available to respond.
+Which two ways could CK use Chatter to solve this problem?
+
+
+
 
 
 
