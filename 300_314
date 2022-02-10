@@ -1,0 +1,176 @@
+NO.300 Universal containers uses a private Account sharing model. They have a Process
+Improvement team with representatives from multiple departments that need s to view all accounts
+that have been flagged as problem accounts. How should this team be granted access to the records?
+
+(A) User a record owner sharing rule that is shared with process improvement public group
+(B) Write a trigger to use apex managed sharing to grant access with the process improvement team
+(c) use a criteria based sharing rule where the account are shared with the process improvement team.
+(d) use a record owner sharing that is shared with the process improvement role
+(e) option 5
+
+NO.301 Universal Containers has created the custom objects Candidate and Interview in Salesforce
+to track candidates and interviews respectively. The company wants to track the total number of
+interviews a candidate has gone through on the candidate record without writing any code. How can
+app builder accomplish this requirements? Choose 2 answers
+(A). Use a roll-up summary field on the candidate record to show the total number of interviews.
+(B). Use a master-detail relationship between the Candidate and the Interview objects.
+(C). Use a lookup relationship between the Candidate and Interview objects
+(D). Use a formula field on the candidate record to show the total number of interviews
+
+NO.302 What should an app builder do to upgrade an unmanaged package that has been installed
+into production?
+(A). Uninstall the current version and install the new version.
+(B). Install the new version to a Developer org then deploy to production.
+(C). Click the update link on the Installed Packages page.
+(D). Install the new version in a sandbox then deploy to production
+
+
+NO.303 Need to change ownership when field of custom object changed.
+(A). Apex trigger
+(B). Assignment Rule
+(C). Validation Rule
+(D). Visual Workflow
+
+NO.175 Where can a custom button be placed? Choose 3 answers
+(A). On the User Object
+(B). On the Custom List View
+(C). On a Person Account
+(D). On a related list
+
+NO.304 Where custom buttons can be placed? (Choose 3)
+(A). Web to case
+(B). Record page
+(C). Personal account
+(D). Related object
+
+
+NO.305 Universal Containers wants to build a recruiting app that allows for multiple positions to
+appear on custom objects websites and postings. UC requires a report that shows the related custom
+objects of postings. Which two items should an app builder configure to implement this?
+(A). Utilize the standard report type
+(B). Create two new custom report type
+(C). Configure a postings object with master detail field to both positions and websites
+D). Configure a postings object with lookup field to both positions and websites
+
+NO.306 What is the capability of schema Builder? Choose 2 Answers
+(A). Showing selected objects on the page.
+(B). Editing custom settings
+(C). Viewing page layout in a new window
+(D). Creating a new record type
+
+NO.162 What is a capability of schema builder? (Select 2)
+(A). To update descriptions of standard and custom objects
+(B). To modify custom field help text on standard objects
+(C). To enable field history tracking on standard objects
+(D). To create new lookup or master-detail object relationships
+
+NO.171 What are the limitations of Schema Builder when creating a custom object?
+(A). "Save" should be clicked each time a new object, field, or relationship is created.
+(B). Fields and relationships can be created, but they will be unable to add the fields to the page
+layout from the canvas.
+(C). Relationships can be made to any custom objects, but any relationships to standard objects
+should be built in Lightning Object Manager.
+(D). Custom fields can be added to any custom objects, excluding formula field types
+
+NO.307 Universal Container wants to display a message when a case needs follow up. What can be
+used to display different text on the case record depending on the number of days a case is opened?
+(A). Formula Field
+(B). Workflow Update
+(C). Case Process
+(D). Lightning Process Builder
+NO.308 What is true statement regarding master - detail relationship? Choose 3 answers
+(A). A master-detail relationship cannot be created if the custom object on the detail side already
+contains data.
+(B). A master - detail relationship cannot be converted to a look-up relationship
+(C). Deleting a master record in a master detail relationship deletes all related detail records
+(D). Standard objects can be on the detail side of the custom object in a master-detail relationship
+(E). Master-detail relationship can convert to a look -up relationship if no roll-up summary field exist
+
+
+NO.309 A recently refreshed partial sandbox at Cloud Kicks has no data In the custom object
+Shipping. Checking In production, there are two million rows of data in the object.
+What could be the reason the data Is missing?
+(A). The sandbox was refreshed too early.
+(B). The selected objects in the sandbox template.
+(C). The Partial sandbox is at capacity.
+(D). The sandbox is still populating data.
+
+
+NO.310 Universal Containers wants to track installation information once it container has been
+purchased on a custom object. Sales reps should have visibility of all the installation with their
+opportunities.
+visibility of all the installations associated with their opportunities.
+What kind of relationship should this new object have to the Opportunity?
+(a)look up
+(b) hierachical
+(c) master detail
+(d) many to many
+
+
+NO.311 Cloud Kicks (CK) tracks the support level of its customers on the account record page. CK
+wants to show a text notification on a case record page when the related account is a platinum-level
+customer.
+How could an app builder meet this requirement?
+(A). Add a rich text area to the Case Lighting page > Set the component visibility of the rich text area
+to show when the account support level is platinum.
+(B). Create a text-only Visualforce page > Drag the Visualforce component into the Case page layout >
+Set its visibility to show when the account support level is platinum.
+(C). Create a text-only Visualforce page > Clone the case page layout > Drag the Visualforce
+component into the page, and assign the layout to platinum cases.
+(D). Clone the Case Lightning page > Add a rich text area to the new page, and assign this page to
+platinum accounts.
+
+
+NO.312 An app builder wants to deploy a new version of an auto launched flow production in an
+active state so that the new functionality is immediately available to users.
+What should the app builder take into consideration when planning the deployment?
+(A). Verify there is an apex test that provides test coverage for the flow
+(B). Include the profile that access the flow in the deployment
+(C). Verify there is a static resource that provides test coverage for the flow
+(D). Include the process builder calling the flow in the deployment
+
+
+NO.313 Cloud Kicks has a sales rep who is stating that their Contact is unavailable for other users to
+see within Salesforce.
+In which three ways can an app builder troubleshoot this issue?
+Choose 3 answers
+(A). Create an Account Sharing Rule to give the users access to all records.
+(B). Confirm whether Default Organization-Wide Sharing Settings provide access to the Account.
+(C). Review the Contact record and ensure it is linked to an Account.
+(D). Verify the users with the issue have access to the Contact object. D.
+(E). Create a new Contact and have the users try again.
+
+NO.314 For which report types custom summary formulas are available? (Choose 3)
+(A). Joined
+(B). Summary
+(C). Tabular
+(D). Matrix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
