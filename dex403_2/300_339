@@ -398,23 +398,822 @@ rule with a field update that sets the Industry field to Technology whenever the
 to San Francisco. What will happen the next time a sales person saves an Account with a Billing City
 of San Francisco?
 
+NO.342 What data type can be used to summarize roll-up summary. (Choose 3)
+(A). Date
+(B). Formula
+(C). Percent
+(D). Number
+(E). Currency
+percent number, currency
+
+NO.62 An app builder wants to streamline the user experience by reflecting summarized calculation
+of specific fields on various objects.
+Which three fields types should be used in roll-up summary fields to accomplish this?
+Choose 3 answer
+(A). Percent
+(B). Checkbox
+(C). Currency
+(D). Date
+(E). Time
+
+percent, currency, date
+
+NO.168  An app builder would like to streamline the user experience by reflecting summarized
+calculations of specific fields on various objects. Which field types could be used in roll-up summary
+fields to accomplish this? Choose 3 answers
+(A). Currency
+(B). Percent
+(C). Date
+(D). Checkbox
+(E). Time
+percent, currency, date
+
+NO.421 Which two field types can be referenced by a Roll-Up Summary field using MIN or MAX?
+Choose 2 answers
+(A). Date/time
+(B). Formula
+(C). Checkbox
+(D). Percent
+
+percent, date/time
 
 
 
+NO.254 Which three field types should be referenced by a roll-up summary field using SUM? Choose
+3 answers
+(A). Percent
+(B). Number
+(C). Date
+(D). Formula
+(E). Currency
+
+percent, currency, number
+
+NO.104 What type of field can be referenced by a Roll-up Summary field using SUM? Choose 3
+answers
+(A). Formula
+(B). Currency
+(C). Number
+(D). Percent
+(E). Date
+
+percent, currency, number
+
+
+NO.343 What can be done after workflow field re-evaluation?
+(A). Option 1
+(B). Invalid data
+(C). Trigger another rule
+(D). Out of hour limit (loop)
 
 
 
+NO.344 An app builder needs to deploy a new account detail page layout from sandbox to
+production.
+Which three components should an app builder include in the Change Set to ensure it deploys
+successfully and visually as expected?
+Choose 3 answers
+(A). Detail page layout
+(B). Custom fields
+(C). Custom actions
+(D). Lightning App Builder
+(E). System administrator profile
+
+NO.345 What may occur if workflow rules are re-evaluated after a field change by a field update?
+Choose 2 answers
+(A). Cross-object workflow rules result in re-evaluation after field change.
+(B). Workflow rules trigger validation rules on field updates
+(C). Workflow rules trigger more workflow rules to be re-evaluated.
+(D). A recursive loop potentially results in exceeding organizational limits.
 
 
 
+NO.346 SERVICE AGENTS ARE REQUIRED TO CONFIRM A USER IDENTITY BEFORE PROVIDING
+SUPPORT INFORMATION OVER THE PHONE. WHAT FEATURE CAN AN APP BUILDER USE TO HELP
+AGENTS MEET THIS REQUIREMENT?
+(A). Include Surveys as a Case related list
+(B). Case Validation Rules
+(C). Add Path to the top of the Case layout
+(D). Guided Action Flows on the record page
+
+
+NO.347 An app builder wants to limit the amount of fields users are required to fill out when
+creating a new Opportunity. Once they fill out the required fields and save, the full record page with
+additional fields relevant to the Opportunity type becomes available.
+How could this be accomplished?
+(A). Make the Opportunity type a required field on the initial Opportunity page layout and use
+automation to fill in the type field to a record type.
+(B). Use different page layouts for Opportunity types based on the user profile.
+(C). Once the required fields are populated, use a sharing rule to share the new fields with the user.
+(D). Hide additional sections on the page layout and show the users how to manually expand them
+when they want to fill in the fields in the hidden sections.
+
+NO.348 Cloud Kicks is redefining its entire business process to convert the Manager Notes field from
+a long text area field. The goal is to encourage managers to be more concise in their comments and
+stay at 255 characters or less. There is preexisting information in the Manager Notes field that often
+s well beyond the character limit.
+What would happen to any existing information if the app builder tries to convert a preexisting long
+text area field to text area?
+(A). Preexisting information will truncate to the first 255 characters.
+(B). Preexisting information will remain even if it was over 255 characters.
+(C). Preexisting information will cause a- e-r0- -essace to poo up.
+(D). Preexisting information in the field will be completely lost
+
+NO.349 Which use case can be accomplished using a custom link?(Select 3)
+(A). To create a custom visual flow
+(B). Navigate to Apex trigger
+(C). To create a record page
+(D). To a process to update current record
+(E). To external system using data of salesforce
+
+
+NO.350 To increase adoption, Universal Containers is proposing changes to its Salesforce data
+model to allow easier visibility for sales reps into key metrics. The proposal has three custom objects
+related to the Account object, one with a master-detail, and two that are not. Each of these objects
+has 15 fields they would like to summarize on the Account object.
+What are two considerations for this proposal?
+Choose 2 answers
+(a) roll-up summaries allows MAX, Min Sum, Count and AVG
+(b) an object can have 20 object reference.
+(c) an object can have 25 roll-up summaries
+(d) roll-up summaries are limited to master-detail relationships.
+
+
+NO.352 Which statement is true about an external id field? Choose 2 answers
+(A). The field must be unique since duplicates are not allowed within salesforce
+(B). The field can be unique based on case-sensitive or case-insensitive values.
+(C). The field must contain at least one number and at least one letter
+(D). The field contains unique records identifiers from a system outside of salesforc
+
+NO.353 Which two statements are true about record types? Choose two answers
+(A). They can be used to control user role hierarchy
+(B). They allow different picklist values for all picklist fields
+(C). They allow different page layouts and mandatory fields
+(D). They can be enabled by profile and permission set
+
+
+NO.354 At UVC, multiple departments utilize the Case object for different purposes. Some users
+submit cases while other users provide customer support with case records. What is the minimum
+required configuration for an App Builder to enable different users to see different fields, based on
+the case type?
+(A). Record Types, Page Layouts, Case Teams and Profiles
+(B). Record Types, Page Layouts, Field Sets and Profiles
+(C). Record Types, Page Layouts, Support Process and Profiles
+(D). Record Types, Page Layouts, Permission Sets and Profiles
+
+NO.355 UVC has created the custom objects Candidate and Interview in Salesforce to track
+candidates and interviews respectively. The company wants to track the total number of interviews a
+candidate has gone through on the candidate record without writing any code. Which two actions
+can an App Builder take to accomplish this requirement? Choose 2 answers
+(A). Use a formula field on the Candidate record to show the total number of interviews
+(B). Use a lookup relationship between the Candidate and Interview objects (Your Answer)
+(C). Use a MD relationship between the Candidate and Interview Objects
+(D). Use a roll-up summary field on the Candidate record to show the total number of interviews
 
 
 
+NO.356 A custom field on an account is used to track finance information about a customer. Only
+members of the Finance Team have access to this field. However, the business wants to allow one
+customer service agent, who is assigned the customer service profile, read-only access to this field for
+special circumstances. What is the recommended solution to grant the customer service agent access
+to the field?
+(A). Create a permission set that allows read-only access to the field via Field Level Security and
+assign it to the agent.
+(B). Create a new profile to allow for read-only access to the field via Field Level Security and assign it
+to the agent
+(C). Update the Customer Service Profile already assigned to the agent to allow for read-only access
+to the field via Field Level Security
+(D). Update the custom field's Field Level Security in setup to allow the agent read-only access to the
+field.
+
+
+NO.357 Which two features can be used to allow users to access flows. Choose 2 answers?
+(A). Invoked by a process
+(B). Custom button
+(C). Quick action
+(D). Flow launcher
+
+
+NO.358 How should an app builder configure access to a contact's Twitter profile for Salesforce
+mobile app users?
+(A). Add a formula field to the Contact page layout.
+(B). Add an AppExchange Lightning Component to the mobile app.
+(C). Add the Twitter component to mobile view Lightning pages.
+(D). Add a Twitter Quick Action to the mobile navigation.
+
+NO.359 An app builder needs to create new automation on an object.
+What best practice should the app builder follow when building out automation7
+(A). One Workflow rule per object.
+(B). One Flow per object.
+(C). One invocable process per object.
+(D). One record change process per objec
+
+
+NO.360 What is a use case for validation rules?
+(a) prevent non-managers from joining a private Chatter gorup
+(b) Restric partner Lead visibility to the channel sales team
+(c) Ensure zip/postal codes are entered in the correct format
+(d) Preven deals with less than 10% discount from entering an approval process
+
+
+NO.361 Universal Containers created a custom object called Component to capture details about
+products sold.
+What approach should an app builder take to show Component as a related list on Product?
+(A). Create a master-detail relationship on Product to Component. Add the Component related list to
+the Product page layout.
+(B). Create a junction object to relate Component and Product. Add the Component related list to the
+Product page layout.
+(C). Create a roll-up on Product. Add the Component related list to the Product page layout.
+(D). Create a lookup relationship on Component to Product. Add the Component related list to the
+Product page layout.
+
+NO.361 Universal Containers created a custom object called Component to capture details about
+products sold.
+What approach should an app builder take to show Component as a related list on Product?
+(A). Create a master-detail relationship on Product to Component. Add the Component related list to
+the Product page layout.
+(B). Create a junction object to relate Component and Product. Add the Component related list to the
+Product page layout.
+(C). Create a roll-up on Product. Add the Component related list to the Product page layout.
+(D). Create a lookup relationship on Component to Product. Add the Component related list to the
+Product page layout.
+
+NO.362 Universal Containers wants sales reps to get permission from their managers before
+deleting Opportunities, What can be used to meet these requirements?
+(A). Process Builder with Submit for Approval action.
+(B). Approval Process with a triggered Flow process.
+(C). Approval Process with Time-Dependent Workflow action.
+(D). Two-step Approval Process.
+
+
+NO.363 What are two reason to create an unmanaged package? Choose 2 answers
+(A). Distributing open-source projects on the AppExchange.
+(B). Publishing an application for sale on the AppExchange
+(C). Deploying from a Developer Edition environment
+(D). Distributing upgradeable components to other Salesforce org
+
+NO.365 UVC wants their Field Sales team to only see the accounts that they own. Separate North
+American and European marketing teams should only see accounts in their respective regions. The
+Inside Sales Team needs to see all accounts in Salesforce. How can this be accomplished?
+(A). Set the OWD to Public for all accounts. Create criteria-based sharing rules for each Marketing
+Team, and create an Inside Sales Team permission set with the "View All" settings for accounts
+(B). Set the OWD to Private for accounts. Create permission sets for each Marketing team, and create
+an Inside Sales team profile with the "View All" setting for accounts
+(C). Set the OWD to Private for all accounts. Create Criteria-based sharing rules for each Marketing
+Team, and create an Inside Sales Team Profile with the "View All" setting for accounts
+(D). Set the OWD to Public for accounts. Create profiles for each Marketing team, and create an
+Inside Sales Team role that is at the top of the Role Hierarchy
+
+
+NO.366 Universal Containers has a requirement that an Opportunity should have a field showing the
+value of its associated account's billing state. This value should not change after the Opportunity has
+been created. What is the recommended solution to configure this automation behavior?
+(A). Formula Field
+(B). Workflow
+(C). Roll-up-summary field
+(D). Apex
+
+
+NO.367 Which values must be defined when creating a new Opportunity stage? Choose 3
+(A). Probability
+(B). Type
+(C). Forecast category
+(D). Close date
+(E). Amount
+
+NO.368 What Is true statement regarding roll up summary fields. Select 2.
+(A). Roll up summary fields can only be created on the master of master-detail relationship
+(B). The roll up summary field inherits the field level security of the child object.
+(C). Multi select picklist files can be used in the field column of the field column of roll up summary
+filters.
+(D). Changes to the value of a roll up summary field can trigger assignment rules to run
+
+
+NO.369 Universal Containers has purchased a Lightning Component on the Apple exchange.
+In which two areas should Components be utilized?
+(A). Salesforce Mobile App
+(B). Flow Builder
+(C). Process Builder
+(D). Standalone Lightning App
+
+
+NO.370 A custom field contains a feedback score which is on a scale of one to five. Endusers would
+like a visual indicator of one to five stars based on the number found inthe feedback score customer
+field
+(a) use a custom image
+(b) number
+(c) formula
+(d) text
 
 
 
+NO.371 Universal Containers wants some enhancements on its Opportunity page layout to improve
+efficiency and collaboration.
+Which two solutions should an app builder suggest to help meet these requirements?
+Choose 2 answers
+(A). Mark stage dependent fields as required on the Opportunity page layout.
+(B). Use two Tabs components to separate record information from activities.
+(C). Add a Path component with fields and instructions aligning to stages on the Opportunity.
+(D). Set up an approval process requiring manager consent at each stage of the Opportunity
+
+
+NO.372 An app builder wants to create a formula field on an Account to include data from related
+Contacts but is unable to find the relationship in the formula editor.
+What is a limitation of formulas that could be causing the issue?
+(A). Unable to reference the child records.
+(B). A master-detail relationship should be created.
+(C). Formula field limit reached on the Account object.
+(D). More than 5,000 characters in the formula.
+
+NO.373 Universal Containers wants to understand return on investment for the latest advertising
+buy. They currently use a private security model for all objects.
+What should an app builder recommend?
+(A). Utilize Account Hierarchies and Roil-Up Summary fields
+(B). Run an opportunities pipeline report
+(C). Change to a public security model
+(D). Configure Campaign Hierarchies and Campaign statistics
+
+NO.374 Universal Containers wants users to have access to the pricing guidelines document when
+viewing a Contract related to an Account.
+What feature should an app builder use to create easy access to the document?
+(A). Quick Action on the Contracts object
+(B). Quick Action on the Account object
+(C). A custom detail page link on the Account object
+(D). A custom detail page link on the Contract object
+
+NO.375 Universal Containers has Public Read/Write as the Account organization-wide default
+(OWD) setting. Visitors to the customer community site report that they can see all of the company's
+account records.
+How should an app builder configure Account sharing so that community users only see their own
+Account?
+(A). Create an account record type for external accounts.
+(B). Define an owner-based sharing rule for external accounts.
+(C). Define a permission set for external accounts.
+(D). Set the account external OWD to private.
+
+NO.376 At UVC, the Account object has a MD relationship with an Invoice custom object. The app
+builder would like to change this to a lookup field, but is not able to do so. What could be causing
+this?
+(A). The Account is included in the workflow on the Invoice Object
+(B). The invoice records have existing values in the Account
+(C). The Account record includes invoice roll-up summary fields
+(D). The Invoice must have at least one MD field for reporting
+
+
+NO.377 An app builder notices several Accounts converted from Leads are missing information they
+expected to be caught via Account validation rules.
+What could be the source of this issue?
+(A). The lead settings are unchecked to require validation for converted leads.
+(B). Account validation rules fail to validate on records converted from a lead.
+(C). The lead settings are allowing users to intentionally bypass validation rules.
+(D). Lead validation rules fail to validate on records when they are being converted.
 
 
 
+NO.378 UVC wants to automate a business process using workflow. They are aware that workflow
+rules may cause recursive behavior, and as a result certain actions will only cause workflow rules that
+didn't fire previously to be retriggered. Which workflow action might cause this behavior?
+(A). Workflow Outbound messages with the "Protected Component" field selected
+(B). Workflow Field Updates with the "Re-evaluate Workflow Rules After Field Changes" field selected
+(C). Workflow Emails containing hard coded links with Salesforce IDs referencing specific workflow
+rules
+(D). Workflow Tasks where the "Due Date" field is set to "Rule Trigger Date" minus X days
 
 
+
+NO.379 Universal Containers uses a custom picklist field Account Region on the account record.
+They want this region to be reflected on all related contact records and stay in sync if the value of this
+field changes on the Account.
+How should an app builder meet this requirement?
+(A). Create a picklist field called 'Account Region' on Contact object > Create a workflow rule to
+update this picklist field if the Account Region field on the Account is changed.
+(B). Create a formula field on the Contact object > Set the value of the formula to
+ISPICKVAL(Account.Account_Region__c).
+(C). Create a formula field on the Contact object > Set the value of the formula to
+TEXT(Account.Account_Region__c).
+(D). Create a text field called 'Account Region' on Contact object > Create a workflow rule to update
+this picklist field if the Account Region field on the Account is changed.
+
+
+NO.380 The VP of account management at Universal Containers has requested that all contacts
+mailing postal codes match the associated accounts shipping postal code. How can this be enforced
+using validation rules?
+(a) create a validatiob rule using the distance() function
+(b) create a validatiob rule using compare operator
+(c) create a validatiob rule using the geolocation() function
+(d) create a validatiob rule using a not equal operator
+
+
+NO.382 The VP of sales requested that Account Site Information should be visible on an Opportunity
+record. What is the recommended salutation to meet this requirement?
+(A). Workflow Rule
+(B). Cross-Object Formula Field
+(C). Process Builder
+(D). Roll-Up Summary Field
+
+
+NO.383 Cloud Kicks (CK) wants to begin socializing and collaborating within Salesforce around
+customer accounts to discuss various topics. CK would like all company employees to see these
+conversations.
+Which two features of Chatter would meet CK's business needs?
+Choose 2 answers
+(A). Set up new private Chatter groups.
+(B). Set up new public Chatter groups.
+(C). Use post action on the Account object.
+(D). Use Chatter actions to create tasks to complete
+
+NO.384 What is true regarding compact layouts? Choose 2 answers.
+(A). If a user doesn't have access to a field it won't be displayed
+(B). Compact layouts can be assigned to different record types
+(C). Compact layouts support all field types
+(D). Compact layouts must be configured for fields to be displayed in the record header
+
+
+NO.385 Universal Containers (UC) has large data volumes and is nearing data storage limits. The
+planned solution is to archive historical data to reduce data storage in Salesforce; however, UC would
+still like to use reports, queries, and lookups on the archived information.
+Which two options could meet this requirement?
+Choose 2 answers
+(A). Big objects
+(B). Custom objects
+(C). Related objects
+(D). External objects
+
+NO.386 Universal containers allows users to create standard reports on demand. What are two
+considerations users should be aware of when creating a new report?
+(A). Reports created from standard report types are available to all users
+(B). The report type determines the types of records and fields that will be available
+(C). Users can require that child objects exist for parent records using a cross filter
+(D). Records will be available in the in the report regardless of security permissions
+
+
+NO.387 The VP of Sales at Universal Containers has requested that Sales reps be given access to
+view all Accounts in Salesforce. However, they've also requested that sales reps only be allowed to
+create new Opportunities on Accounts they own. How can this requirement be met?
+(A). Create an Opportunity Validation Rule that compares the Opportunity and Account Owners
+(B). Create a new Opportunity Quick Action that validates Account ownership.
+(C). Set the Organization-Wide Defaults sharing on Opportunities to Private and recalculate sharing.
+(D). Set the Organization-Wide Defaults sharing on Opportunities to Controlled by Parent
+
+NO.388 A custom object has a public reads only sharing settings that does not grant access using
+hierarchies. A dynamic sharing rule provides write access to the object to the global marketing public
+group if the record is marked as global. A user creates a new record and marks it as global. Who will
+have write access to the record?
+(A). The global marketing public group and anyone above the owner in the role hierarchy
+(B). The record owner and the global marketing public group.
+(C). The global marketing public group, the record owner, and anyone above the owner in the role
+hierarchy.
+(D). The record owner and anyone above the owner in the role hierarchy
+
+NO.389 A workflow has been written to update the 'Stage' field on opps. What will be the impact of
+this field update?
+(A). Type fields on opp
+(B). Forecast field on opp
+(C). No Impact
+(D). Both A&B
+
+NO.390 Which is correctly referencing a field on the Force.com custom object Position__c?
+
+(A) {!Position__c.Status__c }
+(b} [!Position__c.Status__c]
+(c) {&!Position__c.Status__c}
+(d) [&!Position__c.Status__c]
+
+
+NO.391 Universal Containers provide access to Salesforce for their sales, service and marketing
+teams. Management wants to ensure that when user login, their home tab provides access to links
+and documentation that are specifically relevant to their job function. How can this requirement be
+met?
+(A). Create separate home page custom components and layouts; assign to user by role.
+(B). Expose specific elements within a home page custom component determined by profile.
+(C). Create separate home page custom components and layouts; assign to user by profile.
+(D). Expose specific elements within a home page custom component determined by role.
+
+NO.392 universal containers has several large customers that sell their products through dealers.
+Each customer and dealer has an individual rep who works directly with uc and each is billed
+separately. How can an app builder implement these requirements?
+(A). Create a single account record, add each rep as a contact and create a custom dealer object
+(B). Create both customer and dealer as accounts, add each rep as a contact on the correspondingaccount and create an account hierarchy.
+(C). Create a single parent record, add each rep as a contact to the parent account and add each
+dealer as a child record
+(D). Create both customer and dealer as accounts, create account teams on each account and
+associate the dealer records with the parent account.
+
+
+NO.393 Describe the ramifications of field updates and potential for recursion for the following
+scenario: If a field update for Rule1 triggers Rule2, and a field update for Rule2 triggers Rule1
+(A). When the second trigger is saved a Imminent Loop Error message will be displayed and the
+workflow rule update will not save
+(B). Loop is allowed to run 25 times within one hour. If it does not end on its own the process will be
+stopped by R&D
+(C). The updates create a loop and the org limits for workflow time triggers per hour will likely be
+violated
+(D). The updates create a loop and the org be blocked until the admin resolves the issue
+
+
+NO.394 Universal Containers has created two custom objects called Seminars and Attendees.
+Organization-wide defaults for those objects have been set to private. Universal Containers wants to
+set up a new junction object between these objects. A select group of users should be able to edit
+records in the junction object.
+Which two steps should an app builder take to configure the proper security?
+(A). Create an owner-based sharing rule that gives Read access to the junction object.
+(B). Set Sharing Settings to Read Only on both master-detail relationship fields.
+(C). Set lookup filters on both junction object relationship fields.
+(D). Create owner-based sharing rules that give Read access to the master objects.
+
+NO.395 The app builder at UVC has been asked to ensure that the amount field ispopulated when
+the stage is set to closed won. What can be used to meet this requirement?
+(A). Workflow
+(B). Lighting process builder
+(C). Approval process
+(D). Validation rule
+
+NO.396 Universal Containers needs the ability to generate contract documents. All the data
+required for a contract resides in a custom object. What is the recommended solutions?
+(A). Enable the contract feature and create a custom Contract template based on the Standard
+template.
+(B). Store a template in the static resources and configure the Action Link Template to use it.
+(C). Create the HTML template for contracts and store it in the Public Folder.
+(D). Select and install an AppExchange product to meet the contract generation needs
+
+NO.397 Actions on a Lightning Page allow you to do which of the following?
+(A). Clone records, add users, and assign permissions.
+(B). Send email, send outbound messages, and launch a flow.
+(C). Send email and delete or clone records.
+(D). Send email, create a task, and create or update records
+
+
+NO.398 Person Accounts Choose 2 answers
+(A). Can only be merged with other person accounts
+(B). Are enabled by default
+(C). Have the same icon as Business accounts
+(D). Do use space in both account and contacts table
+(E). Are enabled via feature license
+
+
+NO.399 Which report types may be used with Analytic Snapshots?(2)
+(A). Summary
+(B). Joined
+(C). Matrix
+(D). Tabular
+
+NO.400
+(A) navigate to an external system using data in salesforce
+(b) navigate to custom visual flow to update the current record
+(c) navigate to a process to update the current record
+(d) navigate to a create a record page with field pre-populated
+(e) navigate to an apex trigger to update the current record
+
+NO.349 Which use case can be accomplished using a custom link?(Select 3)
+(A). To create a custom visual flow
+(B). Navigate to Apex trigger
+(C). To create a record page
+(D). To a process to update current record
+(E). To external system using data of salesforc
+
+NO.401 When do you refresh a Sandbox?
+(A). After a major update
+(B). Before UAT
+(C). When a Production user is added
+(D). Option 4
+
+
+NO.402 What is true regarding the user interface for external object data? Choose 1 answer.
+(A). External object data can be accessed via lists views
+(B). External object data can be accessed via custom tabs
+(C). External object data can be accessed via detail pages
+(D). Chatter Feeds can be enabled on external object pages
+(E). All of the above
+
+
+NO.403 UVC needs to flag leads with one or more business areas. They need to add a field to
+capture these to the Lead Record. There is no need to report on this field. What is the appropriate
+field type?
+(A). Text Area
+(B). Radio Buttons (Multi-select)
+(C). Picklist (Multi-Select)
+(D). Picklist
+
+NO.404 Cloud Kicks has created a custom object called Interests which is joined to Accounts by way
+of a junction object called Account Interest.
+What is the impact to users attempting to view an Account and the associated Account Interest
+records if they are without read access to the Interest object?
+(A). Users will be able to view the Account Interest records and will have read-only access to the
+Interest records.
+(B). Users will be unable to view Account records that have a related Account Interest record.
+(C). Users will be unable to view the Account Interest records or the Interest records.
+(D). Users will be able to view the Account Interest record, but unable to view the field or any
+information relating back to the Interest record
+
+
+NO.405 In a real estate app, if a listing is sold, all related inspections for the listing must be
+cancelled. What business logic feature best caters to this requirement? Choose 1 answer.
+(A). Use a trigger to update the status of the related inspection records when the listing status is
+updated
+(B). Use Process Builder to define a process action to update related records based on the listing
+status change
+(C). Use Visual Workflow to define a flow to iterate through the related inspection records and
+update the status to 'Cancelled'
+(D). Create a standard workflow on the Listing object with a workflow record update action on the
+related Inspection records
+
+
+NO.406 Universal containers (uc) wants to delete data in several fields for 5000 lead records. UC
+export the selected record IDs and fields that need to have data deleted in a csv file. Which two steps
+should an app builder suggest to meet these requirements ? Choose 2 answers
+(A). Select the correct record type
+(B). Use import Wizard to update leads using the CSV file
+(C). Select insert null values in setting
+(D). Use Data Loader to update leads using the CSV file
+
+
+NO.407 Universal containers would like to use a chatter group for their mergers and acquisition
+team to collaborate on potential new projects. This group should not be visible for non-members to
+see or join, and can be accessed by invite only. Which chatter Group type should the App Builder
+recommend?
+(A). Member Group
+(B). Unlisted Group
+(C). Public Group
+(D). Private Group
+
+NO.408 When a sales rep submits an account for approval, Universal Containers wants the user to
+answer additional questions via a popup window to populate additional record fields.
+What should an app builder use to achieve the desired result?
+(A). Process Builder and Flow
+(B). Lightning component and Process Builder
+(C). Custom picklist field and Process Builder
+(D). Custom button and Flow
+
+
+
+NO.409 Representatives at Universal Con use salesforce to record information for new Leads. When
+new prospects are added, an outbound message is sent to SAP with the Lead's info.
+(A). Design an approval process
+(B). Create a process using lightning process builder
+(C). Create a workflow rule
+(D). Use Visual Workflow
+
+NO.410 Which two standard Lightning page components are available in the Lightning App Builder? choose 2 answer
+(A) highlights Panel
+(b) Quick text
+(c) Accordion
+(d) Path
+
+
+
+NO.411 Which two metadata changes can be made directly in a production environment without
+deploying from a sandbox?
+(A). Visualforce pages
+(B). Apex triggers
+(C). Validation rules
+(D). Apex classes
+
+
+NO.412 What is true about social accounts, contacts, and leads?
+(A). The social feature displays the social profile for a Lead or Contact even if the user is not
+connected with the Lead or Contact on the Social network
+(B). The social feature automatically imports the social profile for a lead or contact in salesforce if the
+user is connected with the lead or contact on the social network
+(C). To use Social Accounts, Contacts and lead feature, a separate feature license must be assigned to
+the user in salesforce
+(D). To use Social Accounts, Contacts and lead feature, users need to have a personal social network accounts for the social network they would like to view
+
+NO.415 Which statement is true for embedding a Visualforce page in a page Layout. Choose 2
+Answers
+(A). Visualforce Pages on a field set have attributes for width and height.
+(B). Visualforce Pages can be placed anywhere in the page layout.
+(C). Visualforce Pages on a page layout have attributes for width and height
+(D). Visualforce Pages can only be place in the Visualforce section in a page layout.
+
+
+NO.416 The Director of Customer Service wants to know when agents are overwhelmed with highpriority items in the support queue. The Director wants to receive a notification when a new case is
+open with the status of "New" for more than four business hours. Which automation process could
+be used to accomplish this? Choose 2 answers
+(A). Escalation rules
+(B). Visual workflow
+(C). Lightning Process Builder
+
+NO.417 DreamHouse Realty (DR) has many properties for sale and wants to identify the highest
+value of all Offer__c records on each Property__c record.
+What solution should the app builder use to meet DreamHouse Realty's needs?
+(A). Master-Detail Child Object
+(B). Text Area (Long)
+(C). Multi-select Pickllst
+(D). Lookup Object
+
+NO.418 Which setting is available to customize the salesforce1 mobile app for branding ? Select 3
+(A). Action bar color
+(B). Background color on loading page
+(C). Notification and search icon
+(D). The image on loading page
+(E). Header and search bar color
+
+NO.419 Representatives at Universal Containers use Salesforce to record information for leads.
+When new prospects are added, an outbound message is sent to SAP with lead's information. Which
+automation process will accomplish this without writing any code?
+(A). Create a process using Lightning Process Builder to send the outbound message.
+(B). Create a Workflow Rule with an outbound message as the action
+(C). Use Visual Workflow to create a wizard that will send an outbound message.
+(D). Design an Approval Process that sends an outbound message upon arrival.
+
+NO.420 Cloud Kicks's management team frequently travels and wants to approve requests from
+their team on the go via Chatter.
+Where would an app builder enable this ability
+(a) chatter feed tracking
+(b) object settings
+(c) chatter settings
+(d) approval process Settings
+
+
+
+NO.422 Sales representatives want to capture custom Feedback record details related to each
+Account. The sales reps want to accomplish this with minimal clicks on the Salesforce1 mobile
+application. What is the recommended solution to meet this requirement? Choose 2 answers.
+(A). Create predefined values for most of the fields.
+(B). Create a global action on Account.
+(C). Create a feedback object as a parent of Account
+(D). Create an object-specific action on Account
+
+NO.423 What is a true statement in regard to creating custom report types?
+(A). When the primary object is a custom object and is deleted, then the report type and any reports
+created from it must be deleted manually
+(B). Any object can be chosen unless the object is not visible to the person creating the report type
+through security settings
+(C). The detail object in a master-detail relationship cannot be added as a secondary object on a
+custom report type
+(D). Once a report type is saved with a standard or custom primary object, the primary object cannot
+be changed for the report type
+
+
+NO.424 A new custom object called Invoices need to have an invoice date for the date and time
+itwas invoiced.
+Which field type should be selected for this?
+(A). Date
+(B). Date/Timestamp
+(C). Date/Time
+(D). Time
+
+NO.425 Universal Container want to store an area code and wants to be able to search for it in
+applications (apex). Which are possible fields to store the dat a. Choose 2
+(A). Phone
+(B). Number
+(C). Text
+(D). Multi Picklist
+(E). Email
+
+
+
+NO.426 Which of these actions are executed after a re-evaluated workflow? (Choose 3 answers)
+(A). Active Validation rules
+(B). Previously fired workflow rules
+(C). Active Escalation rules
+(D). Cross-object workflow rules
+(E). Criteria-based sharing rules
+
+NO.427 Universal Containers sales reps can modify fields on an opportunity until it is closed. Only
+the sales operation team can modify the post closed follow-up dates and post closed follow-up
+comments fields. How can these requirements be met?
+(A). Use record types with field sets and restrict editing fields using field-level security.
+(B). Use field-level security on page layouts to restrict editing fields
+(C). Use multiple record types, page layouts and profiles
+(D). Use field level security to mark fields as read only on the sales profile
+
+
+NO.428 The App Builder at Universal Containers has been asked to ensure that the Amount field is
+populated when the stage is set to Closed Won. What can be used to meet this requirement?
+(A). Validation Rule
+(B). Lightning Process Builder
+(C). Workflow
+(D). Approval Process
+
+NO.430 Sales manager at universal containers would like to standardize what information sales rep
+are gathering. Sales rep want recommendations, sales strategies and to know what key fields need to
+be completed at each step of the sales process on the opportunity record. What feature should an
+app builder use to provide this functionally
+(A) workflow
+(b) path
+(c) chatterfeed
+(d) global action
+
+NO.431 Universal Containers is expecting impacts to operations due to increased demand. The
+executive team will be reaching out to current customers and want to see the number of open cases
+for the account and parent account.
+Which two tools could an app builder combine to display the number of open cases on the account
+page?
+Choose 2 answers
+(A). Flow
+(B). Workflow
+(C). Approval Process
+(D). Process Builder
+
+NO.432 The VP of Marketing wants to broadcast an email to 10,000 contacts in Salesforce on a
+regular basis, but realizes Salesforce's mass email functionality has a limitation on the number of
+emails that can be sent each day.
+(A). Develop Apex code and Visualforce pages to send the emails.
+(B). Download all contacts to a CSV file and use an email client to send the mails
+(C). Research and evaluate products available on AppExchange to send mass emails
+(D). Request Salesforce increase the number of maximum daily mails.
+
+
+
+끝
