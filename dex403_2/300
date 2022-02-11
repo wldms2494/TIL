@@ -147,6 +147,140 @@ NO.314 For which report types custom summary formulas are available? (Choose 3)
 (D). Matrix
 
 
+NO.316 Sales reps at Cloud Kicks (CK) forget to submit for approval when CK needs orders reviewed
+before close won. CK wants to automatically submit opportunities into the Secure Commitment Stage
+to eliminate manual submission.
+Which three features would meet the business requirements?
+Choose 3 answers
+(A). Workflow
+(B). Process Builder
+(C). Apex
+(D). Chatter action
+(E). Flow
+
+NO.317 An app builder needs to change the data types of a few custom fields. The appbuilder is not
+able to delete and recreate any of the fields, nor modify any apexcode. Which data type change will
+require the app builder to perform additionalsteps in order to retain existing functionality?
+(A). Changing the data type of a field used in a report from text to an encrypted field
+(B). In lead conversion from number to text
+(C). In an apex class from number to text
+(D). As an external ID from number to text
+
+
+NO.318 An App Builder wants to deploy a new version of an auto launched flow to production in an
+active state so that the new functionality Is immediately available to users What should the App
+Builder rake Into consideration when planning the deployment?
+(A). Verify there is an Apex test that provides test coverage for the Flow.
+(B). Grant user access to the Flow.
+(C). Manually activate the Flow after deployment
+(D). Include the Process Builder calling the Flow In the deployment
+
+
+NO.319 A production org includes custom objects containing confidential information. A sandbox ix
+needed that includes data records, excludes all of the confidential objects, and can be refreshed
+weekly?
+(A). Create a partial copy sandbox and use a sandbox template
+(B). Create a full sandbox and use a sandbox template
+(C). Create a developer pro sandbox and schedule loader to download selected object data weekly
+(D). Create a developer sandbox and schedule data loader to download selected object data weekly.
+
+
+
+NO.321 Cloud Kicks (CK) is finding sales reps are inconsistent in data entry when deals are won. CK
+requires that custom shoes are shipped within two weeks after the close date. A custom field called
+Scheduled Ship Date on the opportunity records the ship date.
+How should the app builder ensure this field is properly filled out before setting the opportunity to
+closed won?
+(A). OR(ISPICKVAL( StageName /'Closed Won") && ( Scheduled_Ship_Date__c - CloseDate ) > 14,
+ISBLANK(Scheduled_Ship_Date__c))
+(B). OR(ISPICKVAL( StageName ="Closed Won") && ( Scheduled_Ship_Date__c - CloseDate ) > 14,
+ISBLANK(Scheduled_Ship_Date__c))
+(C). ISPICKVAL( StageName /'Closed Won") && ( Scheduled_Ship_Date_c - CloseDate ) > 14
+(D). ISPICKVAL( StageName ="Closed Won") && ( CloseDate-Scheduled_Ship_Date__c ) > 14
+
+
+NO.322 Universal Containers created a 'New Task' custom action on the Opportunity object. The
+action was added to all page layouts in the Mobile & Lightning Actions section.
+Which Lightning component should the app builder add to the layout to display the action?
+(A). Related record
+(B). Related lists
+(C). Highlights panel
+(D). Activities
+
+NO.323 Ursa Major Solar wants to convert the relationship between Galaxy and Star from a lookup
+relationship to a master-detail relationship so each Galaxy record can be equipped with a roll-up
+summary count of Star records.
+Which two considerations should be made?
+Choose 2 answers
+(A). The Star records are all required to have an existing value in their Galaxy field.
+(B). The Galaxy object has fewer than two existing master-detail relationships.
+(C). The Galaxy object is required to contain existing roll-up summary fields.
+(D). The Star object has fewer than two existing master-detail relationships
+
+
+NO.324 Which statement is true about field update actions from workflow rules and approval
+processes? Choose 2 answers
+(A). Field update with "re-evaluate workflow rules" selected can cause a recursive loop if the updated
+field is included in a workflow.
+(B). Field update are not available on currency field if the organization uses multi-currency.
+
+(C). Field updates to records based on workflow rules and approval processes do not trigger
+validation rules
+(D). Field updates are tracked in the history related list of a record regardless of whether or not
+History tracking is set for those fields.
+
+NO.325 An app builder is preparing to deploy a new app from the sandbox to production using
+change sets.
+What two considerations should an app builder keep in mind during this process?
+Choose 2 answers
+(A). Salesforce Connect automatically establishes a link between environments.
+(B). Change sets do not include all components and may have to perform some changes manually.
+(C). Users should be logged out of production when receiving inbound change sets.
+(D). Transactions will revert if the deployment errors
+
+NO.326 Universal Containers (UC) tracks Account locations in Zip Code, a custom text field with a
+validation rule to enforce proper formatting of the US ZIP+4 code for UC's orders.
+What formula should the app builder create on Order to display only the first five digits of Zip Code
+from the parent Account?
+(A). BEGINS(Account.Zip_Code_r, 5)
+(B). TEXT(Account.Zip_Code_c, 5)
+(C). LEFT(Account.Zip_Code_c, 5)
+(D). LPAD(Account.Zip_Code__r, 5)
+
+
+NO.327 Universal Containers needs the 18-digit record ID from Opportunity records when exporting
+data to Excel in order to ensure each record is treated uniquely.
+What formula should an app builder use to create this new field?
+(A). ISNUMBER(Id)
+(B). CASESAFEID(Id)
+(C). TEXT(Id)
+(D). VALUE(Id)
+
+
+NO.328 Which rule can be configured for the Opportunity object? Choose 2 answers
+(A). Escalation Rule
+(B). Workflow Rule
+(C). Validation Rule
+(D). Assignment Rule
+
+NO.329 What is a use case for approval processes?
+
+(A). Roll-up summary fields can only be created on the master of a master-detail relationship.
+(B). The roll-up summary field inherits the field - level security of the child object
+(C). Changes to the value of a roll-up summary field column of roll-up summary filters.
+(D). Multi-select picklist fields can be used in the field column of roll-up summary filters
+
+
+NO. 330 In order to delete a record smth needs to be approved.
+(a) 
+
+
+
+
+
+
+
+
 
 
 
