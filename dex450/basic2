@@ -26,3 +26,37 @@ Name이랑 Phone의 필드값도 요청하는 쿼리를 작성 해보았다.
 폰이랑 이름도 잘 출력 된다. ㅎㅎ
 이것은 참고로 SOSL을 배우는 중 
 SOSL은 우리가 멀티 오브젝트로 동시에 검색하는것을 하게 해준다
+
+gook check for consideration for relationship https://help.salesforce.com/s/articleView?id=sf.relationships_considerations.htm&type=5
+
+
+
+
+
+
+
+
+
+
+
+
+DEX-450 
+Q.234 which two queries can a developer user in visualfoce controller to protect against SOQL injection Vunerabilities(취약점 vunerability)
+(what;s the SOQL's Vunerability)
+(a) String qryName = '%' + String.enforceSecurityChecks(name) + '%' 
+
+
+
+
+
+
+SOQL 기본부터 해야겄다.
+
+
+in OOP for admins you learned DML ! insert update delete. 
+but what if you want to get data that already exists in the databased? SOQL makes it simple to retrieve data
+
+
+for(data type 변수명 : 훑을 리스트 네임) {
+    실행할 로직
+}
