@@ -1,0 +1,28 @@
+List<List<sObject>> acmes1 = [Find 'Acme' Returning Acocount];
+account object에서 'Acme'라는 회사를 찾는 SOQL문이다
+출력결과 :
+09:29:26:059 USER_DEBUG [2]|DEBUG|((Account:{Id=0018c000028a65oAAA, RecordTypeId=0128c000001t5loAAA, CurrencyIsoCode=USD}, Account:{Id=0018c000028a65qAAA, RecordTypeId=0128c000001t5loAAA, CurrencyIsoCode=USD}))
+
+어카운트의 아이이디랑 레코드 타입 두가지가 보인당
+
+List<List<sObject>> acmes1 = [Find 'Acme Returning Account, Opportunity];
+
+출력결과 : 
+09:34:51:119 USER_DEBUG [2]|DEBUG|
+((Account:{Id=0018c000028a65oAAA, RecordTypeId=0128c000001t5loAAA, CurrencyIsoCode=USD}, Account:{Id=0018c000028a65qAAA, RecordTypeId=0128c000001t5loAAA, CurrencyIsoCode=USD}), 
+(Opportunity:{Id=0068c00000mhlfZAAQ, RecordTypeId=0128c000001t5lmAAA, CurrencyIsoCode=USD}, Opportunity:{Id=0068c00000mhlfaAAA, RecordTypeId=0128c000001t5lmAAA, CurrencyIsoCode=USD}, Opportunity:{Id=0068c00000mhlfbAAA, RecordTypeId=0128c000001t5lmAAA, CurrencyIsoCode=USD}, Opportunity:{Id=0068c00000mhlfYAAQ, RecordTypeId=01
+회원에 있던 acme 와 영업에 있던 acme가 모두 출력이 된다
+
+일단 하나의 오브젝트에서 찾던 , 멀티 오브젝트로 찾던 List<List<sObject>> 형식으로 데이터 타입을 주면 되는것 같다 .
+그리고 OR조건이 아니라 AND조건으로 검색하는듯.
+
+List<List<sObject>>  acmes1 = [Find 'Acme' Returning Account(Name, Phone)];
+Name이랑 Phone의 필드값도 요청하는 쿼리를 작성 해보았다. 
+
+출력 결과 : 
+
+09:38:06:064 USER_DEBUG [2]|DEBUG|
+((Account:{Name=Acme Inc, Phone=1-212-555-5555, Id=0018c000028a65oAAA, RecordTypeId=0128c000001t5loAAA, CurrencyIsoCode=USD}, Account:{Name=Acme Inc (London), Phone=1-212-555-7500, Id=0018c000028a65qAAA, RecordTypeId=0128c000001t5loAAA, CurrencyIsoCode=USD}))
+폰이랑 이름도 잘 출력 된다. ㅎㅎ
+이것은 참고로 SOSL을 배우는 중 
+SOSL은 우리가 멀티 오브젝트로 동시에 검색하는것을 하게 해준다
