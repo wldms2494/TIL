@@ -74,8 +74,12 @@ Create a method
 Name: newListedProperties
 Keywords: public, static, and void
 Create a list
+
 Name: newPropList
 Create a query and assign the query results to the list
+
+List<Property__c> newPropList = [SELECT Name, Broker__r.Email, Day_On_Market__c FROM Property__c WHERE Day_On_Markcet__c<=30];
+
 Get this information:
 The name of the property
 The broker’s email address
@@ -89,3 +93,121 @@ List name: newPropList
 For each item, concatenate the property name, followed by a colon, followed by the broker’s email address: <Property Name> : <Broker Email>
 Store the concatenated string in a variable named propEmail
 Print the propEmail variable to the debug log
+
+
+
+
+조건절을 둘때 변수로 지정해서 둘수 도 있다.
+프로퍼티 리스트를 가져 오는데 가격이 200000이상인것만 들고온다고 해보자
+List<Property__c> property = [SELECT Name, Price__c FROM Property__c WHERE Price__c<20000];
+
+가격은 변수로 지정할 수 도 있다.
+Integer maxHomeValue = 200000;
+List<Property__c> property = [SELECT Name, Price__c FROM Property__c WHERE Price__c<= :maxHomeValue];
+
+
+** here's the thing
+look where part
+the bind varible is preceded by a colon (:)
+the value of the bind variable, maxHomeValue, is set outside the query. 
+
+
+
+
+## Aggregate Functions
+
+just thinks as comining.
+In reports, you use roll-up summary fields to caculate values from related reocords. For example,
+you might want to calculate the total number of properties, or the average or highest value of properties in a city.
+In SOQL,.,/. you use aggregate functions to perform those and other calculations!
+
+COUNT() : number of rows that are associated with the field
+COUNT_DISTINCT() : number of unique rows that match query criteria 
+SUM () : total value of a numeric field
+AVG () : average value of a numeric field
+plus MIN(), MAX()
+
+i'm kind of counfused with SUM() and, COUNT()
+
+for example
+
+for count() : SELECT COUNT(Name) FROM Broker__c 
+brings the total number of Name's rows
+
+SUM()  : SELECT SUM(Price__c), Broker__r.Name FROM Property__c GROUP BY Broker__r.Name
+guess it;s mix with other object with group by
+
+
+## Group the Results of Aggeregate Functions
+
+after cal based of aggregated data, when you report results in groups, as you do in summary reports.
+To group values in a SOQL query, use the GROUP By clause ~! 
+a customer of DreamHouse Realty wants to know which brokers have sold(closed) a property.
+
+
+`
+SELECT MAX(Status__c), Broker__r.Name
+FROM Property__c
+GROUP BY Broker__r.Name
+`
+i'm not 100%sure about why they use MAX() this time.
+it filter highst value ? maybe? but how they compare close and available ;;???
+anyway we're using aggregate Function,
+
+they we can get result List grouped by broker
+
+and we can get narrow result
+put condition on it ! 
+
+with 'HAVING'
+
+SELECT MAX(Status__c), Broker__r.Name
+FROM Property__c
+GROUP BY Broker__r.Name
+HAVING MAX(Status__c) = 'Closed'
+
+그냥 Having Status__c 하면 안댕~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
