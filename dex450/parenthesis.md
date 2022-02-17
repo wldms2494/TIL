@@ -8,7 +8,7 @@
 []
 
 
-< : less than or Left angle
+< : less than or Left angle  
 > : greater than or rignt angle
 
 ## :
