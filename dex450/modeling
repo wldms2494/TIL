@@ -1,0 +1,53 @@
+"NO.254 The operation manager at a construction company uses a custom object called Machinery
+to manage the usage and maintenance of its cranes and other machinery. The manager wants to be
+able to assign machinery to different constructions jobs, and track the dates and costs associated
+with each job. More than one piece of machinery can be assigned to one construction job.
+What should a developer do to meet these requirements?
+"
+
+"(A). Create a lookup field on the Construction Job object to the Machinery object.
+(B). Create a lookup field on the Machinery object to the Construction Job object.
+(C). Create a junction object with Master-Detail Relationship to both the Machinery object and the
+Construction Job object.
+(D). Create a Master-Detail Lookup on the Machinery object to the Construction Job object"
+
+
+기계들 관리하는 오브젝트 하나.
+그리고 기계들을 할당받아 일하는 job object 하나.
+
+사실 매니투매니와 룩업릴레이션십에서 job을 상위옵젝트로 하는 관계에서 확신이 서지 않았음.
+
+일단 원투매니로 생각해보자.
+
+1. one to Many
+
+내가 원투매니하면 가장 많이 생각나는것이 포스트와 코멘트의 관계이다
+포스트 하나 당 여러개의 댓글이 달릴 수 있지만, 댓글의 관점으로 보았을때 댓글은 포스트 하나만 가진다. 
+이로 비추어 보았을때 일단 문제에선,
+for machin! More than one piece of machinery can be assigned to one construction job
+여러 피스의 기계들은 하나의 잡에 달릴 수 있음
+잡은 여러개의 기계를 가진다는 말이다.
+그러면 기계의 관점에서 보았을때, 기계는 무조건 job 하나만 가지는 것인가? 
+여기서 내가 혼란스러웠던 부분이당.
+
+job이 없어진다면 기계도 없어지는곤가? 근데 look-up에서는 무조건 delete되는것도 아니니까.. 가능한것 같기도 하고.....
+
+특히 이부분 the manager wants to be able to assign machnery to different constructions jobs. 기계는 여러 잡에 할당 되기를 원한다면
+그러면 기계 역시 포크레인이 모 땅파기도 할수 있고 저집도 갈수있고 이런것 같은데..
+
+그래서
+
+2. many to many 로 가보자
+매니투매니하면 가장 많이 생각나는것이 job posting이다. 
+
+position - job posting - website
+
+
+여러가지의 포지션이 있고 뭐 매니저, 판매원 사장님 등등,, 하지만 포스팅에는 포지션 하나만 달린다.
+여러가지의 웹사이트가 알바몬 알바천국이 있지만 포스팅 하나는 하나의 웹사이트만 가지고 있다.
+잡포스팅과 포지션, 잡포스팅과 웹사이트는 하나씩 원투매니 관계를 가지지만 
+삼각관계로 보았을대 잡 포스팅은 junction 포지션에 있다.
+
+
+다른 사이트들을 확인해보아도 , 열띤 토론을 하고 있던데,,
+나는 다대다 관계라고 생각함ㅋ
