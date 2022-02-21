@@ -1,0 +1,279 @@
+NO.1 A developer needs to find information about @future methods that were invoked. From which
+system monitoring feature can the developer see this information?
+(A). Scheduled jobs
+(B). Apex Jobs
+(C). Background Jobs
+(D). Asynchronous Job
+
+NO.2 Which two platform features allow for the use of unsupported languages? Choose 2 answers
+(A). Heroku Acm
+(B). App.json
+(C). Buildpacks
+(D). Docker
+
+NO.3 Given the code block: Integer x; For(x=0;x<10; x+=2) { If(x==8) break; If(x==10) break; }
+System.debug(x); Which value will the system debug statement display?
+(A). 2
+(B). 10
+(C). 8
+(D). 4
+
+그대로 나오는군
+
+NO.4 A developer is creating an enhancement to an application that will allow people to be related
+to their employer. Which date model should be used to track the data?
+(A). Create a junction object to relate many people to many employers trough master-detail
+relationship
+(B). Create a junction object to relate many people to many employers trough lookup relationship
+(C). Create a lookup relationship to indicate that a person has an employer
+(D). Create a master detail relationship to indicate that a person has an employer
+
+NO.5 A developer wants to display all of the picklist entries for the Opportunity StageName field and
+all of the available record types for the Opportunity object on a Visualforce page. Which two actions
+should the developer perform to get the available picklist values and record types in the controller?
+Choose 2 answers.
+(A). Use Schema.RecordTypeInfo returned by
+RecordType.SObjectType.getDescribe().getRecordTypeInfos().
+(B). Use Schema.PicklistEntry returned by Opportunity.SObjectType.getDescribe().getPicklistValues().
+(C). Use Schema.PicklistEntry returned by Opportunity.StageName.getDescribe().getPicklistValues().
+(D). Use Schema.RecordTypeInfo returned by
+Opportunity.SObjectType.getDescribe().getRecordTypeInfos().
+
+
+NO.6 Which two automation tools include a graphical designer? Choose 2 answers
+
+(A). Approvals
+(B). Flow builder
+(C). Process builder
+(D). Workflows
+
+NO.7 What is the easiest way to verify a user before showing them sensitive content?
+(A). Sending the user a SMS message with a passcode.
+(B). Calling the generateVerificationUrl method in apex.
+(C). Sending the user an Email message with a passcode.
+(D). Calling the Session.forcedLoginUrl method in apex.
+
+
+NO.8 How are debug levels adjusted In the Developer Console?
+(A). Under the Settings menu > Trace Settings..., click Change DebugLevel
+(B). Under the Edit menu, dick Change DebugLevels
+(C). Under the Logs tab, click Change in the DebugLevels panel
+(D). Under the Debug menu > Change Log Levels..., click Add/Change in the DebugLevel Action
+
+
+NO.9 A candidate may apply to multiple jobs at the company Universal Containers by submtting a
+single application per job posting. Once an application is submitted for a job posting, that application
+cannot be modified to be resubmitted to a different job posting.What can the administrator do to
+associate an application with each job posting in the schema for the organization?
+(A). Create a master-detail relationship in the Job Postings custom object to the Applications custom
+object.
+(B). Create a master-detail relationship in the Application custom object to the Job Postings custom
+object.
+(C). Create a lookup relationship on both objects to a junction object called Job Posting Applications.
+(D). Create a lookup relationship in the Applications custom object to the Job Postings custom object
+
+
+NO.10 Which declarative method helps ensure quality data? ( choose 3)
+(a) validation rules
+(b) workflow alerts
+(c) Exceptio Handling
+(d) Lookup Filters
+(E) Page Layouts
+
+
+NO.11 A user selects a value from a multi-select picklist. How is this selected value represented in
+Apex?
+(A). As a string ending with a comma
+(B). As a string
+(C). As a list< String > with one element
+(D). As a set< string > with one element
+
+NO.11 A user selects a value from a multi-select picklist. How is this selected value represented in
+Apex?
+(A). As a string ending with a comma
+(B). As a string
+(C). As a list< String > with one element
+(D). As a set< string > with one element
+
+NO.12 A developer creates an Apex helper class to handle complex trigger logic. How can the helper
+class warn users when the trigger exceeds DML governor limits?
+(A). By using PageReference.setRedirect() to redirect the user to a custom Visualforce page before
+the number of DML statements is exceeded.
+(B). By using Messaging.sendEmail() to continue toe transaction and send an alert to the user after
+the number of DML statements is exceeded.
+(C). By using AmexMessage.Messages() to display an error message after the number of DML
+statements is exceeded.
+(D). By using Limits.getDMLRows() and then displaying an error message before the number of DML
+statements is exceeded.
+
+NO.13 To which primitive data type in Apex is a currency field atomically assigned?
+(A). Integer
+(B). Decimal
+(C). Double
+(D). Currency
+
+
+NO.14 What is a benefit of using a trigger framework?
+(A). Simplifies addition of context-specific logic
+(B). Increases trigger governor limits
+(C). Allows functional code to be tested b
+(D). Reduces trigger execution time
+
+
+NO.15 A Visualforce page has a standard controller for an object that has a lookup relationship to a
+parent object. How can a developer display data from the parent record on the page?
+(A). By adding a second standard controller to the page for the parent record.
+(B). By using a roll-up formula field on the child record to include data from the parent record.
+(C). By using SOQL on the Visualforce page to query for data from the parent record.
+(D). By using merge field syntax to retrieve data from the parent record.
+
+NO.16 How can a custom type be identified as unique when added to a Set?
+(A). Methods in the class must be static
+(B). The class must implement the Equals and Hashcode methods
+(C). Methods in the class must be global
+(D). The class must have a method with the @InvocableMethod annotation
+
+
+NO.18 A developer needs to create a Visualforce page that will override the standard Account edit
+button. The page will be used to validate the account's address using a SOQL query. The page will
+also allow the user to make edits to the address. Where would the developer write the Account
+address verification logic?
+(A). In a Standard Extension.
+(B). In a Standard Controller.
+(C). In a Custom Controller.
+(D). In a Controller Extension.
+
+
+NO.19 A developer needs to confirm that an Account trigger is working correctly without changing
+the organization's data.What would the developer do to test the Account trigger?
+(A). Use the Test menu on the developer Console to run all test classes for the account trigger.
+(B). Use the New button on the Salesforce Accounts Tab to create a new Account record.
+(C). Use the Open Execute Anonymous feature on the Developer Console to run an 'insert Account'
+DML statement.
+(D). Use Deply from the Force.com IDE to deploy an 'insert Account' Apex class.
+
+NO.20 Using the Schema Builder, a developer tries to change the API name of a field that is
+referenced in an Apex test class.
+What is the end result?
+
+(a) The API name is not changed and there are no ohter impacts.
+(b) The API name of the field and the reference in the test class is changed.
+(c) The API name of the field is changed, and a warning is issued to update the class
+(d) The API name of the field and the reference in the test class is updated.
+
+NO.21 A developer is creating an enhancement to an application that will allow people to be related
+to their employer. Which data model provides the simplest solution to meet the requirements?
+(A). Create a lookup realtionship to indicate that a person has an employer
+(B). Create a master-detail relationship to indicate that a person has an employer
+(C). Create a junction object to relate many people to many through master-detail relationship
+(D). Create a junction object to relate many people to many through lookup relationship
+
+NO.22 Which two condition cause workflow rules to fire? Choose 2 answers
+(A). Changing territory assignments of accounts and opportunities
+(B). Updating record using bulk API
+(C). Converting leads to person account
+(D). An Apex batch process that changes field values
+
+NO.23 Which approach should be used to provide test data for a test class?
+(A). Query for existing records in the database.
+(B). Execute anonymous code blocks that create data.
+(C). Use a test data factory class to create test data.
+(D). Access data in @TestVisible class variables
+
+NO.24 The Sales Management team hires a new intern. The intern is not allowed to view
+Opportunities, but needs to see the Most Recent Closed Date of all child Opportunities when viewing
+an Account record. What would a developer do to meet this requirement?
+(A). Create a trigger on the Account object that queries the Close Date of the most recent
+Opportunities.
+(B). Create a Workflow rule on the Opportunity object that updates a field on the parent Account.
+(C). Create a formula field on the Account object that performs a MAX on the Opportunity Close Date
+field.
+(D). Create a roll-up summary field on the Account object that performs a MAX on the Opportunity
+Close Date field.
+
+
+NO.25 What is a valid Apex statement?
+(A). Map conMap = (SELECT Name FROM Contact);
+(B). Account[] acctList = new List{new Account()}
+(C). Integer w, x, y = 123, z = 'abc',
+(D). Private static constant Double rate = 775;
+
+
+NO.26 Why would a developer consider using a custom controller over a controller extension?
+(A). To increase the SOQL query governor limits.
+(B). To implement all of the logic for a page and bypass default Salesforce functionality
+(C). To leverage built-in functionality of a standard controller
+(D). To enforce user sharing settings and permissions
+
+- bypass : 우회로, 여러 신호들이나 물리량으로 통과가 어려울 경우, 별도의 우회길을 만들어 사용할 때, 그 방법을 바이패스라고 합니다. 
+
+
+
+NO.27 How can a developer avoid exceeding governor limits when using an Apex Trigger?choose 2
+answers
+(A). By using a helper class that can be invoked from multiple triggers.
+(B). By using the Database class to handle DML transactions.
+(C). By using Maps to hold data from query results.
+(D). By performing DML transactions on lists of SObjects.
+
+
+
+NO.28 Which three options allow a developer to use custom styling in a Visualforce page? (Choose
+three.)
+(A). <apex:stylesheet> tag
+(B). Inline CSS
+(C). <apex:style>tag
+(D). <apex:stylesheets>tag
+(E). A static resource
+
+
+- 인라인이란? Inline editing is a feature by which we can edit a record without pressing the edit button, 
+we can go to the detail page, doubles click on the field, changes to a new value and click on Save and field value is updated to the new value.
+
+
+
+
+NO.29 Which two number expressions evaluate correctly? (Choose two.)
+(A). Double d = 3.14159;
+(B). Integer I = 3.14159;
+(C). Decimal d = 3.14159;
+(D). Long l = 3.14159;
+
+decimal : is an arbitrary(임의?) precision(정도) number,. In Apex currency fields are automatically assigned the type Demimal. 
+Also decimal has a lot of built-in methods and rounding options, so it's helpful to use this instead of double
+
+(+Rounding means replacing a number with an approximate value that has a shorter, simpler, or more explicit representation. 
+For example, replacing $23.4476 with $23.45, the fraction 312/937 with 1/3, or the expression √2 with 1.414.
+
+ + Arbitraty-precision arithmetic :
+ 무한 정밀도 산술이라고도 함, 임의 정밀도 산술은 정밀도 자릿수가 호스트 시스템의 사용 가능한 메모리에 의해서만 제한되는 숫자에 대해 계산이 수행됨을 나타앰)
+ 
+)
+
+A 64-bit number that includes a decimal point. Doubles have a minimum value of -263 and a maximum value of 263-1.
+
+long : this is 64-bit(2^64)-1 number without any decimal point. this is used when we need a range of values wider than Integer
+
+
+NO.30 A Hierarchy Custom Setting stores a specific URL for each profile in Salesforce. Which
+statement can a developer use to retrieve the correct URL for the current user'sprofile and display
+this on a Visualforce Page?
+
+(a) {!$Setup.Url_Settings__C.Instance[Profile.Id].URL__c}
+(b) {!$Setup.Url_Settings__C.URL__c}
+(c) {!$Setup.Url_Settings__C.[Profile.Id].URL__c}
+(d) {!$Setup.Url_Settings__C.[$Profile.Id].URL__c}
+
+
+
+NO.31 A developer needs to join data received from an integration with an external system with
+parent records in Salesforce. The data set does not contain the Salesforce IDs of the parent records,
+but it does have a foreign key attribute that can be used to identify the parent.
+Which action will allow the developer to relate records in the data model without knowing the
+Salesforce ID?
+(A). Create and populate a custom field on the parent object marked as Unique.
+(B). Create a custom field on the child object of type External Relationship.
+(C). Create and populate a custom field on the parent object marked as an External ID.
+(D). Create a custom field on the child object of type Foreign Key.
+
+
