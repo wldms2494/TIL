@@ -1,0 +1,197 @@
+# 
+
+NO.32 A developer has created a Visualforce Page and Apex Controller that uses the With Sharing
+keyword. The page will be used of by Sales Managers and should only display Accounts owned by
+Sales Representatives who report to the running Sales Manager. The organization-wide sharing for
+Accounts is set to Private. Which additional set of stops should the developer take?
+(A). Create one Profile, two Permission Sets, and one Role.
+(B). Create one Profile, one Permission Set, and one Role.
+(C). Create one Profile, one Permission Set, and two Roles.
+(D). Create two Profiles, one Permission Set, and one Role.
+
+- Use the with sharing keyword when declaring a class to enforce sharing rules of the current user.
+Explicitly(명시적) setting this keyword ensures that Apex code runs in the current user context.
+Apex code that is executed with the executeAnonymous call and Connect in Apex always execute using the sharing rules of the current user.
+
+NO.33 A developer has javascript code that needs to be called by controller functions in multiple
+components by extending a new abstract component. Which resource in the abstract component
+bundle allows the developer to achieve this
+(A). Controller.js
+(B). Superrender.js
+(C). Rendered.js
+(D). Helper.js
+
+- put fuctions that you want to reuse in the component's helper. Helper funcitons also enable specialization of tasks, such as processing data and queueing server-side actions.
+Helper functions are local to a component, improve code reuse, and move the heavy lifting of Java Script logic away frome the clinent side controller, where possible~
+
+NO.34 What is a benefit of using an after insert trigger over using a before insert trigger?
+(A). An after insert trigger allows a developer to bypass validation rules when updating fields on the
+new record.
+(B). An after insert trigger allows a developer to insert other objects that reference the new record.
+(C). An after insert trigger allows a developer to make a callout to an external service.
+(D). An after insert trigger allows a developer to modify fields in the new record without a query.
+
+there are two types of trigger :
+
+- Before trigger are used to update or validate record values before they're saved to the data base.
+- After triggers are used to access field vallues that are set by the system ( such as record's Id or LastModifiedDate field) and to afftect changes in other records,
+such as logging into an audit table or firing asynchronous events with a queue. The records that fire the after trigger ar read-only.
+
+NO.35 How can a developer determine, from the DescribeSObjectResult, if the current user will be
+able to create records for an object in Apex?
+(A). By using the isInsertable() method.
+(B). By using the isCreatable() method.
+(C). By using the hasAccess() method.
+(D). By using the canCreate() method.
+
+NO.36 Universal Containers (UC) has an integration with its Accounting system that creates tens of
+thousands of Orders inside of Salesforce in a nightly batch. UC wants to add automaton that can
+attempt to match Leads and Contacts to these Orders using the Email Address field on the insert. UC is concerned about the performance of the automation with a large data volume. Which tool should UC use to automate this process?
+(A). Process Builder
+
+(B). Process Builder with an Autolaunched Flow
+(C). Workflow Rules
+(D). Apex
+
+NO.37 Which three statements are true regarding the @istest annotation? Choose 3 answers
+(A). Products and pricebooks are visible in a test even if a class is annotated @istest (seealldata=false)
+(B). A method annotated @istest (seealldata=false) in a class annotated @istest (seealladata=true)
+has access to all org data
+(C). A method annotated @istest (seealldata=true) in a class annotated @istest (seealladata=false)
+has access to all org data
+(D). Profiles are visible in a test even if a class is annotated @istest (seealldata=false)
+(E). A class containing test methods counts toward the apex code liit regardless of any @istest
+annotation (Missed
+
+- 
+    
+    class에다가 @istest (seealldata = true)를 사용하게 된다면, has access to all org data.  @isTest (SeeAllData= false)라고 메소드에 붙어있어도 무시된다. 
+    
+    이 경우에는, 어노테이션(= true)가 (=false)를 오버라이드 하게 된다. 
+    
+
+NO.38 What is true for a partial sandbox that is not true for a full sandbox? Choose 2 answers:
+(A). More frequent refreshes.
+(B). Only Includes necessary metadata.
+(C). Use of change sets.
+(D). Limited to 5 GB of data
+
+NO.39 Which statement about change set deployments is accurate? (Choose 3)
+(A). They use an all or none deployment model.
+(B). They require a deployment connection.
+(C). They ca be used to transfer Contact records.
+(D). They can be used to deploy custom settings data.
+(E). They can be used only between related organizations.
+
+NO.40 What is a capability of formula fields? (Choose 3)
+
+(a) generate a link using the HYPERLINK fuctionsto a specific record in a legacy system.
+
+(b) display the previous values for a field using the PRIORVALUE function.
+
+(c) Return and display a field value from another object using the VLOOKUP function.
+
+(d) Determine if a datetime field has passed using the NOW function.
+
+(e) Determine which of three different images to display using the IF function.
+
+NO.41 A developer has the following class and trigger code:
+public class InsuranceRates { public static final Decimal smokerCharge = 0.01; } trigger ContactTrigger
+on Contact (before insert) { InsuranceRates rates = new InsuranceRates(); Decimal baseCost = XXX; }
+Which code segment should a developer insert at the XXX to set the baseCost variable to the value of
+the class variable smokerCharge?
+(A). rates.smokerCharge
+(B). rates.getSmokerCharge()
+(C). ContactTrigger.InsuranceRates.smokerCharge
+(D). InsuranceRates.smokerCharge
+
+NO.42 What is the return data type when ApexPages.currentPage().getParameters() is used to
+retrieve URL parameters from a visualforce controller?
+(A). Map
+(B). List
+(C). Enum
+(D). String[]
+
+NO.43 The initial value for a number field on a record is 1. A user updated the value of the number
+field to 10. This action invokes a workflow field update, which changes the value of the number field  to 11. After the workflow field update, an update trigger fires.What is the value of the number field
+of the object that is obtained from Trigger.old?
+(A). Null
+(B). 11
+(C). 1
+(D). 10
+
+- 
+    
+    update 랑 delete 이외에는 다 null 값 
+    
+
+NO.44 How would a developer determine if a CustomObject__c record has been manually shared
+with the current user in Apex?
+(A). By querying the role hierarchy.
+(B). By calling the isShared() method for the record.
+(C). By querying CustomObject__Share.
+(D). By calling the profile settings of the current user.
+Answer: C
+
+NO.45 What is the result of the following code block ?
+Integer x = 1;Integer Y = 0;While(x < 10){Y++;}
+(A). An error occurs
+(B). Y = 9
+(C). Y = 10
+(D). X = 0
+
+- 
+    
+    cpu time limit??????
+    
+
+NO.46 Which two platform features align to the Controller portion of MVC architecture? (Choose
+two.)
+(A). Process Builder actions
+(B). Workflow rules
+(C). Standard objects
+(D). Date fields
+
+NO.47 Which statement is true about developing in a multi-tenant environment?
+(A). Governor limits prevent apex from impactiong the performance of multiple tenants on the same
+instance
+(B). Apex sharing controls access to records fomr multiple tenants on the same instance
+(C). Global apex classes can be referenced from multiple tenants on the same instance
+(D). Org-level data security controls which users can see data from multiple tenants on the same
+instance
+
+NO.48 Which user can edit a record after it has been locked for approval? (Choose 2)
+(A). Any user with a higher role in the hierarchy
+(B). A user who is assigned as the current approver
+(C). Any user who approved the record previously
+(D). An administrator
+
+- 
+    
+    when a record is submitted for approval, it’s locked to prevent users from editing it during the approval process. use the record editability properties to determine who can edit records that are locked in this approval process..
+    
+
+NO.49 In which order does SalesForce execute events upon saving a record?
+(A). Before Triggers; Validation Rules; After Triggers; Assignment Rules; Workflow Rules; Commit
+(B). Validation Rules; Before Triggers; After Triggers; Workflow Rules; Assignment Rules; Commit
+(C). Before Triggers; Validation Rules; After Triggers; Workflow Rules; Assignment Rules; Commit
+(D). Validation Rules; Before Triggers; After Triggers; Assignment Rules; Workflow Rules; Commit
+
+- 
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4754b611-0b29-44a1-ae1a-d2fc34c16f7d/Untitled.png)
+    
+
+NO.50 What is the advantage of Salesforce Lightning?
+
+(a) Uses service side for better handling
+
+(b) Pre-defined  components to give standard Look and Feel.
+
+- trigger
+    
+    triggers are often used to access and manage records related to the records in the trigger context-the records that caused this trigger to fire.
+    
+    this trigger adds a related opportunity for each new or updated account if no opportunity is already associated with the account. the trigger first performs a SOQL query to get all childs opportunites for the accounts that the trigger fired on.
+    
+    Next, the trigger iterates over the list of sObjects in [Trigger.New](http://Trigger.New) to get each account sObject. If the account does’t have any related opportunity sObjects. the for llop creates one.
