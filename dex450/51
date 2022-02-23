@@ -1,0 +1,30 @@
+NO.51 In which two trigger types can a developer modify the new sObject records that are obtained
+by the trigger.new context? Choose 2 answers
+(A). After insert
+(B). After update
+(C). Before update
+(D). Before insert
+
+
+NO.52 A developer wants to store a description of a product that can be entered on separate lines
+by a user during product setup and later displayed on a Visualforce page for shoppers. Which field
+type should the developer choose to ensure that the description will be searchable in the custom
+Apex SOQL queries that are written?
+(A). Text Area (Rich)
+(B). Text Area (Long)
+(C). Text
+(D). Text Area
+
+
+Text area : Enter up to 255 characters on seperate lines
+Text area (long) : allows user to enter up to 131,702 character
+Text area (rich) : allows the user to format text, add images and hyperlinks up to 131,072 characters
+
+NO.53 A developer has the following trigger that fires after insert and creates a child Case whenever
+a new Case is created. List<Case> childCases = new List<Case>();for (Case parent : Trigger.new){Case
+child = new Case (ParentId = parent.Id, Subject = parent.Subject);childCases.add(child);}insert
+childCases; What happens after the code block executes?
+(A). Multiple child cases are created for each parent case in Trigger.new.
+(B). Child case is created for each parent case in Trigger.new.
+(C). The trigger enters an infinite loop and eventually fails.
+(D). The trigger fails if the Subject field on the parent is blank
