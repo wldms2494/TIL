@@ -1,0 +1,465 @@
+NO.51 In which two trigger types can a developer modify the new sObject records that are obtained
+by the trigger.new context? Choose 2 answers
+(A). After insert
+(B). After update
+(C). Before update
+(D). Before insert
+
+NO.52 A developer wants to store a description of a product that can be entered on separate lines
+by a user during product setup and later displayed on a Visualforce page for shoppers. Which field
+type should the developer choose to ensure that the description will be searchable in the custom
+Apex SOQL queries that are written?
+(A). Text Area (Rich)
+(B). Text Area (Long)
+(C). Text
+(D). Text Area
+
+- 
+    
+    Text area : Enter up to 255 characters on seperate lines
+    Text area (long) : allows user to enter up to 131,702 character
+    Text area (rich) : allows the user to format text, add images and hyperlinks up to 131,072 characters
+    
+
+NO.53 A developer has the following trigger that fires after insert and creates a child Case whenever
+a new Case is created. List<Case> childCases = new List<Case>();for (Case parent : Trigger.new){Case
+child = new Case (ParentId = [parent.Id](http://parent.id/), Subject = parent.Subject);childCases.add(child);}insert
+childCases; What happens after the code block executes?
+(A). Multiple child cases are created for each parent case in Trigger.new.
+(B). Child case is created for each parent case in Trigger.new.
+(C). The trigger enters an infinite loop and eventually fails.
+(D). The trigger fails if the Subject field on the parent is blank.
+
+NO.54 Which three options can be accomplished with formula fields? (Choose three.)
+(A). Generate a link using the HYPERLINK function to a specific record.
+
+(B). Display the previous value for a field using the PRIORVALUE function.
+(C). Determine if a datetime field value has passed using the NOW function.
+(D). Return and display a field value from another object using the VLOOKUP function.
+(E). Determine which of three different images to display using the IF function.
+
+NO.55 When would the use of Heroku Postgres be appropriate?
+(A). To cache commonly accessed data for faster retrieval.
+(B). To interconnect Microsoft SQL servers to Heroku Applications.
+(C). To store and retrieve data using the Structured Query Language.
+(D). To store user generated pictures and Word documents
+
+NO.56 A developer can use the debug log to see which three types of information? Choose 3
+answers
+(A). Resource usage and limits
+(B). Database changes
+(C). User login events
+(D). HTTP callout to external systems
+(E). Actions triggered by time-based workflow
+
+NO.57 Which is a valid Apex assignment?
+(A). Integer x = 5.0;
+(B). Float x = 5.0;
+(C). Integer x = 5*1.0;
+(D). Double x = 5;
+
+- 
+    
+    use a float to pull an element out of the document’s normal flow and to align it with the left or right side of the container
+    
+
+NO.58 A company would like to send an offer letter to a candidate, have the candidate sign it
+electronically, and then send the letter back.What can a developer do to accomplish this?
+(A). Create a visual workflow that will capture the candidate's signature electronically
+(B). Develop a Process Builder that will send the offer letter and allow the candidate to sign it
+electronically.
+(C). Install a managed package that will allow the candidate to sign documents electronically
+(D). Create an assignment rule that will assign the offer letter to the candidate
+
+NO.59 Which two conditions cause workflow rules to fire? Choose 2 answers
+(A). Changing the territory assignments of accounts and opportunities
+(B). Updating records using the bulk API
+(C). Converting leads to person accounts
+(D). An Apex Batch process that changes field values
+
+NO.60 Before putting an app into production, which step should be taken?
+
+(A) Run the production check feature via the web interface.
+
+(B) Switch to a production database
+
+(C) Insure that you have installed  a performance introspection add-on
+
+(D) Scale you dynos
+
+NO.61 To which data type in Apex a currency field automatically assigned?
+(A). Integer
+(B). Decimal
+(C). Double
+(D). Currency
+
+NO.62 How should a developer avoid hitting the governor limits in test methods?
+(A). Use @TestVisible on methods that create records.
+(B). Use Test.loadData() to load data from a static resource.
+(C). Use @IsTest (SeeAllData=true) to use existing data.
+(D). Use Test.startTest() to reset governor limits.
+
+- 
+    
+    everytime the start method begins, the limits are reset
+    
+
+NO.63 Candidates are reviewed by four separate reviewers and their comments and scores which
+range from 1 (lowest) to 5 (highest) are stored on a review record that is a detail record for a
+candidate . what is the best way to indicate that a combined review score of 15 of better is required to recommend that the candidate come in for an interview?
+
+(A). Use a validation rule on a total score field on the candidate record that prevents a recommended field from being true if the total score is less than 15
+
+(B). Use a workflow rule to calculate the sum of the review scores and send an email to the hiring
+manager when the total is 15 or better
+
+(C). Use visual workflow to set a recommended field on the candidate whenever the cumulative
+review score is 15 or better
+
+(D). Use a rollup summary field to calculates the sum of the review scores, and store this in a total
+score field on the candidate
+
+NO.64 A developer is creating an application to track engines and their parts. An individual part can
+be used in different types of engines. What data model should be used to track the data and to
+prevent orphan records?
+
+(A). Create a junction object to relate many engines to many parts through a master-detail
+relationship
+(B). Create a lookup relationship to represent how each part relates to the parent engine object.
+(C). Create a master-detail relationship to represent the one-to-many model of engines to parts.
+(D). Create a junction object to relate many engines to many parts through a lookup relationship
+
+- 
+    
+    Orphan record is when a child record with a foreign key points to a parent record of primary key field that no longer exists.
+    
+
+NO.65 Which set of roll-up types are available when creating a roll-up summary field?
+(A). COUNT, SUM, MIN, MAX
+
+(B). AVERAGE, SUM, MIN, MAX
+(C). SUM, MIN, MAX
+(D). AVRAGE, COUNT, SUM, MIN, MAX
+
+NO.66 When a Task is created for a Contact, how can a developer prevent the task from being
+included on the Activity Timeline of the Contact's Account record?
+(A). In Activity Settings, uncheck Roll up activities to a contact's primary account.
+(B). By default, tasks do not display on the Account Activity Timiline.
+(C). Use Process Builder to create a process to set the Task Account field to blank.
+(D). Create a Task trigger to set the Account field to NULL
+
+NO.67 What are the supported content sources for custom buttons and links? (Choose 2 Answers)
+(A). VisualForce Page.
+(B). Static Resource.
+(C). URL.
+(D). Chatter File.
+(E). Lightning Page.
+
+- 
+    
+    비주얼 포스 페이지와 그와 연결할 URL
+    
+
+NO.68 A developer creates a method in an Apex class and needs to ensure that errors are handled
+properly.What would the developer use? (There are three correct answers.)
+(A). ApexPages.addErrorMessage()
+(B). A custom exception
+(C). .addError()
+(D). Database.handleException()
+(E). A try/catch construct
+
+NO.69 A developer created a lightning component name accountList.cmp that display a list of
+Accounts. Client-side logic that is executed when a user hovers over an account in the list should be
+stored in which bundle member?
+(A). AccountListHelper.js
+(B). AccountListRenderer.js
+(C). AccountList.renderer
+(D). AccountList.helper
+
+NO.70 What must the Controller for a Visulforce page utilized to override the standard Opportunity
+view button?
+
+(a) A constructor that initialized a private Opportunity variable.
+
+(b) A callback constructor to reference the StandardController
+
+(c) the StandardSetController to support related lists for pagination.
+
+(d) The opportunity Standard Controller for pre-built functionality 
+
+NO.71 Which two queries can a developer use in a Visualforce controller to protect against SOQL
+injection vulnerabilities? Choose 2 answers
+(A). String qryName = % + String.enforceSecurityChecks(name)+ % ;
+String qryString = SELECT Id FROM Contact WHERE Name LIKE :qryNAme ;
+List queryResults = Database.query(qryString);
+(B). String qryName = % + name % ;
+String qryString = SELECT Id FROM Contact WHERE Name LIKE :qryNAme ;
+List queryResults = Database.query(qryString);
+(C). String qryName = % + String.escapeSingleQuotes(name)+ % ;
+String qryString = SELECT Id FROM Contact WHERE Name LIKE :qryNAme ;
+List queryResults = Database.query(qryString);
+(D). String qryString = SELECT Id FROM Contact WHERE Name LIKE :qryNAme ; List queryResults =
+Database.query(qryString);
+
+- 
+    
+    To prevent a SOQL injection attck, avoid using dynamic SOQL queries and [binding variables.](https://trailhead.salesforce.com/en/content/learn/modules/soql-for-admins/use-bind-variables-and-aggregate-functions) The vulnerable example above can be re-written using static SOQL as follows.
+    
+    if you must use dynamic SOQL , use the **excapleSingleQuotes** method to sanitize user-supplied input. This method adds the excape character(\) to all single quotation marks in a String that is passed in from a user. The method ensure that all single quotation marks are treated as enclosing strings, instead of database commands.
+    
+
+NO.72 What is the minimum log level needed to see user-generated debug statements?
+(A). DEBUG
+(B). FINE
+(C). INFO
+(D). WARN
+
+NO.73 A developer has the controller class below.
+
+public with sharing class myFooController {
+
+public integer prop { get; private set ; } 
+
+}
+
+Which code block will run successfully in an execute anonymous window?
+(A). myFooController m = new myFooController();System.assert(m.prop !=null);
+(B). myFooController m = new myFooController();System.assert(m.prop ==0);
+(C). myFooController m = new myFooController();System.assert(m.prop ==null);
+(D). myFooController m = new myFooController();System.assert(m.prop ==1)
+
+NO.74 What is the requirement for a class to be used as a custom Visualforce controller?
+(A). Any top-level Apex class that has a constructor that returns a PageReference
+(B). Any top-level Apex class that extends a PageReference
+(C). Any top-level Apex class that has a default, no-argument constructor
+(D). Any top-level Apex class that implements the controller interface
+
+### sObject
+
+### 
+
+: Every record in Salesforce in natively represented as an sObject in Apex. For example, the Acme account record corresponds to an Account sObject in Apex. The fields of the Acme record that you can view and modify in the user interface canbe read and modified directly on the sObject as well.
+
+standard and custom object records in Salesforce map to their sObject types in Apex. Here are some common sobject type names in Apex used for stadrd objects
+
+(account contact lead opportunity)
+
+For custom objects and custom fields, the API names for custom relationship fields, the API name ends with the __r suffix. 
+
+spaces in labels are replaced with underscores in Api names
+
+before you can insert a salesfroce record, you must create it in memory first as an sObject. Like with any other object, sObjects are created with the new operator.
+
+` Account acct = new Account();`
+
+→ Account is the data type of `acct` varizbles
+
+there are two ways to add fields. 
+
+1. constructor:   Account acct = new Account(Name = ‘Acme’);
+2. dot notation: Accountacct = new Account() ; [acct.Name](http://acct.Name) = ‘Acme’l
+
+NO.75 Which data structure is returned to a developer when performing a SOSL search?
+(A). A list of lists of sObjects.
+(B). A map of sObject types to a list of sObjects
+(C). A map of sObject types to a list oflists of sobjects
+(D). A list of sObjects.
+
+- 
+    
+    List<List<sObject>> searchList = [FIND ‘SFDX’ IN ALL FIELDS RETURNING Account(Name), Contact(FirstName, LastName)];
+    
+
+NO.76 When the number of record in a recordset is unknown, which control statement should a
+developer use to implement a set of code that executes for every record in the recordset, without
+performing a .size() or .length() method call?
+(A). For (init_stmt, exit_condition; increment_stmt) { }
+(B). Do { } While (Condition)
+(C). For (variable : list_or_set) { }
+(D). While (Condition) { ... }
+
+NO.77 A developer is asked to create a custom visualforce page that will be used as a dashboard
+component. Which three are valid controller options for this page? Choose 3 answers
+(A). Use a custom controller
+(B). Use a custom controller with extensions
+(C). Use a standard controller with extensions
+(D). Do not specify a controller
+(E). Use a standard controller
+
+NO.78 A developer wants to create a custom object to track Customer Invoices.How should Invoices
+and Accounts be related to ensure that all Invoices are visible to everyone with access to an Account?
+(A). The Account should have a Master-Detail relationship to the Invoice.
+(B). The Invoice should have a Master-Detail relationship to the Account
+(C). The Account should have a Lookup relationship to the Invoice
+(D). The Invoice should have a Lookup relationship to the Account Previous
+
+NO.79 What can a developer use to determine if the core Apex code exceeds any governor limits in
+a test class during bulk execution?
+(A). Limits, startTest, stopTest
+(B). Test.getDmlStatements()
+(C). @TestSetup.
+(D). @TestVisible
+
+NO.80 What is accurate statement about with sharing keyword? Choose 2 answers
+(A). Either inner or outer classes can be declared as with sharing, but not both
+(B). Both inner and outer classes can be declared as with sharing
+(C). Inner classes do not inherit the sharing settings from the container class
+(D). Inner classes inherit the sharing settings from the container class.
+
+NO.81 A developer needs to apply the look and feel of lightning experience to a number of
+applications built using a custom third-party javascript framework and rendered in visualforce pages which option achieves this
+
+(A). Set the attribute enablelightning to "true" in the definition
+(B). Replace the third-party javascript library with native visualforce tags
+(C). Configure the user interface options in the setup menu to enable legacy mode for visualforce
+(D). Incorporate salesforce lightning design system css style sheets into the javascript applications
+
+NO.82 Which type of information is provided by the Checkpoints tab in the Developer Console?
+(Choose 2)
+(A). Namespace
+(B). Time
+(C). Exception
+(D). Debug Statement
+
+NO.83 Which feature allows a developer to create test records for use in test classes?
+(A). Static resources
+(B). Documents
+(C). Httpcalloutmocks
+(D). Webservicetests
+
+NO.84 How should a developer prevent a recursive trigger?
+(A). Use a "one trigger per object" pattern.
+(B). Use a static Boolean variable.
+(C). Use a trigger handler.
+(D). Use a private Boolean variable
+
+NO.86 Which two are true regarding a Dyno? Choose 2 answers
+(A). Is a light weight VM used to run code on the Heroku Platform
+(B). Has the ability to sleep as a standard and performance Dyno
+(C). Is a lightweight Linux container used in a collection to run Heroku applications
+(D). Has Ephemeral filesystems and is rebooted every 24 hours.
+
+- 
+    
+    Ephemeral (일시적인). reboot(재부팅ㅋㅋ)
+    
+
+NO.87 How should a developer make sure that a child record on a custom object, with a lookup to
+the Account object, has the same sharing access as its associated account?
+(A). Create a Sharing Rule comparing the custom object owner to the account owner
+
+(B). Create a validation rule on the custom object comparing the record owners on both records.
+(C). Include the sharing related list on the custom object page layout.
+(D). Ensure that the relationship between the objects is Master-Detail
+
+NO.88 Which two ways can a developer instantiate a PageReference in Apex? Choose 2 answers
+(A). By using an object standard set controller action
+(B). By using ApexPages.currentPage()
+(C). By using the PageReference.getURL() method
+(D). By using an object standard controller action
+
+NO.89 A developer needs an Apex method that can process Account or Contact records. Which
+method signature should the developer use?
+(A). Public void doWork(Record theRecord)
+(B). Public void doWork(sObject theRecord)
+(C). Public void doWork(Account Contact)
+(D). Public void doWork(Account || Contatc)
+
+- 
+    
+    제네릭
+    
+
+NO.90 Which code block returns the ListView of an Account object using the following debug
+statement? system.debug(controller.getListViewOptions() );
+
+(A) Apexpages.StandardSetController controller = new ApexPages.StandardSetController(Database.getQueryLocator(’SELECT Id FROM Account LIMIT 1’));
+
+(b) ApexPages.Standard Controller controller = new ApexPages. StandardController([SELECT Id FROM Account LIMIT 1]);
+
+(c) ApexPages. StandardController controller = new ApexPages. StandardController( Database.getQueryLocator(’SELECT Id FROM Account LIMIT 1’));
+
+(d) ApexPages.StandardController controller = new ApexPages.StandardController([SELECT Id FROM Account LIMIT 1]);
+
+- 
+    
+    database.getQueryLocator returns a Query Locator that runs your selected SOQL query returning list that can be iterated over in batch apex or used for displaying large set in VF(allowing things as pagination).
+    
+    NO.91 While writing a test class that covers an OpportunityLineItem trigger, a Developer is unable to create a standard PriceBook since one already exists in the org.
+    How should the Developer overcome this problem?
+    (A). Use Test.getStandardPricebookId() to get the standard PriceBook ID.
+    (B). Use @IsTest(SeeAllData=true) and delete the existing standard PriceBook.
+    (C). Use Test.loadData() and a Static Resource to load a standard Pricebook.
+    (D). Use @TestVisible to allow the test method to see the standard PriceBook.
+    
+
+NO.92 Which two statement are acceptable for a developer to use Inside procedural loops?
+(A). Contactlist.remove(i)
+(B). Delete contactList
+(C). Account a=[select id,name from account where id=:con.accountid limit 1]
+(D). Contact con =new contact()
+IT Certification Guaranteed, The Easy Way!
+
+NO.93 Which statement results in an Apex compiler error?
+(A). Map<Id,Leas> lmap = new Map<Id,Lead>([Select ID from Lead Limit 8]);
+(B). Date d1 = Date.Today(), d2 = Date.ValueOf('2018-01-01');
+(C). Integer a=5, b=6, c, d = 7;
+(D). List<string> s = List<string>{'a','b','c');
+
+NO.94 Given the code block: Integer x; for (x =0; x<10; x+=2){
+if (x==8) break; if (x==10) break;
+} system.debug(x); Which value will the system.debug display?
+(A). 2
+(B). 4
+(C). 8
+(D). 10
+
+NO.95 What is the result of the debug statements in testMethod3 when you create test data using
+testSetup in below code?
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a99b817-80b5-482f-9c6e-512d2a93d487/Untitled.png)
+
+- 
+    
+    for loop 안에 +i 빠진거 아님?
+    @testSetup : if a test class contains a test setup method, the testing framework executes the test setup method first, before any test method in the class. records that are created in a test setup method are available to all the test methods in the test class and are rolled back at the end of test class execution.
+    
+
+NO.96 To which primitive data type is a text area (rich) field automatically assigned?
+(A). Text
+(B). Blob
+(C). Object
+(D). String
+
+NO.97 A company has a custom object named Warehouse. Each Warehouse record has a distinct
+record owner, and is related to a parent Account in Salesforce.Which kind of relationship would a
+developer use to relate the Account to the Warehouse?
+(A). One -to -Many
+(B). Lookup
+(C). Master -Detail
+(D). Parent -Child
+
+NO.98 How can a developer refer to, or instantiate a PageReference in Apex? Choose 2 answers
+(A). By using a PageReference with a partial or full URL.
+(B). By using the Page object and a Visualforce page name.
+(C). By using the ApexPages.Page() method with a Visualforce page name.
+(D). By using the PageReference.Page() method with a partial or full URL
+
+NO.88 Which two ways can a developer instantiate a PageReference in Apex? Choose 2 answers
+(A). By using an object standard set controller action
+(B). By using ApexPages.currentPage()
+(C). By using the PageReference.getURL() method
+(D). By using an object standard controller action
+
+NO.99 An org has different Apex Classes that provide Account -related functionality.After a new
+validation rule is added to the object, many of the test methods fail.What can be done to resolve the
+failures and reduce the number of code changes needed for future validation rules?Choose 2
+answers:
+(A). Create a method that creates valid Account records, and call this method from within test
+methods.
+(B). Create a method that loads valid Account records from a Static Resource, and call this method
+within test methods.
+(C). Create a method that performs a callout for a valid Account record, and call this method from
+within test methods.
+(D). Create a method that queries for valid Account records, and call this method from within test
+methods.
