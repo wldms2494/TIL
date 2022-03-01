@@ -1,0 +1,962 @@
+# pdi
+
+NO.1 Given the following code snippet, that is part of a custom controller for a visual force page : 
+
+public void updateContact (Contact this contact) {
+
+thisContact.Is__Active__c  = false;
+
+try{
+
+update thisContact ;
+
+} catch (Exception e) {
+
+String errorMessage = ‘ An error concurred while updating the Contact.’ + e.getMesaage()}
+
+ApexPages.addmessage (new ApexPages.meessage(ApexPages.severity.FATAL.errorMessage))
+
+}
+
+In which two ways can the try/catch be enclosed to enforce object and field-level prevent the DML statement from being executed if the current loggen - in user doesn’t have the appropriate level of access? 2 answers
+
+- Enforcing object and field permissions
+    
+    you can also enforce object-level and field-level permissions in your code by explicitly calling the sObject describe result methods ( of Schema.DescribeSObectResult) and the field describe result methods(ofSchemaDescribeFieldResult)
+    
+    - to check the field level update permission of the contact’s email field before creating a new contact: isUpdatable()
+    
+    - to check the fild level read permission of the contact’s email field before query for this field : 
+    isAccessible()
+    - [https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_perms_enforcing.htm](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_perms_enforcing.htm)
+
+NO.2 A Next Best Action strategy uses an Enhance Element that invokes an Apex method to
+determine a discount level for a Contact, based on a number of factors. What is the correct definition
+of the Apex method?
+(A). @InvocableMethod
+global static ListRecommendation getLevel(List<ContactWrapper> input)
+{ /*implementation*/ }
+(B). @InvocableMethod
+global static List<List<Recommendation>> getLevel(List<ContactWrapper> input)
+{ /*implementation*/ }
+(C). @InvocableMethod
+global List<List<Recommendation>> getLevel(List<ContactWrapper> input)
+{ /*implementation*/ }
+(D). @InvocableMethod
+global Recommendation getLevel (ContactWrapper input)
+{ /*implementation*/ }
+
+NO.3 What are two benefits of using declarative customizations over code? Choose 2 answers What
+are two benefits of using declarative customizations over code?
+(A). Declarative customizations automatically update with each Salesforce release.
+(B). Declarative customizations automatically generate test classes.
+(C). Declarative customizations automatically generate test classes.
+(D). Declarative customizations generally require less maintenance
+
+NO.4 What are two ways a developer can get the status of an enquered job for a class that
+queueable interface? Choose 2 answers
+(A). View the apex status Page
+
+(B). View the apex flex Queue
+(C). View the apex Jobs page
+(D). Query the AsyncApexJobe object
+
+NO.5 What is the order of operations when a record is saved in Salesforce?
+(A). Process flows, triggers, workflow, commit
+(B). Workflow, process flows, triggers, commit
+(C). Workflow, triggers, process flows, commit
+(D). Triggers, workflow, process flows, commit
+
+NO.6 While writing a test class that covers an OpportunityLineItem trigger, a Developer is unable to
+create a standard PriceBook since one already exists in the org.
+How should the Developer overcome this problem?
+(A). Use Test.getStandardPricebookId() to get the standard PriceBook ID.
+(B). Use @IsTest(SeeAllData=true) and delete the existing standard PriceBook.
+(C). Use Test.loadData() and a Static Resource to load a standard Pricebook.
+(D). Use @TestVisible to allow the test method to see the standard PriceBook.
+
+NO.7 What should a developer use to obtain the Id and Name of all the Leads. Accounts, and
+Contacts that hove the company name "Universal Containers"?
+(A). FIND 'Universal Containers' IN Name Fields RETURNING leadjid, name), accounted, name),
+contacted, name)
+(B). FIND Universal Containers' IN CompanyName Fietds RETURNING lead{ld. name), accounted,
+name), contacted, name)
+(C). SELECT lead(id, name). accountOd, name), contacted, name) FROM Lead, Account, Contact
+WHERE Name = "universal Containers'
+(D). SELECT [Lead.id](http://lead.id/). [Lead.Name](http://lead.name/), [Account.Id](http://account.id/), AccountName, Contacted, [Contact.Name](http://contact.name/) FROM Lead,
+Account, Contact WHERE CompanvName * Universal Containers'
+
+ 
+
+- 
+    
+    이해 안됨ㅎ
+    
+
+NO.8 A developer is creating a Visualforce page that allows users to create multiple Opportunities.
+
+The developer is asked to verify the current user’s default values based on the record type before inserting the record. How can the developer fine the current user’s dafault record type?
+
+(A). Query the Profile where the ID equals userInfo.getProfileID() and then use the profile.Opportunity.getDefaultRecordType() method.
+
+(B). Use Opportunity.SObjectType.getDescribe().getRecordTypeInfos() to get a list of record types, and iterate trought them until isdefaultRecordTypeMapping() is true.
+
+(C). Create the opportunity and check the opportunity.recordType before inserting, which will have the record ID of the current user's default record type
+
+(D). Use the Schema.userInfo.Opportunity.getDefaultRecordType() method.
+
+NO.9 Which two statements are true about Getter and Setter methods as they relate to Visualforce?
+(A). Setter methods always have to be declared global.
+(B). There is no guarantee for the order in which Getter methods are called.
+(C). A corresponding Setter method is required for each Getter method.
+(D). Getter methods pass values from a controller to a page
+
+NO.10 A developer needs to join data received from an integration with an external system with
+parent records in Salesforce. The data set does not contain the Salesforce IDs of the parent records,
+but it does have a foreign key attribute that can be used to identify the parent.
+Which action will allow the developer to relate records in the data model without knowing the
+Salesforce ID?
+(A). Create a custom field on the child object of type Foreign Key
+(B). Create and populate a custom field on the parent object marked as Unique
+(C). Create and populate a custom field on the parent object marked as an External ID.
+(D). Create a custom field on the child object of type External Relationship
+
+NO.11 A developer of Universal Containers is tasked with implementing a new Salesforce application
+that must be able to by their company's Salesforce administrator.
+Which three should be considered for building out the business logic layer of the application? Choose
+3 answers
+(A). Workflows
+(B). validation Rules
+(C). Process Builder
+(D). Scheduled Jobs
+(E). Invocable Action
+
+NO.12 An Approval Process is defined in the Expense_Item__c. A business rule dictates that
+whenever a user changes the Status to 'Submitted' on an Expense_Report__c record, all the
+Expense_Item__c records related to the expense report must enter the approval process individually.
+Which approach should be used to ensure the business requirement is met?
+(A). Create a Process Builder on Expense_Report__c with a 'Submit for Approval' action type to
+submit all related Expense_Item__c records when the criteria is met.
+(B). Create two Process Builder, one on Expense_Report__c to mark the related Expense_Item__c as
+submittable and the second on Expense_Item__c to submit the records for approval.
+(C). Create a Process Builder on Expense_Report__c to mark the related Expense_Item__c as
+submittable and trigger on Expense_item__c to submit the records for approval.
+(D). Create a Process Builder on Expense_Report__c with an 'Apex' action type to submit all related
+Expense_Item__c records when the criteria is met
+
+- 
+    
+    confusing!!
+    근데 일단 related records는 submit approval 할 수 없다. 그래서
+    
+    일단 a 부터 보면 
+    
+    Expense report에다가 빌더를 하나 만들고 거기에 submit for approval 액션을 만든다. 그리고 이 액션은 all related Expense item records 를 조건에 맞는다면 submit한다고 하였는데 틀린것 같다. 
+    
+    B!
+    
+    create two process builder , one on Expense report to mark the related Expense_Item as submittable and the second on Expense Item to submit the records for approval
+    
+    일단 릴레이트 레코드를 제출하는것이 아닌, 아이템 그 테이블 ? 필드 ? 위에서 동작하는것이니까 좀 맞는 소리처럼 들린다.
+    
+     c 같은 경우에도, 레포트 위에 필더 장착하고 트리거로 아 모르겟따 ㅇ....ㅇㅅ
+    
+
+NO.13 Which Salesforce feature allows a developer to see when a user last logged in to Salesforce if
+real-time notification is not required?
+
+(A). Asynchronous Data Capture Events
+(B). Developer Log
+(C). Event Monitoring Log
+(D). Calendar Events
+
+NO.14 Which two are best practices when it comes to component and application event handling?
+(Choose two.)
+(A). Reuse the event logic in a component bundle, by putting the logic in the helper.
+(B). Use component events to communicate actions that should be handled at the application level.
+(C). Handle low-level events in the event handler and re-fire them as higher-level events.
+(D). Try to use application events as opposed to component events.
+
+NO.15 Universal Containers wants to assess the advantages of declarative development versus
+programmatic customization for specific use cases in its Salesforce implementation.
+What are two characteristics of declarative development over programmatic customization?
+Choose 2 answers
+(A). Declarative development has higher design limits and query limits.
+(B). Declarative development can be done using the Setup UI.
+(C). Declarative development does not require Apex test classes.
+(D). Declarative code logic does not require maintenance or review
+
+NO.16 Which three web technologies can be integrated into a Visualforce page? (Choose three.)
+(A). JavaScript
+(B). CSS
+(C). Java
+(D). PHP
+(E). HTML
+
+NO.17 Which statement should be used to allow some of the records in a list of records to be
+inserted rf others fail to be inserted?
+(A). insert records
+(B). Database.insert(records, true)
+(C). insert (records, false)
+(D). Database.insert(records, false)
+
+NO.18 A developer needs to update an unrelated object when a record gets saved. Which two
+trigger types should the developer create?
+(A). After insert
+(B). After update
+(C). Before update
+(D). Before insert
+
+NO.19 Which annotation exposes an Apex class as a RESTful web service?
+(A). RemoteAction
+(B). HttpInvocable
+(C). AuraEnabled
+(D). RestResource
+
+NO.20  When using SalesforceDX, what does a developer need tto enable to create and manage scratch orgs?
+
+(a) Production
+
+(b) dev hub
+
+(c) Environment Hub
+
+(d) Sandbox
+
+- 
+    
+    [https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm) 
+    
+    scrach orgs는 데이터가 다 들어가있는 일회용 디스포저블 씨아이씨디 올리는 용? 여튼 데이터가 다 들어있는 오그라고 생각하고 데브허브에서 매니징한다. 
+    
+
+NO.21 A team of many developers work in their own individual orgs that have the same
+configuration at the production org. Which type of org is best suited for this scenario?
+(A). Developer Sandbox
+(B). Developer Edition
+(C). Full Sandbox
+(D). Partner Developer Edition
+
+NO.22 What can used to delete components from production?
+(A). A change set deployment with the delete option checked
+(B). An ant migration tool deployment with destructivechanges xml file and the components to delete
+in the package .xml file
+(C). A change set deployment with a destructivechanges XML file
+(D). An ant migration tool deployment with a destructivechanges XML file and an empty package .xml
+file
+
+NO.23 In the Lightning UI, where should a developer look to find information about a Paused Flow
+Interview?
+(A). On the Paused Row Interviews related List for a given record
+(B). In the Paused Interviews section of the Apex Flex Queue
+(C). In the system debug log by Altering on Paused Row Interview
+(D). On the Paused Row Interviews component on the Home page
+
+NO.24 A development team wants to use a deployment script lo automatically deploy lo a sandbox
+during their development cycles.
+
+Which two tools can they use to run a script that deploys to a sandbox?
+Choose 2 answers
+(A). Ant Migration Tool
+(B). SFDX CLI
+(C). Change Sets
+(D). Developer Console
+
+NO.25 An Opportunity needs to have an amount rolled up from a custom object that is not in a
+master-detail relationship.
+How can this be achieved?
+(A). Write a trigger on the child object and use a red-black tree sorting to sum the amount for all
+related child objects under the Opportunity.
+(B). Write a Process Builder that links the custom object to the Opportunity.
+(C). Write a trigger on the child object and use an aggregate function to sum the amount for all
+related child objects under the Opportunity
+(D). Use the Streaming API to create real-time roll-up summaries
+
+NO.26 A developer must write an Apex method that will be called from a Lightning component. The
+method may delete an Account stored in the accountRec variable.
+Which method should a developer use to ensure only users that should be able to delete Accounts
+can successfully perform deletions?
+(A). Schema.sObjectType.Account.isDeletable()
+(B). Account.isDeletable()
+(C). accountRec.isDeletable()
+(D). accountRec.sObjectType.isDeletable()
+
+NO.27 A developer created a Visualforce page and custom controller to display the account type
+field as shown below. Custom controller code: public class customCtrlr{ private Account theAccount;
+public String actType; public customCtrlr() { theAccount = [SELECT Id, Type FROM Account WHERE Id
+= :apexPages.currentPage().getParameters().get('id')]; actType = theAccount.Type; } } Visualforce
+page snippet: The Account Type is {!actType} The value of the account type field is not being
+displayed correctly on the page. Assuming the custom controller is property referenced on the
+Visualforce page, what should the developer do to correct the problem?
+(A). Add a getter method for the actType attribute.
+(B). Change theAccount attribute to public.
+(C). Convert theAccount.Type to a String.
+(D). Add with sharing to the custom controller.
+
+NO.28 Universal Containers stores the availability date on each Line Item of an Order and Orders are  only shipped when all of the Line Items are available. Which method should be used to calculate the estimated ship date for an Order?
+
+(A). Use a CEILING formula on each of the Latest availability date fields.
+(B). Use a DAYS formula on each of the availability date fields and a COUNT Roll-Up Summary field on
+the Order.
+(C). Use a LATEST formula on each of the latest availability date fields.
+(D). Use a Max Roll-Up Summary field on the Latest availability date fields.
+
+- 
+    
+    Line Item. 
+    거래의 세부내역을 담고있는 전표의 일부분으로 금액, 계정번호 및 항목이 대변항목인지 차면항목인가 등을 비롯한 기타 거래의 종류에 따라 포함되어야 하는 정보
+    
+
+NO.29 A developer considers the following snippet of code:
+
+Boolead isOK;
+
+integer x;
+
+String theString = ‘Hello’;
+
+if(isOK == false && theString ==’Hellp’) { 
+
+x=1;
+
+} else if(isOK == true && the String ==’Hello’) {
+
+x=2;
+
+} else if ( isOK = null && theString ==’Hello’) {
+
+x=3;
+
+} else {
+
+x=4;
+
+}
+
+Based on this code, what is the value of x?
+(A). 2
+(B). 1
+(C). 3
+(D). 4
+
+NO.30 Cloud Kicks Fitness, an ISV Salesforce partner, is developing a managed package application.
+One of the application modules allows the user to calculate body fat using the Apex class, BodyFat,
+and its method, calculateBodyFat(). The product owner wants to ensure this method is accessible by
+the consumer of the application when developing customizations outside the ISV's package
+namespace.
+Which approach should a developer take to ensure calculateBodyFat() is accessible outside the
+package namespace?
+(A). Declare the class and method using the public access modifier.
+(B). Declare the class as global and use the public access modifier on the method.
+(C). Declare the class as public and use the global access modifier on the method.
+(D). Declare the class and method using the global access modifier.
+
+NO.31 Which code displays the contents of a Visualforce page as a PDF?
+(A). <apex:page contentType="pdf">
+(B). <apex:page rendersAs="application/pdf">
+(C). <apex:page contentType="application/pdf">
+(D). <apex:page renderAs="pdf">
+
+NO.32 Which salesforce org has a complete duplicate copy of the production org including data and
+configuration?
+(A). Developer Pro Sandbox
+(B). Partial Copy Sandbox
+(C). Production
+(D). Full Sandbox
+
+NO.33 When a user edits the Postal Code on an Account, a custom Account text field named
+"Timezone" must be update based on the values in a PostalCodeToTimezone__c custom object. How
+should a developer implement this feature?
+(A). Build an Account Assignment Rule.
+(B). Build an Account custom Trigger.
+(C). Build an account Approval Process
+(D). Build an Account Workflow Rule.
+
+- 
+    
+    apex로 after update 요롷게 해서  custom trigger만들면 되지 않을까용ㅎ
+    
+
+NO.34 What is the result of the following code?
+
+`What is the result of the following code?
+
+Account a = new Account ();
+
+Database.insert(a, false);`
+
+NO.35 A developer created a trigger on the Account object and wants to test if the trigger is
+properly bulklfield. The developer team decided that the trigger should be tested with 200 account
+records with unique names.
+What two things should be done to create the test data within the unit test with the least amount of code? Choose 2 answers
+
+(A). Use the @isTest(isParallel=true) annotation in the test class.
+(B). Use Test.loadData to populate data in your test methods.
+(C). Use the @isTest(seeAllData=true) annotation in the test class.
+(D). Create a static resource containing test data.
+
+NO.36 A developer writes a trigger on the Account object on the before update event that
+increments a count field. A workflow rule also increments the count field every time that an Account
+is created or update. The field update in the workflow rule is configured to not re-evaluate workflow
+rules. What is the value of the count field if an Account is inserted with an initial value of zero,
+assuming no other automation logic is implemented on the Account?
+(A). 3
+(B). 2
+(C). 1
+(D). 4
+
+NO.37 Universal Containers wants Opportunities to no longer be editable when reaching the
+Closed/Won stage.
+How should a developer accomplish this?
+(A). Use a validation rule.
+(B). Use the Process Automation settings.
+(C). Use Flow Builder.
+(D). Mark fields as read-only on the page layout.
+
+NO.38 Which code displays the content of Visualforce page as PDF?
+(A). <apex:page renderAs="pdf">
+(B). <apex:page readeras'' application/pdf''>
+(C). <apex:page readerAs= ''application/pdf''>
+(D). <apex:page contentype '' application/pdf'')
+
+NO.39 A developer writes a trigger on the Account object on the before update event that
+increments a count field. A workflow rule also increments the count field every time that an Account
+is created or updated. The field update in the workflow rule is configured to not re-evaluate workflow
+rules.
+What is the value of the count field if an Account is inserted with an initial value of zero, assuming no
+other automation logic is implemented on the Account?
+(A). 1
+(B). 3
+(C). 4
+(D). 2
+
+NO.40 Which three statements are true regarding trace flags? (Choose three.)
+
+(a) Setting trace flags automatically cause debug logs to be generated . 
+
+(b) Logging levels override trace flags
+
+(c) trace flags override logging levels.
+
+(d) if active trace flags are not set, Apex test execute with default loggint levels.
+
+(e) Trace flags can be set in teh developer Console setup or using the Tooling API
+
+NO.41 A developer has requirement to write Apex code to update a large number of account
+records on a nightly basis. The system administrator needs to be able to schedule the class to run
+after business hours on an as-needed basis.
+Which class definition should be used to successfully implement this requirement?
+(A). Global inherited sharing class ProcessAccountProcessor implements
+Database. Batchable<sObject>
+(B). Global inherited sharing class ProcessAccount Process implements Queueable
+(C). Global inherited sharing class ProcessAccountProcess Implements Queueable
+(D). Gloabal inherited sharing class processAccount Processor implements
+Database>Bachable<sObject> Schedulable
+
+NO.42 Refert to the following code that runs in an Execute Anonymous block : 
+
+for(List<Lead> theseLeads : [SELECT LastName, Companay, Email From Lead LIMIT 20000] ) {
+
+for(Lead thisLead : theseLeads){
+
+[thisLead.Email](http://thisLead.Email) = !@@#$@#$@#%$%^$%^$}
+
+Database.update(theseLeads, False);
+
+}
+
+}
+
+(A). In an environment where the full result set is returned, what is a possible outcome of this code?
+(B). The total number of records processed as a result of DML statements will be exceeded
+(C). The transaction will succeed and the first ten thousand records will be committed to the
+database.
+(D). The total number of DML statements will be exceeded
+
+- 
+    
+    DML limit은 150임 . (bulk)
+    
+
+NO.43 A developer is building custom search functionality that uses SOSL to search account and
+contact records that match search terms provided by the end user. The feature is exposed through a
+Lightning web component, and the end user is able to provide a list of terms to search.
+Consider the following code snippet:
+
+@AuraEnabled
+
+public static List<List<sObject>> searchTerms (List<String> termList){
+
+List<List<sObject>> result = new List<List<sObject>>();
+
+for (String term : termList) { 
+
+retuls.addAll ( [ FIND : term IN ALL FIELDS RETURNING Account(Name) , Contact(FirstName, LastName] );
+
+}
+
+}
+
+what is the maximum number of search terms the end user can provide to successfully execute the search without excedding a governor limit? 
+
+(a) 20
+
+(b) 150
+
+(c) 200
+
+(d) 2,000
+
+NO.44 A developer must implement a CheckPaymentProcessor class that provides check processing
+payment capabilities that adhere to what defined for payments in the PaymentProcessor interface.
+public interface PaymentProcessor { void pay(Decimal amount); } Which is the correct
+implementation to use the PaymentProcessor interface class?
+(A). Public class CheckPaymentProcessor implements PaymentProcessor {
+public void pay(Decimal amount) {}
+}
+(B). Public class CheckPaymentProcessor implements PaymentProcessor {
+public void pay(Decimal amount);
+}
+(C). Public class CheckPaymentProcessor extends PaymentProcessor {
+public void pay(Decimal amount);
+}
+(D). Public class CheckPaymentProcessor extends PaymentProcessor {
+public void pay(Decimal amount) {}
+
+v
+
+NO.45 An org tracks customer orders on an Order object and the items of an Order on the Line Item
+object. The Line Item object has a MasterDetail relationship to the order object. A developer has a
+requirement to calculate the order amount on an Order and the line amount on each Line item based
+on quantity and price.
+What is the correct implementation?
+(A). Implement the line amount as a numeric formula field and the order amount as a roll-up
+summary field.
+(B). Write a single before trigger on the Line Item that calculates the item amount and updates the
+order amount on the Order.
+(C). Implement the Line amount as a currency field and the order amount as a SUM formula field.
+
+(D). Write a process on the Line item that calculates the item amount and order amount and updates
+the filed on the Line Item and the order.
+
+NO.46 What is the maximum number of SOQL queries used by the following code? List<Account>
+aList = [SELECT Id FROM Account LIMIT 5]; for (Account a : aList){ List<Contact> cList = [SELECT Id
+FROM Contact WHERE AccountId = :a.Id); }
+(A). 5
+(B). 6
+(C). 1
+(D). 2
+
+NO.47 Which code in a Visualforce page and/or controller might present a security vulnerability?
+(A). <apex:outputField value="{!ctrl.userInput}" />
+(B). <apex:outputText escape="false" value=" {!$CurrentPage.parameters.userInput}" />
+(C). <apex:outputText value="{!$CurrentPage.parameters.userInput}" />
+(D). <apex:outputField escape="false" value="{!ctrl.userInput}" />
+
+NO.48 What is a benefit of developing applications in a multi-tenant environment?
+(A). Enforced best practices for development
+(B). Access to predefined computing resources
+(C). Unlimited processing power and memory
+(D). Default out-of-the-box configuration
+
+What should a developer do to correct the code so that there is no chance of hitting a governor limit?
+(A). Rework the code and eliminate the for loop.
+(B). combine the two SELECT statements into a single SOQL statement.
+(C). Add a WHERE clause to the first SELECT SOQL statement.
+(D). Add a LIMIT clause to the first SELECT SOQL statement.
+
+NO.49 Given the code below:
+
+`
+
+List<Account>aList = [SELECT Id FROM Account];
+
+for( Account a : aList){
+
+List<Contact> cList =[SELECT Id FROM Contact WHERE AccountId = a.Id];}
+
+`
+
+What should a developer do to correct the code so that there is no chance of hitting a governor limit?
+(A). Rework the code and eliminate the for loop.
+(B). combine the two SELECT statements into a single SOQL statement.
+(C). Add a WHERE clause to the first SELECT SOQL statement.
+(D). Add a LIMIT clause to the first SELECT SOQL statement.
+
+NO.50 A Visual Flow uses an apex Action to provide additional information about multiple Contacts,
+stored in a custom class, contactInfo. Which is the correct definition of the Apex method that gets
+additional information?
+
+(A). @InvocableMethod(label='Additional Info')
+public List<ContactInfo> getInfo(List<Id> contactIds)
+
+{ /*implementation*/ }
+
+(B). @InvocableMethod(label='additional Info')
+public static ContactInfo getInfo(Id contactId)
+{ /*implementation*/ }
+
+(C). @invocableMethod(label)='Additional Info')
+public static List<ContactInfo> getInfo(List<Id> contactIds)
+{ /*Implementation*/ }
+
+(D). @InvocableMethod(Label='additional Info')
+public ContactInfo(Id contactId)
+{ /*implementation*/ }
+
+NO.51 How can a developer check the test coverage of active Process Builder and Flows deploying
+them in a Changing Set?
+(A). Use the Flow properties page.
+(B). Use the code Coverage Setup page
+(C). Use the Apex testresult class
+(D). Use SOQL and the Tooling API
+
+NO.53 Cloud kicks has a multi-screen flow that its call center agents use when handling inbound
+service desk calls.
+At one of the steps in the flow, the agents should be presented with a list of order numbers and dates
+that are retrieved from an external order management system in real time and displayed on the
+screen.
+What should a developer use to satisfy this requirement?
+(A). An Apex controller
+(B). An Apex REST class
+(C). An outbound message
+(D). An invocable method
+
+NO.54 A workflow updates the value of a custom for an existing Account.
+
+How ca developer acces the updated custom feild value from a trigger? 
+
+(A). By writing, a Before Update trigger and accessing the field value from Trigger.new
+(B). By writing an After Insert trigger and accessing the field value from Trigger.old
+(C). By writing an After Update trigger and accessing the field value from Trigger.old
+(D). By writing a Before Insert trigger and accessing the field value from Trigger.new
+
+- 
+    
+    [Trigger.new](http://Trigger.new) : Returns a list of the new versions of the sObjet records. Note that this sObject List is only available in insert and update trigger, and the records can only be modified in before triggers.
+    
+    Trigger.old : Returns a list of the old versions of the sObject records. Note that this sObject list is only available in update and delete triggers.
+    
+    simple words, [Trigger.new](http://Trigger.new) returns new value of records and Trigger.old returns old value of records.
+    
+    [Trigger.new](http://Trigger.new)  works in case of insert and update both and Trigger.old works in case of update and delete both 
+    
+
+NO.55 A developer is tasked with performing a complex validation using Apex as part of advanced
+business logic. certain criteria are met for a PurchaseOrder, the developer must throw a custom
+exception.
+What is the correct way for the developer to declare a class that can be used as an exception?
+(A). public class PurchaseOrderException implements Exception ()
+(B). public class PurchaseOrderException extends Exception ()
+(C). public class PurchaseOrder implements Exception ()
+(D). public class PurchaseOrder extends Exception ()
+
+NO.56 
+
+List<<Case> casesToUpdate = new List<Case>();
+
+for(Case thisCase : [Select Id, Status FROM Case Limit 50000]){
+
+thisCase.Status = ‘Working’;
+
+casesToUpdate.add(thisCase);
+
+}
+
+try {
+
+Database.update(casesToUpdate, false);
+
+}catch(Exception e) {
+
+System.debug(e.getMessage()0;
+
+}
+
+What should a developer consider for an environment that has over 10,000 Case records?
+(A). The transaction will fail due to exceeding the governor limit.
+(B). The try/catch block will handle any DML exceptions thrown.
+(C). The transaction will succeed and changes will be committed.
+(D). The try/catch block will handle exceptions thrown by governor limits.
+
+NO.57 The following Apex method is part of the ContactSerfvice class that is called from a trigger: 
+
+public static void setBusinessUnitToEMEA(Contact thisContact){ thisContact.Business_Unit__c = “EMEA”; update thisContact;}
+
+how shold the developer modify the code to ensure best practis are met?
+
+(a) Public static void setBusinessUnitToEMEA(List<Contact> contacts) {
+
+for(Contact thisContact : contacts) {
+
+thisContact.Business_Unit__c = ‘EMEA’;
+
+update contacts[0];
+
+}
+
+}
+
+(b) public static void setBusinessUnitToEMEA(List<Contact> contacts) {
+
+for(Contact thisContact: contacts) {
+
+thisContact.Busines __c = ‘EMEA’;
+
+}
+
+update contacts;
+
+}
+
+(c) public static void setBusinessUnitToEMEA(Contact thisContact) {
+
+List<Contact> contacts = new List<Contact>( ) ;
+
+contacts.add(thisContact.Business_Unit__c = ‘EMEA’);
+
+update contacts;
+
+}
+
+(d) public void setBusinessUnitToEMEA(List<Contact>contacts) {
+
+contacts[0].Business_Unit__c = ‘EMEA’;
+
+update contacts[0];
+
+}
+
+NO.58 A developer created a weather app that contains multiple Lightning web components.
+
+One of the components called Toggle, has a toggle for Fahrenheit or Celsius units.
+
+Another component, called Temperature, displays the current temperature in the unit selected in  the toggle component when a user toggles from Farenheit to Celsius or vies versa in the Toggle component, the information must be sent to be the Temperature component so the temperature can be comverted and displayed
+
+what is the recomment way to accomplish this?
+
+What is the recommend way to accomplish this?
+(A). Create a custom event to handle the communicate between the components.
+(B). Use Lightning Message Service to communicate between the component.
+(C). Use Lightning Message Service to communicate between the components.
+(D). The Toggle component should call a method in the Temperature component.
+
+NO.59 A developer wants to mark each Account in a List<Account> as either or Inactive based on the
+LastModified field value being more than 90 days.
+Which Apex technique should the developer use?
+(A). A for loop, with a switch statement inside
+(B). A Switch statement, with a for loop inside
+(C). An If/else statement, with a for loop inside
+(D). A for loop, with an if/else statement inside
+
+NO.60 Universal Containers implemented a private sharing model for the Account object. A custom
+Account search tool was developed with Apex to help sales representatives find accounts that match
+multiple criteria they specify. Since its release, users of the tool report they can see Accounts they do
+not own. What should the developer use to enforce sharing permission for the currently logged-in
+user while using the custom search tool?
+(A). Use the schema describe calls to determine if the logged-in users has access to the Account
+object.
+(B). Use the without sharing keyword on the class declaration.
+(C). Use the UserInfo Apex class to filter all SOQL queries to returned records owned by the logged-in
+user.
+(D). Use the with sharing keyword on the class declaration
+
+NO.61 In terms of the MVC paradigm, what are two advantages of implementing the layer of a
+Salesforce application using Aura Component-based development over Visualforce? Choose 2
+
+answers
+(A). Self-contained and reusable units of an application
+(B). Rich component ecosystem
+(C). Automatic code generation
+(D). Server-side run-time debugging
+
+NO.63 Which two statements accurately represent the MVC framework implementation in
+Salesforce? Choose 2 answers
+(A). Validation rules enforce business rules and represent the Controller (C) part of the MVC
+framework
+(B). Lightning component HTML files represent the Model (M) part of the MVC framework.
+(C). Triggers that create records represent the Model (M) part of the MVC framework.
+(D). Standard and Custom objects used in the app schema represent the View (V) part of the MVC
+framework
+
+No.64 
+
+Integer x = 0;
+
+do{
+
+x=1;
+
+x - - ;
+
+While(x<1);
+
+System.debug(x);
+
+}
+
+What is the value of x when it is written to the debug log?
+(A). 0
+(B). 1
+(C). 2
+(D). 3
+
+not sure about apex code
+
+no66. which two characterstics are true for Aura component events?
+
+(a) the event propagates to every owner in the containment hierarchy
+
+(b) Depending on the current propagation phrase, calling event. Stoppropagation() may not stop the event propagation.
+
+(C). If a container component needs to handle a component event, add a includeFacets" true"
+attribute to its handler.
+(D). By default, containers can handle events thrown by components they contain.
+
+- 
+    
+    propagation - 번식, 포교..? 
+    the framework suppports capture and bubble phrases for the propagation of component events.
+    
+    stopPropagation ( ) 메서드는 현재 이벤트가 캡처링?버블링?단계에서 더 이상 전파되지 않도록 방지합니다. 
+    
+    stopPropagation ( ) method stops the bubbling of an event to parent elements, preventing any parent event handlers from be executed
+    
+    To allow a container component to handle the event, add includeFacets="true"
+     to the <aura:handler>
+     tag of the container component.
+    
+
+NO.66 Which action causes a before trigger to fire by default for Accounts?
+(A). Renaming or replacing picklist
+(B). Importing data using the Data Loader and the Bulk API
+(C). Converting Leads to Contact accounts
+(D). Updating addresses using the Mass Address update too
+
+NO.67 A developer wants to get access to the standard price book in the org while writing a test
+class that covers an OpportunityLineItem trigger. Which method allows access to the price book?
+(A). Use Test.loadData ( )and a static resource to load a standard price book
+(B). Use @TestVisible to allow the test method to see the standard price book.
+(C). Use Test,getStandardPricebookid ( ) to get the standard price book ID.
+(D). Use @IsTest (SeeAllData=True) and delete the existing standard price book
+
+NO.68 A developer has an integer variable called maxAttempts. The developer meeds to ensure that
+once maxAttempts is initialized, it preserves its value for the lenght of the Apex transaction; while
+being able to share the variable's state between trigger executions. How should the developer
+declare maxAttempts to meet these requirements?
+(A). Declare maxattempts as a member variable on the trigger definition.
+(B). Declare maxattempts as a private static variable on a helper class
+(C). Declare maxattempts as a constant using the static and final keywords
+(D). Declare maxattempts as a variable on a helper class
+
+NO.69 An org has an existing Visual Flow that creates an Opportunity with an Update records
+element. A developer must update the Visual Flow also created a Contact and store the created
+Contact's ID on the Opportunity.
+(A). Add a new Get Records element.
+(B). Add a new Create records element.
+(C). Add a new Quick Action (of type create) element.
+(D). Add a new Update records element
+
+NO.70 Universal Containers recently transitioned from Classic to Lighting Experience. One of its
+business processes requires certain value from the opportunity object to be sent via HTTP REST
+callout to its external order management system based on a user-initiated action on the opportunity
+page. Example values are as follow Name Amount Account Which two methods should the developer
+implement to fulfill the business requirement? (Choose 2 answers)
+(A). Create a Lightning component that performs the HTTP REST callout, and use a Lightning Action to
+expose the component on the Opportunity detail page
+
+(B). Create a Process Builder on the Opportunity object that executes an Apex immediate action to
+perform the HTTP REST callout whenever the Opportunity is updated.
+(C). Create an after update trigger on the Opportunity object that calls a helper method using
+@Future(Callout=true) to perform the HTTP REST callout.
+(D). Create a Visualforce page that performs the HTTP REST callout, and use a Visualforce quick action
+to expose the component on the Opportunity detail page
+
+NO.71
+
+Total_Timesheets__c
+
+Total_Approved_Timesheets __c
+
+Totla_Rejected_Timesheet__c
+
+The developer is asked to create a new field that should the ratio between rejected and approved
+timesheet for a given project.
+What are two benefits of choosing a formula held instead of an Apex trigger to fulfill the request?
+Choose 2 answers
+(A). A test class will validate the formula field during deployment.
+(B). A formula field will trigger existing automation when deployed.
+(C). A formula field will calculate the retroactively for existing records
+(D). Using a formula field reduces maintenance overhead.
+
+NO.72 a developer must create a shippingCalculator class that cannot be instantiated and must include a working default implementation of a calculate method, that sub-classes can override.
+
+what is the correct implementation of the shipping caculator class?
+
+(a) public abstract class ShippingCalculator {
+
+public abstract calculate() {/*implementation*/ } 
+
+}
+
+(b) public abstract class ShippingCalculator {
+
+public virtual void calculate() {/*implementation*/ } 
+
+}
+
+(c) public abstact class(ShippingCalculator {
+
+public void calculate() {/*implementation*/ } 
+
+}
+
+(d) public abstract class shippingCalculator { 
+
+public ovverid calculate() {/*implementation*/ } 
+
+}
+
+NO.118 A Salesforce Administrator used Flow Builder to create a flow named ''accountOnboarding''.
+The flow must be used inside an Aura component.
+Which tag should a developer use to display the flow in the component?
+(A). Lightning-flow
+(B). Aura:flow
+(C). Lightning:flow
+(D). Aura:flow
+
+- 
+    
+    To embed a flow in your Aura component, add the <lightning:flow>
+     component to it.
+    
+    aura:component
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <lightning:flow aura:id="flowData" />
+    </aura:component>
+    
+
+NO.124 Universal Containers has an order system that uses on Order Number to identify an order
+for customers service agents. Order records will be imported into Salesforce.
+How should the "Order Number field be defined in Salesforce.
+(A). Lookup
+(B). Direct Lookup
+(C). Number with External ID
+(D). Indirect Lookup
+
+- 
+    
+    - An external ID is a custom field that has the “External ID” attribute, meaning that it contains unique record identifiers from a system outside of Salesforce. When you select this option, the import wizard will detect existing records in Salesforce that have the same external ID.
+    
+
+NO.131 A Lightning component has a wired property, searchResults, that stores a list of
+Opportunities. Which definition of the Apex method, to which the searchResults property is wired,
+should be used?
+(A). @AuraEnabled(cacheable=true)
+public static List<Opportunity> search(String term) { /* implementation*/ }
+(B). @AuraEnabled(cacheable=true)
+public List<Opportunity> search(String term) { /*implementation*/ }
+(C). @AuraEnabled(cacheable=false)
+public static List<Opportunity> search(String term) { /*implementation*/ }
+(D). @AuraEnabled(cacheable=false)
+public List<Opportunity> search(String term) { /*implementation*/ }
