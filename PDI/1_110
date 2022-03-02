@@ -917,6 +917,473 @@ public ovverid calculate() {/*implementation*/ }
 
 }
 
+NO.73 A developer needs to implment a custom SOAP Web Service that is used by an external Web Application . The developer chooses to include helper methods that are not used by the Web Application. In theimplementation of the Web Service Class, WHich code segment shows the correct declrarion of the class and methods?
+
+(a) global class WebServiceClass {
+
+private Boolean helperMethod () {/*implementation*/ } 
+
+global String updateRecords() {/*implementation*/ } 
+
+}
+
+(b) webservice class WebServiceClass{
+
+private Boolean helperMethod() {{/*implementation*/ } 
+
+global static String updateRecords() {/*implementation*/ } 
+
+}
+
+(c) global class WebServiceClass {
+
+private Boolean helperMethod() {/*implementation*/ } 
+
+webservice static String updateRecords() {/*implementation*/ } 
+
+}
+
+(d) webservice class WebserviceClass{
+
+private boolean helperMethods() {/*implementation*/ } 
+webservice static String updateRecords() {/*implementation*/ } 
+
+}
+
+NO.74 A developer created a new trigger that inserts a Task when a new Lead is created. After
+deploying to production, an outside integration chat reads task records is periodically reporting
+errors.
+Which change should the developer make to ensure the integration is not affected with minimal
+impact to business logic?
+(A). Deactivate the trigger before the integration runs.
+(B). Use a try-catch block after the insert statement.
+(C). Remove the Apex class from the integration user's profile.
+(D). Use the Database method with all or None set to false
+
+NO.75 Which two are phases in the Salesforce Application Event propagation framework? Choose
+2 answers
+
+(A). Bubble
+(B). Default
+(C). Capture
+
+NO.76 The sales management team at Universal Containers requires that the Lead Source field of
+the Lead record be populated when a Lead is converted.
+What should be used to ensure that a user populates the Lead Source field prior to converting a
+Lead?
+(A). Process Builder
+(B). Validation Rule
+(C). Formula Field
+(D). workflow Rule
+
+NO.77 Universal Containers (UC) uses a custom object called Vendor. The Vendor custom object has
+a Master-Detail relationship with the standard Account object. Based on some internal discussion,
+the UC administrator tried to change the Master-Detail relationship to a Lookup relationship but was
+not able to do so. What is a possible reason that this change was not permitted?
+(A). The Account records contain Vendor roll-up summary fields.
+(B). The Vendor object must use a Master-Detail field for reporting.
+(C). The Vendor records have existing values in the Account object.
+(D). The Account object is included on a workflow on the Vendor object.
+
+NO.78 What are two ways for a developer to execute tests in an org?
+(A). Tooling API
+(B). Developer console
+(C). Bulk API
+(D). Matadata API
+
+NO.79 A developer needs to create a baseline set of data (Accounts, Contacts, Products, Assets) for
+an entire suite of test allowing them to test independent requirements various types of Salesforce
+Cases.
+Which approach can efficiently generate the required data for each unit test?
+(A). Use @TestSetup with a viod method.
+(B). Create test data before Test.startTest() in the unit test.
+(C). Add @isTest(seeAllData=true) at the start of the unit test class.
+(D). Create a nock using the Stud API
+
+NO.80 Which two characteristics are true for Aura component events?
+(A). Calling event, stopPropagation ( ) may or may not stop the event propagation based of the
+current propagation phase.
+(B). If a container component needs to handle a component event, add a handleFacets='' attribute to
+
+Its handler.
+(C). Only parent components that create subcomponents (either in their markup or
+programmatically) can handle events.
+(D). The event propagates to every owner In the containment hierarchy.
+
+찾아보세요 이문제 !
+
+[aura component](https://www.notion.so/aura-component-fc395446cc5c483dba6605e31039210c)
+
+NO.81 A developer created these three Rollup Summary fields in the custom object, Project_ct,
+The developer is asked to create a new field that shows the ratio between rejected and approved
+timesheets for a given project.
+Which should the developer use to Implement the business requirement in order to minimize
+maintenance overhead?
+
+Total _ Timesheets __c
+
+Total_Approved_Timesheets__c
+
+Total_Reejected_Titmesheet__c
+
+(A). Record-triggered Flow
+(B). Formula field
+(C). Apex Trigger
+(D). Process Builder
+
+NO.82 A custom object Trainer_c has a lookup field to another custom object Gym___c.
+Which SOQL query will get the record for the Viridian City gym and it's trainers?
+
+(A). SELECT Id, (SELECT Id FROM Trainers) FROM Gym_C WHERE Name . Viridian City Gym'
+
+(B). SELECT Id, (SELECT Id FROM Trainer_c) FROM Gym_c WHERE Name - Viridian City Gym'
+
+(C). SELECT ID FROM Trainer_c WHERE Gym__r.Name - Viridian City Gym'
+
+(D). SELECT Id, (SELECT Id FROM Trainers) FROM Gym_C WHERE Name - Viridian City Gym'
+
+NO.83 As a part of class implementation a developer must execute a SOQL query against a large data
+ser based on the contact object. The method implementation is as follows
+
+Which two methods are best practice to implement heap size control for the above code? (Choose 2
+Answers)
+(A). Use the FOR UPDATE option on the SOQL query to lock down the records retrieved.
+(B). Use visual keyword when declaring the retrieve variable.
+(C). Use a SOQL FOR loop, to chunk the result set in batches of 200 records.
+(D). Use WHERE clauses on the SOQL query to reduce the number of records retrieved.
+
+NO.84 When importing and exporting data into Salesforce, which two statements are true?
+Choose 2 answers
+(A). Bulk API can be used to import large data volumes in development environments without
+bypassing the storage limits.
+(B). Bulk API can be used to bypass the storage limits when importing large data volumes in
+development environments.
+(C). Developer and Developer Pro sandboxes have different storage limits.
+(D). Data import wizard is a client application provided by Salesforce.
+
+NO.85 A developer created a child Lightning web component nested inside a parent Lightning web
+component, parent component needs to pass a string value to the child component.
+In which two ways can this be accomplished?
+Choose 2 answers
+(A). The parent component can use a custom event to pass the data to the child component,
+(B). The parent component can use the Apex controller class to send data to the child component.
+(C). The parent component can invoke a method in the child component
+(D). The parent component can use a public property to pass the data to the child component.
+
+- 
+    
+    The primary purpose of using component-based development is performance and resusability. if your are creating lightning web components, you must come across thescenario where you need to communicate between them .communication refers to passing data beweent two or more components. There can be two cases. either components are connected to each other via soem sort fo rrelationship like a parent-child relationship, or they are independent of each other.unrelated.
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/311fff88-a893-4407-8193-cd8134be538c/Untitled.png)
+    
+    - Parent to child communication
+    
+    as the name suggests, parent to child component tag in its HTML file and passes data to the child component. To pass data to the child component, we need to define a variable with @api decorator in the child componet to be public and accessed from the parent component.
+    
+    - child to parent communication
+    
+    in the case of child to parent communication, it ‘s a bit more complicated. From the child component, we are going to pass value to the parent component using custom Event.
+    
+
+NO.86 Which annotation exposes an Apex class as a RESTful web service?
+(A). AuraEnabled
+(B). RestResource
+(C). Remote Action
+(D). Httplnvocable
+
+NO.88 A developer has two custom controller extensions where each has a save() method.
+Which save() method will be called for the following Visualforce page?
+<apex:page standardController ="Account", extensions="ExtensionA, ExtensionB">
+<apex:commandButton action ="{!save}" value="Save"/>
+</apex:page>
+(A). Runtime error will be generated
+(B). Standard controller save()
+(C). ExtensionB save()
+(D). ExtensionA save()
+
+NO.89 What does the Lightning Component framework provide to developers?
+(A). Extended governor limits for applications
+(B). Prebuilt component that can be reused.
+(C). Templates to create custom components.
+(D). Support for Classic and Lightning UIS.
+
+NO.90 Given the following trigger implementation:
+trigger leadTrigger on Lead (before update){
+final ID BUSINESS_RECORDTYPEID = '012500000009Qad';
+for(Lead thisLead : Trigger.new){
+if(thisLead.Company != null && thisLead.RecordTypeId != BUSINESS_RECORDTYPEID){
+thisLead.RecordTypeId = BUSINESS_RECORDTYPEID;
+}
+}
+}
+The developer receives deployment errors every time a deployment is attempted from Sandbox to
+Production.
+What should the developer do to ensure a successful deployment?
+(A). Ensure BUSINESS_RECORDTYPEID is retrieved using Schema.Describe calls.
+(B). Ensure a record type with an ID of BUSINESS_RECORDTYPEID exists on Production prior to
+deployment.
+(C). Ensure BUSINESS_RECORDTYPEID is pushed as part of the deployment components.
+(D). Ensure the deployment is validated by a System Admin user on Production.
+
+NO.91 Which three Salesforce resources can be accessed from a Lightning web component?
+Choose 3 answers
+(A). SVG resources
+(B). Third-party web components
+(C). Content asset files
+(D). Static resources
+(E). All external libraries
+
+NO.92 A developer is migrating a Visualforce page into a Lightning web component.
+The Visualforce page shows information about a single record. The developer decides to use
+Lightning Data Service to access record data.
+Which security consideration should the developer be aware of?
+(A). Lightning Data Service handles sharing rules and field-level security.
+(B). Lightning Data Service ignores field-level security.
+(C). The with sharing keyword must be used to enforce sharing rules.
+(D). The isAccessible ( ) method must be used for field-level access checks
+
+- 
+    
+    Using Lightning data service to load, create, edit , or delete a record in your component without requiring Apex code.
+    
+    lightning data service handles sharing rules and field-level security for you. 
+    
+    In addition to simplifying access to salesforce data, lightning data service improves performance and user interface consistency.
+    
+    with Sharing
+    
+    use the with sharing keyword when declaring a class to enforce sharing rules of the current user Explicitly setting this keyword ensures that Apex code runs in the current user context. Apex code that is executed with
+    
+     
+    
+
+NO.93 Which standard field is required when creating a new contact record?
+(A). LastName
+(B). Name
+(C). AccountId
+(D). FirstName
+
+NO.94 A developer is implementing an Apex class for a financial system. Within the class, the
+variables 'creditAmount' and 'debtAmount' should not be able to change once a value is assigned. In
+which two ways can the developer declare the variables to ensure their value can only be assigned
+one time? Choose 2 answers
+(A). Use the static keyword and assign its value in the class constructor.
+(B). Use the final keyword and assign its value in the class constructor.
+(C). Use the static keyword and assign its value in a static initializer.
+(D). Use the final keyword and assign its value when declaring the variable.
+
+NO.95 A developer needs to save a List of existing Account records named myAccounts to the
+database, but the records do not contain Salesforce Id values. Only the value of a custom text field
+configured as an External ID with an API name of Foreign_Key__c is known.
+Which two statements enable the developer to save the records to the database without an Id?
+(Choose two.)
+(A). Upsert myAccounts Foreign_Key__c;
+(B). Upsert myAccounts(Foreign_Key__c);
+(C). Database.upsert (myAccounts, Foreign_Key__c);
+(D). Database.upsert(myAccounts).Foreign_Key__c;
+
+NO.96 what are the methods used to show input in classic and lightning ?
+(A). Use visualforce page in classic and lightning component in lightning
+
+NO.97 Universal Containers wants to back up all of the data and attachments in its Salesforce org
+once month. Which approach should a developer use to meet this requirement?
+(A). Use the Data Loader command line.
+(B). Create a Schedulable Apex class.
+(C). Schedule a report.
+(D). Define a Data Export scheduled job.
+
+NO.98 In the following example, which sharing context will myMethod execute when it is invoked?
+(A). Sharing rules will be inherited from the calling context.
+(B). Sharing rules Ail be enforced by the instantiating class
+(C). Sharing rules Ml be enforced for the running user.
+(D). Sharing rules will not be enforced for the running user.
+
+NO.99 Get Cloudy Consulting (GCC) has a multitude of servers that host its customers' websites. GCC
+wants to provide a servers status page that is always on display in its call center. It should update in
+real time with any changes made to any servers. To accommodate this on the server side, a
+developer created a server Update platform event.
+The developer is working on a Lightning web component to display the information.
+(A). import ( subscribe, unsubscribe, onError ) from 'lightning/empApi '
+(B). import ( subscribe, unsubscribe, onError ) from 'lightning/MessageChannel'
+(C). import ( subscribe, unsubscribe, onError ) from 'lightning/ServerUpdate'
+(D). import ( subscribe, unsubscribe, onError ) from 'lightning/pubsub
+
+- 
+    
+    ```
+    import {
+        subscribe,
+        unsubscribe,
+        onError,
+        setDebugFlag,
+        isEmpEnabled,
+    } from 'lightning/empApi';
+    ```
+    
+
+NO. 100 which action may cause triggers to fire? 
+
+(a) updates to Feed Items
+
+(b) Renaming or replacing a picklist entry
+
+(c) Changing a user’s  default division when the transfer division option is checked
+
+(d) cascading delete operations
+
+- 
+    
+    Cascading이란 ‘위에서 아래로 흐르는, 상속 또는 종속 의 의미를 갖고 있다. 따라서 cascading은 선택자에 적용된 많은 스타일 중에 어떤 스타일로 브라우저를 표현할지 결정해주는 원리를 의미한다.
+    
+    CSS는 cascading style sheet의 줄임말이였음 헉
+    
+    예시 : 
+    
+    <body>
+    
+    <div>
+    
+    <p>helloworld</p>
+    
+    </div>
+    
+    </body>
+    
+    각 태그마다 바디에 빨간색, 디브에 파란색, 피태그에 초록색을 주었다고 생각해보자
+    
+    그러면 헬로우 월드는 무슨 색깔로 나올까
+    
+    이런것들을 결정해주는 원리가 캐스케이딩이다. cascading은 스타일 우선순위, 스타일 상속 두가지의 원칙을 따른다. 
+    
+
+NO.101 A developer must provide a custom user interface when users edit a Contact. Users must be
+able to use the interface in Salesforce Classic and Lightning Experience.
+What should the developer do to provide the custom user interface?
+(A). Override the Contact's Edit button with a Visualforce page in Salesforce Classic and a Lightning
+component in Lightning Experience.
+(B). Override the Contact's Edit button with a Visualforce page in Salesforce Classic and a Lightning
+page inLightning Experience.
+(C). Override the Contact's Edit button with a Lightning component in Salesforce Classic and a
+Lightning component in Lightning Experience.
+(D). Override the Contact's Edit button with a Lightning page in Salesforce Classic and a Visualforce
+page in Lightning Experience.
+
+NO.102 A developer must create a ShippingCalculator class that cannot be instantiated and must
+include a working default implementation of a calculate method, that sub-classes can override. What
+is the correct implementation of the ShippingCalculator class?
+(A). Public abstract class ShippingCalculator {
+public override calculate() { /*implementation*/ }
+}
+(B). Public abstract class ShippingCalculator {
+public virtual void calculate() { /*implementation*/ }
+}
+(C). Public abstract class ShippingCalculator {
+public abstract calculate() { /*implementation*/ }
+}
+(D). Public abstract class ShippingCalculator {
+public void calculate() { /*implementation*/ }
+
+NO.103 Universal Containers stores Orders and Line Items in Salesforce. For security reason,
+financial representatives are allowed to see information on the Order such as order amount, but they
+are not allowed to see the Line items on the Order. Which type of relationship should be used?
+(A). Lookup
+(B). Direct Lookup
+(C). Indirect lookup
+(D). Master Detail
+
+- 
+    
+    line item : 거래의 세부내역을 담고있는 전표의 일부분으로 금액, 계정번호 및 항목이 대변항목인지 차변항목인가 등을 비롯한 기타 거래의 종류에 따라 포함 되어야 할 정보들.
+    
+    오더는 볼수 있지만 라인아이템은 볼 수 없게 만들어라. 연관 정보이지만 강한 결합은 아니다 
+    
+
+NO.104 Universal Containers wants a list button to display a Visualforce page that allows users to
+edit multiple records. which Visualforce feature supports this requirement?
+(A). apex:listButton tag
+(B). Custom controller
+(C). RecordSetVar page attribute
+(D). Controller extension
+
+NO.106 The Job_Application__c custom object has a field that is a Master-Detail relationship to the
+Contact object, where the Contact object is the Master. As part of a feature implementation, a
+developer needs to retrieve a list containing all Contact records where the related Account Industry is
+'Technology' while also retrieving the contact's Job_Application__c records.
+Based on the object's relationships, what is the most efficient statement to retrieve the list of
+contacts?
+(A). [SELECT Id, (SELECT Id FROM Job_Applications_r) FROM Contact WHERE
+Account.Industry = 'Technology'];
+(B). [SELECT Id, (SELECT Id FROM Job_Applications_r) FROM Contact WHERE
+Accounts.Industry = 'Technology'];
+(C). [SELECT Id, (SELECT Id FROM Job_Applications_c) FROM Contact WHERE
+Accounts.Industry = 'Technology'];
+(D). [SELECT Id, (SELECT Id FROM Job_Application_c) FROM Contact WHERE
+Account.Industry = 'Technology'];
+
+NO.107 Which three data types can a SOQL query return? Choose 3 answers
+
+A). List
+(B). Long
+(C). Integer
+(D). sObject
+
+NO.108 Which two events need to happen when deploying to a production org? Choose 2 answers
+(A). All triggers must have at least 1% test coverage.
+(B). All Apex code must have at least 75% test coverage.
+(C). All triggers must have at least 75% test coverage.
+(D). All test and triggers must have at least 75% test coverage combined
+
+NO.109 What is a key difference between a Master-Detail Relationship and a Lookup Relationship?
+(A). A Master-Detail Relationship detail record inherits the sharing and security of its master record.
+(B). When a record of a master object in a Lookup Relationship is deleted, the detail records are also
+deleted.
+(C). A Lookup Relationship is a required field on an object.
+(D). When a record of a master object in a Master-Detail Relationship is deleted, the detail records
+are kept and not deleted.
+
+NO.110 Einstein Next best action is configured at UC to display recommendations to internal users on the Account detail page.
+
+If the recommendation is approved, a new opportunity record and task should be generated. If the recommendation is rejected, an Apex method must be executed to perform a callout to an external system. 
+
+Which 3 factors should a developer keep in mind implementing the Apex method?
+
+(a) the method must use the @auraEnabled annotation
+
+(a) the method must use the use @Future annotation
+
+(a) the method must use the @invocableMethod annotation
+
+(a) the method must use be defined as static
+
+(a) the method must use  be defined as public
+
+- 
+    
+    A future method runs in the background, asynchronously. You can call a future method for executing long-running operations, such as callouts to external Web services or any operation you’d like to run in its own thread, on its own time. 
+    
+
+NO.111 Which two conditions cause workflow rules to fire? Choose 2 answers
+(A). Changing the territory assignments of accounts and opportunities
+(B). Updating records using the bulk API
+(C). Converting leads to person accounts
+(D). An Apex Batch process that changes field values
+
+- 
+    
+    BulkAPI is a functionality grounded on the REST principles and is used to process large amounts of data in batches.
+    
+
+NO.112 AW Computing tracks order information in custom objects called order__c and order_Line_
+c - Currently, all shipping information is stored in the order__c object.
+The company wants to expand Its order application to support split shipments so that any number of  order_Line__c records on a single order__c can be shipped to different locations.
+What should a developer add to fulfill this requirement?
+(A). Order_shipment_Group_c object and master-detail field on order_Line_c
+(B). Order_shipment_Group_c object and master-detail field on order_c
+(C). Order_shipment_Group_c object and master-detail field to order_c and Order Line_c
+(D). Order_shipment_Group_c object and master-detail field on order_shipment_Group_c 
+
+모르겠넹 ㅇㅅㅇ         
+
 NO.118 A Salesforce Administrator used Flow Builder to create a flow named ''accountOnboarding''.
 The flow must be used inside an Aura component.
 Which tag should a developer use to display the flow in the component?
@@ -960,3 +1427,55 @@ public List<Opportunity> search(String term) { /*implementation*/ }
 public static List<Opportunity> search(String term) { /*implementation*/ }
 (D). @AuraEnabled(cacheable=false)
 public List<Opportunity> search(String term) { /*implementation*/ }
+
+- 
+    
+    Now let’s look at the apexWireMethodToFunction component from the [lwc-recipes](https://github.com/trailheadapps/lwc-recipes) repo. This component wires an Apex method call to a function. Because the results are provisioned to a function, the JavaScript can operate on the results. Also, the template accesses the data a bit differently than if results were provisioned to a property.
+    
+    The rendered component is the same as apexWireMethodToProperty (except for the header).
+    
+    ![https://resources.docs.salesforce.com/images/d9df789ac7254b7888a4d0eba265f3fb.png](https://resources.docs.salesforce.com/images/d9df789ac7254b7888a4d0eba265f3fb.png)
+    
+    This component calls the same Apex method as apexWireMethodToProperty. The method must be `static`, and `global` or `public`. The method must be decorated with `@AuraEnabled(cacheable=true)`.
+    
+    `// ContactController.cls
+    public with sharing class ContactController {
+        @AuraEnabled(cacheable=true)
+        public static List<Contact> getContactList() {
+            return [
+                SELECT Id, Name, Title, Phone, Email, Picture__c
+                FROM Contact
+                WHERE Picture__c != null
+                WITH SECURITY_ENFORCED
+                LIMIT 10
+            ];
+        }
+    }`
+    
+    The component’s JavaScript code imports the Apex method and invokes it via the wire service. The wire service provisions the results to the `wiredContacts()` function via an object with either an `error` or `data` property. If the wire service provisions `data`, it’s assigned to `this.contacts`, which is used in the template. If it provisions `error`, it’s assigned to `this.error`, which is also used in the template. If the value of these properties change, the template rerenders.
+    
+- 
+    
+    Now let’s look at the apexWireMethodToFunction component from the [lwc-recipes](https://github.com/trailheadapps/lwc-recipes) repo. This component wires an Apex method call to a function. Because the results are provisioned to a function, the JavaScript can operate on the results. Also, the template accesses the data a bit differently than if results were provisioned to a property.
+    
+    The rendered component is the same as apexWireMethodToProperty (except for the header).
+    
+    ![https://resources.docs.salesforce.com/images/d9df789ac7254b7888a4d0eba265f3fb.png](https://resources.docs.salesforce.com/images/d9df789ac7254b7888a4d0eba265f3fb.png)
+    
+    This component calls the same Apex method as apexWireMethodToProperty. The method must be `static`, and `global` or `public`. The method must be decorated with `@AuraEnabled(cacheable=true)`.
+    
+    `// ContactController.cls
+    public with sharing class ContactController {
+        @AuraEnabled(cacheable=true)
+        public static List<Contact> getContactList() {
+            return [
+                SELECT Id, Name, Title, Phone, Email, Picture__c
+                FROM Contact
+                WHERE Picture__c != null
+                WITH SECURITY_ENFORCED
+                LIMIT 10
+            ];
+        }
+    }`
+    
+    The component’s JavaScript code imports the Apex method and invokes it via the wire service. The wire service provisions the results to the `wiredContacts()` function via an object with either an `error` or `data` property. If the wire service provisions `data`, it’s assigned to `this.contacts`, which is used in the template. If it provisions `error`, it’s assigned to `this.error`, which is also used in the template. If the value of these properties change, the template rerenders.
