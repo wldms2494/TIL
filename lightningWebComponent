@@ -1,0 +1,162 @@
+# 
+
+1. Queue
+
+prioritize. distribute, and assign records for teams who share workloads (작업량)
+
+큐는 콜랙션인데, 이 안에서 우선순위를 정하고 분배하고 작업량 분배를 위해서 레코드를 할당하는것을 말한다. 
+
+you can use queues for managing 
+
+cases, leads, tasks, contact requests, orders, service contracts, knowledge articles, and custom objects - just like a List view on that objects
+
+그러면 왜 큐를 쓰는가요?
+
+이미 언급은 했지만!!
+
+→ manage shareds workload easier
+
+→ helpfule if you have a user out sick or on vacation
+
+→ Access Queues as a list view
+
+Who can join a queue?
+
+An Admin can chooses which users can join queues as queue Members. These can be added as : 
+Individual users( specific users)
+
+Roles/roles + subordinates(부하들)
+
+public group
+
+members of the queues are free to accpet records from the Queue! 
+
+The records remain in the queue util a user accepts them or they are transferred to another queue. 
+
+Any queue members or users higher in a role hierarchy can take ownership or records in a Queue
+
+How can i add reocrds to a queue?
+
+you can think of the queue as a user 이거 진짜 무슨말이냥
+
+앗 알겠다 그래서 큐에 들어있는 users들을 하나의 user라고 생각하라는 것임
+
+왜냐 그것들은 레코드의 owner로서 같은 특성을 공유하기 때문이다. 
+
+because it shares the same characteristics as a records owner. you can add records to a queue
+
+→ automatically : Assignmt rules can add records to a queue when they are created, based on a specific records criteria
+
+→ Manyaaly : change the records owner of the records to the Queue(which will apear like a user). change the Lead Owner of the Lead to the Queue.
+
+lead의 큐를 만들어서 VP와 그 하위 들을 저장하는 큐를 만들었고,
+
+lead assignment를 이용하여서 rule Entry를 만들고 그 안에 criteria(eg. regio equals North American)를 충족하면 new lead가 바로 설정해놓은 큐로 들어가게 만들었다. lead가 만들어지면 바로 큐에 들어가서 lead 관리를 편하게 해주었다. 
+
+참고로 리드 생성할때 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cc0a11fd-5f58-46cd-9d9b-6f395220dba7/Untitled.png)
+
+밑의 체크박스를 해줘야 assignment rule로 할당이 되었다. 
+
+큐는 대기열인데, user들을 role이나 그룹 별로 집어 넣는것이당 ㅎ 쉽넹 
+
+그러면 queueable은 모임? 
+
+queueable Apex
+
+this interface enables you to add jobs to the queue and monitor them.
+
+Using the interface is an enhanced way of running your asynchronous Apex code compared to using future methods
+
+LEN 
+
+returns the number of characters in a specified text String.
+
+LEN(text) and replace text with the field or expression whose length you want returned.
+
+1. Lightning Web component
+
+lightning web component is a new programming model for building lightning components.
+
+it can coexist and interoperate( operate together) with the Aura programming model, and delivers  unparalleled (better and greater thant another) performance
+
+sales force CLI - it allows you to interact with you Salesforce environments in many ways, like retrieving or pushing code or interacting with data. The CLI consists of several plugins. These plugins provide important specific functionality.
+
+what is Scratch Org? Developer Hub?
+
+Scratch Org is dedicated.. dedicated? 헌신적configuarable, and short-term salesforce environment that you can quickly spin up when starting a new project, a new feature branch or feature test.
+
+Scratch orgs are disposable일회용 Salesforce orgs that are used to support development and testing.
+
+Developer Hub is the main Salesforce org that you and your team use to create and manage your your scratch orgs.
+
+데브 허브 enable시킨다
+
+Authorize a dev hub
+
+VScode에 create a Scratch Org
+
+cli를 이용하여서 명령어로 파일 만들기 
+
+`sfdx force:lightning:component:create -n myFirstWebComponent -d force-app/main/default/lwc --type lwc`
+
+-n : 이름은 이걸로 짓겠다.
+
+-d :  : 타겟 디렉토리 지정한다. 
+
+—type : this specifies that you want to create a Lightning Web Component
+
+Simple Component Creation
+
+The beauty of adhering(고착) to web standards is simplicity .
+
+ You don’t need to ramp up확장함 on quirks (요상한 습관?)of particular framework. 
+
+so 3steps for web component creation.
+
+HTML provides the structure for your component
+
+JavaScript defines the core business logic and event handling
+
+CSS provides the look, feel, and animation for your component.
+
+boilerplate component(상용구)
+
+namespace : namespace is a one to 15character alphanumeric identifier that distingushes your package and its contentes from packages of other developers on AppExchange
+
+- 
+    
+    camel case : 낙타에서 따온 모냥..
+    ex) rocket launch duration 
+          rocketLaunchDuration
+    꼬불꼬불하지만 붙어있음ㅋㅋ
+    
+    kebab case:꼬챙이에 꽃인것 같음
+    
+    ex)rocket launch duration
+        rocket-launch-duration
+    
+    Pascal case : 카멜식과 매우 유사하지만, 차이점은 첫 단어도 대문자로 시작한다.
+    ex) rocket launch duration
+    
+    RocketLaunchDuration
+    
+    Snake case :파이썬 ㅋㅋ 케밥이랑 유사하지만 _언더라인이다
+    
+    ex) rocket launch duration
+    
+    rocket_launch_duration
+    
+
+Working with javaScript
+
+must include at least this code:
+
+```java
+import { LightningElement } from 'lwc';
+export default class MyComponent extends LightningElement {
+}
+```
+
+base class for Lightning web components, which allows us to use connectedCallback().
