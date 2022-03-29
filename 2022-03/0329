@@ -1,0 +1,141 @@
+function b(){console.log("b is called")};
+function a(another) {
+console.log("a is started");
+another();
+console.log("a is ended") }
+
+console.log(1);
+console.log(2);
+a(b);
+console.log(3);
+console.log(4);
+
+> 
+
+1
+2
+ a is started
+ b is called
+ a is ended
+ 3
+ 4
+
+함수는 정의 될때 가 아니라 호출 될때 실행되는 것이다. another이라는 인자를 받은것이고 그 자리에 b가 들어가서 b가 실행이 되는 것이다. 
+
+b가 a의 인자로 전달될 시점에도 비는 호출 되는것은 아님. 비가 인자로 들어간 에이 함수가 호출이 되어야 비로소 실행이 된다. 
+a 함수를 호출할때 b함수를 전달 하는 것. 이를 우리는 콜백함수를 전달한다고 함. 
+지금 당장 호출되는 것이 아니라 A함수 내에서 나중에 b함수를 호출할 것이다 라고 짐작할 수 있음 
+
+Promise 는 비동기 작업의 단위 이다. 자바스크립트에서 동시에 여러가지 작업을 할 수 있는 비동기  개념을 배웠고, 프로미스로 어떻게 비동기 작업들을 쉽게 관리할 수 있는지를 알 수 있다. 
+
+비동기 의 특징은 동시에 여러 작업을 실행할 수 있지만, 그의 흐름을 예측하기 어렵다. 
+
+promise syntax
+
+```jsx
+const promise1 = new Promise((resolve, reject) ⇒ {  // 비동기 작업  });
+```
+
+생성자는 특별한 함수 하나를 인자로 받는다 ?
+
+이 함수를 executor라고 부른다. 
+
+executor는 첫번째 인수로 resolve이며, 두번째 인수로 reject를 받음. 
+
+resolve는 executor내에서 호출할 수 있는 또다른 함수 이다. resolve를 호출하게 된다면 
+”이 비동기 작업이 성공했다”라는 뜻임.
+reject또한 executor내에서 호출할 수 있는 또다른 함수 이다. 
+”reject를 호출하게 된다면 “이 비동기 작업이 실패했어” 라는 뜻임.
+
+Promise 의 특징은 new Promise(...) 생성 순간 여기에 할당된 비동기 작업이 바로 시작된다. 
+비동기 작업의 특징은 작업이 언제 끝날지 모르기 때문에 일단 배를 떠나 보낸다. 그럼 그 이후에 이 작업이 성공하거나 실패하는 순간에 뒷처리는 우리의 몫임. 
+Promise 가 끝나고 난 다음의 동작을 우리가 설정해 줄 수 있는데 그때 바로 
+
+then 메소드와 catch 메소드를 사용한다
+
+- then 메소드는 해당 Promise 가 성공했을 때의 동작을 지정한다. 인자로 함수를 받는다.
+- catch 메소드는 해당 Promise 가 실패했을 때의 동작을 지정한다. 인자로 함수를 받는다.
+- 위의 함수들은 체인 형태로 활용 가능
+
+```jsx
+function startAsync(age){
+ return new Promise((resolve, reject) => {
+//실행할 비동기 작업
+if(age>20)resolve();
+else reject();
+});
+}
+
+setTimeout(()=>{
+
+	const promise1 = starAsync(25);
+	promise1
+	.then (()=> {console.log("1 then ");})
+	.catch(()=> {console.log("1 fail");});
+
+	const promise 2= startAsync(19);
+	promise2
+	.then (()=> {console.log("2 then ");})
+	.catch(()=> {console.log("2 tail");});
+
+}, 1000);
+```
+
+function 에 오타가 있었는데 Uncaught SyntaxError : Unexpected identifier 에러가 났다. 이 오류는 주로 오타날때 일어나는듯.
+
+```jsx
+function startAsync(age){
+    return new Promise((resolve, reject) => {
+
+        if(age>20) resolve(`${age} success`);
+        else reject(new Error(`${age} is not over 20`));
+    });
+}
+
+setTimeout(()=>{
+
+    const promise1 = startAsync(25);
+    promise1
+    .then((value)=>{console.log(value);})
+
+    .catch((error)=>{console.error(error);});
+
+    const promise2 = startAsync(19);
+    promise2
+    .then((value)=>{console.log(value);})
+    .catch((error)=>{console.error(error);});
+
+},1000);
+```
+
+promise1은 then에 잡혔고, 
+promise 2는 에러를 잡았다. 에러메세지가 나옴
+
+```jsx
+async function startAsync(age){
+    return new Promise((resolve, reject) => {
+
+        if(age>20) resolve(`${age} success`);
+        else reject(new Error(`${age} is not over 20`));
+    });
+}
+
+setTimeout(()=>{
+
+    const promise1 = startAsync(25);
+    promise1
+    .then((value)=>{console.log(value);})
+
+    .catch((error)=>{console.error(error);});
+
+    const promise2 = startAsync(19);
+    promise2
+    .then((value)=>{console.log(value);})
+    .catch((error)=>{console.error(error);});
+
+},1000);
+```
+
+new Promise 생성 없이 function 앞에 async를 붙혀 주어서 완성했음
+
+async 함수의 리턴값은 Promise이다.
