@@ -164,6 +164,113 @@ so Promise의 의의를 한마디로 이야기 하자면, promise는 비동기 �
 기존의 러프한 비동기 작업을 보다 유연한 설계로 가능토록 한다.  
 
 
+## async
+async 함수는 위의 executor로부터 몇가지 규칙만 적용하면 new Promise객체를 리턴하는 함수를 아까 재사용하기위해 만든 함수 async로 쉽게 바꿀 수 있음.
+
+1. 함수에 async를 붙인다
+2. new Promise 부분을 없애고 executor만 남긴다. 
+3. resolve(value); 부분을 return value;로 변경한다.
+4. reject(new Error(...)); 부분을 throw new Error(..) 로 변경한다. 
+
+
+프로미스 객체를 리턴하는 재사용 가능한 함수를 만들어 보장
+```
+function startAsync(age) {
+return new Promise ((resolve, reject) =>{
+ if(age>20) resolve(`성공했을때는 말이야 $(age)`); else reject(new Error(`실패했을때는 말이야 $(age)`));
+});
+}
+
+
+//만들어온 startAsync객체 만들어 보깅
+const promise1 = startAsync(100);
+promise1
+.then((value) => console.log(value))
+.catch((error)=> console.error(error));
+```
+
+async로 바꾸기
+```
+async function startAsync(age){
+
+    if(age>30) return `${age} hihihihi`;
+    else throw new Error(`${age} byebye`);
+}
+
+const pr = startAsync(50);
+pr
+.then((value) => console.log(value))
+.catch((error) => console.error(error));
+
+
+.then((value) => console.log(value))
+.catch((error) => console.error(error));
+```
+so async의 리턴값은 promise라는거! 
+우리가 리턴한것은 분명히 문자열인데, 프로미스라는거
+
+# await
+await 는 Promise가 fulfilled 가 되든지 rejected가 되든지 아무튼 간에 끝날 때 까지 기다리는 함수이다.  
+쓸때 조건이 있는데, 무조건 async 함수에서만 사용할 수 있다.  
+
+
+
+```
+function setTimeoutPromise(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), ms);
+  });
+}
+
+async function startAsync(age) {
+  if (age > 20) return `${age} success`;
+  else throw new Error(`${age} is not over 20`);
+}
+
+async function startAsyncJobs() {
+  await setTimeoutPromise(1000);
+  const promise1 = startAsync(25);
+  try {
+    const value = await promise1;
+    console.log(value);
+  } catch (e) {
+    console.error(e);
+  }
+  const promise2 = startAsync(15);
+  try {
+    const value = await promise2;
+    console.log(value);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+startAsyncJobs();
+```
+
+await가 하는 일은 setTimeout을 Promise버전으로 하여 setTimeoutPromise라는 함수를 새로 만들었음 .  
+이 함수는 setTimeout 함수를 활용하여 지정된 ms초만큼 기다린 후 resolve를 호출한다.  
+이렇게 만든 Promise의 then 으로 다음 동작을 정의할 수 있다.  then 동작은 resolve함수가 호출되면 실행됬었쥐? ms초만큼 기다린 후 다음 동작으로 넘어간다. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 참고 : https://elvanov.com/2597
 
 
