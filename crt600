@@ -1,5 +1,263 @@
 # js crt 600
 
+**기출**
+
+NO1. Refer to following code block : 
+
+let array = [1,2,3,4,5,6,7,8,9,10,11];
+
+let output = 0;
+
+for ( let num of array) {
+
+if(output > 10) {
+
+break;
+
+}
+
+if(num%2 ==0) {
+
+continue;
+
+}
+
+output += num;
+
+}
+
+A. 16
+B. 36
+C. 11
+D. 25
+
+- 
+    
+    break 문에 걸리면 for문이 아예 종료되고, 
+    
+    continue문에 걸리면 밑의 함수나 내용을 실행 안함.
+    
+    +=연산자는 
+    왼쪽과 오른쪽을 더한 값을 왼쪽에 대입한다. 
+    
+    if(output>0){  break; }라면 1 들어가자마자  break걸리니까 답은 1이고, 
+    
+    output>10 이라면 
+    
+    1,3,5,7까지 홀수는 다 들어가고 
+    여기서 아웃풋이 16까지 완성되고 다음에는 걸림
+    그래서 16ㅋ
+    
+
+NO.2 A developer wants to set up a secure web server with Node.js. The developer creates a
+directory locally called app-server, and the first file is app-server/index.js Without using any thirdparty libraries, what should the developer add to index.js to create the secure web server?
+A. const tls = require('tls');
+B. const https =require('https');
+C. const server =require('secure-server');
+D. const http =require('http');
+
+- 
+    
+    b
+    
+
+NO.3 Refer to the following code that performs a basic mathematical operation on a provided input:
+function calculate(num) {
+Return (num +10) / 3;
+}
+How should line 02 be written to ensure that x evaluates to 6 in the line below?
+Let x = calculate (8);
+A. Return Number((num +10) /3 );
+B. Return (Number (num +10 ) / 3);
+C. Return Integer(num +10) /3;
+D. Return Number(num + 10) / 3;
+
+- 
+    
+    b
+    
+
+**NO.4 Teams at Universal Containers (UC) work on multiple JavaScript projects at the same time.
+UC is thinking about reusability and how each team can benefit from the work of others.
+Going open-source or public is not an option at this time.
+Which option is available to UC with npm?**
+A. Private packages can be scored, and scopes can be associated to a private registries.
+
+B. Private registries are not supported by npm, but packages can be installed via URL.
+C. Private packages are not supported, but they can use another package manager like yarn.
+D. Private registries are not supported by npm, but packages can be installed via git.
+
+- 
+    
+    A
+    
+    registry 기재 
+    
+
+NO.5 a developer has an ErrorHandler module that contains multiple functions.
+
+what kind of export be leverages so that multiple functions can be used? 
+
+A. Named
+B. All
+C. Multi
+D. Default
+
+- 
+    
+    leverage : use to maximum advantage , exploit, make full use of and derive benifit from 
+    
+    A
+    
+
+**NO.6 Which option is a core Node,js module?**
+A. Path
+B. Ios
+C. Memory
+D. locate
+
+- 
+    
+    node.js core modules  → http, url, querystring path, fs, util 
+    
+    A
+    
+
+NO.7 a developer has code that calculates a restaurant bill, but generates incorrect answers while testing the code, : 
+
+```jsx
+function caculateBill(items) {
+let total = 0; 
+total += findSubTotal(items);
+total += addTax(items);
+total += addTip(total);
+
+return total;
+}
+```
+
+which option allows the developer to step into each function execution within calculateBill?
+
+Which option allows the developer to step into each function execution within calculateBill?
+A. Using the debugger command on line 05.
+B. Using the debugger command on line 03
+C. Calling the console.trace (total) method on line 03.
+D. Wrapping findSubtotal in a console.log() method.
+
+- 
+    
+    a
+    
+
+NO.8 refer to the code below : 
+
+```jsx
+const exec = (item, delay) => {
+	 new Promise (resolve => setTimeout(()=> resolve(item), delay);)
+}
+
+async function runParallel(){
+const(resul1,resul2, resul3) = await Promise.all{
+[exec('x','100'), exec('y', 500), exec('z', '100')]
+
+return `parallel is done: $(result1) $(result2)$(result3)`;
+}}
+```
+
+ which two statements coreectly execute the runParallel ( ) function ?
+
+choose 2 answers
+
+A. Async runParallel () .then(data);
+B. runParallel ( ). done(function(data){
+return data;
+});
+C. runParallel () .then(data);
+D. runParallel () .then(function(data)
+return data
+
+- 
+    
+    b , d
+    
+
+NO.9 Which three statements are true about promises ?
+Choose 3 answers
+A. The executor of a new Promise runs automatically.
+B. A Promise has a .then() method.
+C. A fulfilled or rejected promise will not change states .
+D. A settled promise can become resolved.
+E. A pending promise can become fulfilled, settled, or rejected.
+
+- 
+    
+    a b c
+    e → a pending promise can becom fulfilled or rejected
+    
+
+NO.10 Refer to the following array : 
+
+```jsx
+let arr1 = [ 1, 2, 3, 4, 5];
+let arr2 = arr1.slice(0, 5);
+console.log(arr2);
+//[1,2,3,4,5]
+
+let arr1 = [1,2,3,4,5];
+let arr2 = Array.from(arr1);
+
+```
+
+Which two lines of code result in a second array, arr2 being created such that arr2 is not a reference
+to arr1?
+A. Let arr2 = arr1.slice(0, 5);
+B. Let arr2 = Array.from(arr1);
+C. Let arr2 = arr1;
+D. Let arr2 = arr1.sort();
+
+- 
+    
+    arr2 가 arr1을 참조하지 않고 arr2가 만들어지는거..?
+    전부다 [1,2,3,4,5]는 출력
+    a,b
+    
+
+**NO.11 refer to the code below :** 
+
+```jsx
+function changeValue(param) {
+	param = 5;
+}
+let a = 10;
+let b = a;
+changeValue(b);
+const result = a+ "-" + b;
+
+```
+
+A. 10 -10
+B. 5 -5
+C. 5 - 10
+D. 10 - 5
+
+- 
+    
+    왜 a값은 5로 변하지 않았는가? let의 scope때문이다.
+    
+    param은 function 안에서만 쓸 수 있다. 
+    그래서 let a= 10 그대로 쓴다. 
+    
+    a
+    
+
+NO. 12 Refer to the code : 
+
+```jsx
+function Animal(size, type) {
+this.size = size || "small";
+}
+```
+
 NO.69 
 setTimeout (() => (
 
@@ -1585,6 +1843,566 @@ What should a developer insert at line 15 to output the following message using 
 > SNEGeneziz is loading a cartridge game: Super Monic 3x Force . . .
 > 
 
+A. Console16bit.prototype.load(gamename) = function() 
+
+B. Console16bit.prototype.load = function(gamename) {
+C. Console16bit = Object.create(GameConsole.prototype).load = function
+(gamename) {
+D. Console16bit.prototype.load(gamename) {
+
 - 
     
-    fucntion . prototype. call ( ) 은 주어진 this값 및 각각 전달된 인수와 함게 함수를 호출한다.
+    
+    밑의 설명을 참조하고 만약에 
+    
+    Console16bit.prototype.load  = function () {} 을 재 설정해주지 않으면, 
+    Console16bit의 객체 console16bit를 만들었을때, 이 객체는 GameConsole.prototype을 받게 되므로 is loading a game 으로 출력 됨
+    
+    그래서 뽀인트는 prototype을 재 설정해줘야 한다는 말 ..
+    
+    ```jsx
+    function GameConsole(name){
+        this.name = name;
+    }
+    
+    GameConsole.prototype.load = function (gamename) {
+        console.log(`${this.name} is loading a game : ${gamename}`);
+    }
+    
+    function Console16Bit(name) {
+        GameConsole.call(this, name);
+    }
+    
+    Console16Bit.prototype = Object.create(GameConsole.prototype);
+    
+    Console16Bit.prototype.load = function (gamename) {
+        console.log(`${this.name} is loading a cartridge game : ${gamename}...`);
+    }
+    
+    const console16Bit = new Console16Bit(' SNE Genezizzz');
+    console16Bit.load('Super Nonic 3xForce');
+    ```
+    
+    fucntion . prototype. call ( ) 은 주어진 this값 및 각각 전달된 인수와 함께 함수를 호출한다. 
+    
+    무슨말.. 
+    함수는 선언 후 호출이 되어야 실행이 된다.
+    호출하는 방법으로는 함수 뒤에 ( ) 를 붙인다
+    그리고 call 그리고 apply 하는 방법 이 있음.
+    var example = function (a , b, c) {
+    return a + b+ c;
+    };
+    example(1,2,3);
+    example.call(null, 1 2, 3);
+    example.apply(null, [1 , 2 , 3]);
+    보통 call 은 보통 함수와 똑같이 인자를 넣고 , apply 는 인자를 하나로 묶어서 배열로 만들어 넣는다.
+    그러면 call 과 apply가 공통적으로 가진 null 인자의 역할이 뭘까? 바로 this.를 대체하는 것이다
+    [https://inpa.tistory.com/entry/JS-📚-Call-Bind-Apply](https://inpa.tistory.com/entry/JS-%F0%9F%93%9A-Call-Bind-Apply)
+    
+    다시 보세영
+    
+    ```jsx
+    var obj = {
+    string : 'zero',
+    yell : function () {
+    	alert(this.string );
+    }
+    
+    var obj2 = {
+    string : 'what'
+    };
+    
+    obj.yell() ;
+    obj.yell().call(obj2); obj.yell()을 obj2로 바꾼거라는데...
+    ```
+    
+    마지막 줄에서 obj.yell.call(obj2)로 this가 가르키는 것은 obj2로 바뀐거란다 무슨말이지..
+    
+    ywll 은 obj의 메소드 이지만 yell이 가르키는 this 는 string : zero였지만 바꼈다고 !!
+    
+    ```jsx
+    var kim = { name : "kim", first:10, second: 20}
+    var lee = { name ": "lee", first:100, second:200}
+    
+    function sum(num) {
+    	return num + this.first. + this.second
+    }
+    
+    sum.call(kim, 500);// sum 을 call 하는데 this값을 kim객체로 한다. 
+    ```
+    
+    call을 사용해서 this를 정의 해준다면, 다른 객체의 파라미터나 메소드를 자기것 마냥 사용가능하다는 것임 
+    
+    object.create ( ) 
+    Object.create( ) 메서드는 지정된 프로토타입 객체 및 속성(property) 을 갖는 새 객체를 만든다. 
+    
+    syntax :  
+    
+    ` Object.create(proto[, propertiesObject])`
+    
+    proto 는 새로 만든 객체의 프로토타입이어야 할 객체
+    
+    propertiesObject : 선택사항, 
+    
+
+[script 상속](https://www.notion.so/script-0fd02c62a28f44e3baf9249595f9f86b)
+
+NO.139 Given the code below:
+Setcurrent URL ();
+console.log('The current URL is: ' +url );
+function setCurrentUrl() {
+Url = window.location.href:
+What happens when the code executes?
+A. The url variable has local scope and line 02 throws an error.
+B. The url variable has global scope and line 02 executes correctly.
+C. The url variable has global scope and line 02 throws an error.
+D. The url variable has local scope and line 02 executes correctly.
+
+NO.140 developer is trying to convince management that their team will benefit from using Node.js
+for a backend server that they are going to create. The server will be a web server that handles API
+requests from a website that the team has already built using HTML, CSS, and JavaScript.
+Which three benefits of Node.js can the developer use to persuade their manager?
+Choose 3 answers
+
+A. I nstalls with its own package manager to install and manage third-party libraries.
+B. Ensures stability with one major release every few years.
+C. Performs a static analysis on code before execution to look for runtime errors.
+D. Executes server-side JavaScript code to avoid learning a new language.
+E. User non blocking functionality for performant request handling
+
+- 
+    
+     a c e 
+    
+
+NO.141 Refer to the HTML below:
+
+- Leo
+- Tony
+- Tiger
+
+Which JavaScript statement results in changing " Tony" to "Mr. T."?
+A. document.querySelectorAll('$main $TONY').innerHTML = ' Mr. T. ';
+B. document.querySelector('$main li:second-child').innerHTML = ' Mr. T. ';
+C. document.querySelector('$main li.Tony').innerHTML = ' Mr. T. ';
+D. document.querySelector('$main li:nth-child(2)'),innerHTML = ' Mr. T. ';
+
+- 
+    
+    querySelecotor로 선택자를 지정하고 . innerHTML 을 통해 내용을 바꾼다. 
+    
+    document.querySelector("#main li:nth-child(2)").innerHTML = " Mr. T. ";
+    
+    li 선택자는 
+    li:nth=child(n)으로 선택 가능함
+    
+    D
+    
+
+NO.142 Which javascript methods can be used to serialize an object into a string and deserialize a
+JSON string into an object, respectively?
+A. JSON.stringify and JSON.parse
+B. JSON.serialize and JSON.deserialize
+C. JSON.encode and JSON.decode
+D. JSON.parse and JSON.deserialize
+
+- 
+    
+    serialize 직렬화 
+    a
+    
+
+NO.143 A test has a dependency on database.query. During the test the dependency is replaced
+with an object called database with the method, query, that returns an array. The developer needs to
+verify how many times the method was called and the arguments used each time.
+Which two test approaches describe the requirement?
+Choose 2 answers
+A. Integration
+B. Black box
+C. White box
+D. Mocking
+
+- 
+    
+    c ,d
+    
+
+NO.144 Refer to the code below:
+Const myFunction = arr => {
+Return arr.reduce((result, current) =>{
+Return result = current;
+}, 10};
+}
+What is the output of this function when called with an empty array ?
+A. Returns 0
+B. Throws an error
+C. Returns 10
+D. Returns NaN
+
+NO.145 refer to the following code : 
+
+```jsx
+let obj = {
+foo : 1, 
+bar: 2
+}
+let output = [];
+for(let something in obj) {
+output.push(something);
+}
+console.log(output);
+```
+
+A. [1,2]
+B. ["bar","foo"]
+C. ["foo","bar"]
+D. ["foo:1","bar:2"]
+
+- 
+    
+    c
+    
+
+  
+
+NO.146 What are two unique features of functions defined with a fat arrow as compared to normal
+function definition?
+Choose 2 answers
+A. The function generated its own this making it useful for separating the function's scope from its
+enclosing scope.
+B. The function receives an argument that is always in scope, called parentThis, which is the
+enclosing lexical scope.
+C. If the function has a single expression in the function body, the expression will be evaluated and
+implicit returned.
+D. The function uses the this from the enclosing scope.
+
+- 
+    
+    AC
+    
+
+NO. 147 give the code below : 
+
+```jsx
+function myFunction ( ) {
+
+a=5;
+var b = 1;
+}
+
+myFunction ();
+console.log(a);
+console.log(b);
+```
+
+What is the expected output?
+A. Both lines 08 and 09 are executed, and the variables are outputted.
+B. Line 08 outputs the variable, but line 09 throws an error.
+C. Line 08 thrones an error, therefore line 09 is never executed.
+D. Both lines 08 and 09 are executed, but values outputted are undefined.
+
+- 
+    
+    b
+    
+    function  레벨로 hoisiting 현상이 발생하기 때문에 b는 myFunction 안에서만 쓸 수 있다. 
+    
+
+NO.148 Considering type coercion, what does the following expression evaluate to?
+True + '13' + NaN
+A. ' 113Nan '
+B. 14
+C. ' true13 '
+D. ' true13NaN '
+
+- 
+    
+    강제 형변환 문제, 
+    
+    string 이 들어가 있으면 모두 하나의 string으로 인식 한다.
+    연산은 왼쪽에서 부터 오른쪽으로 연산이 일어남 
+    
+
+NO.149 Refer to the code below:
+Const resolveAfterMilliseconds = (ms) => Promise.resolve (
+setTimeout (( => console.log(ms), ms ));
+Const aPromise = await resolveAfterMilliseconds(500);
+
+Const bPromise = await resolveAfterMilliseconds(500);
+Await aPromise, wait bPromise;
+What is the result of running line 05?
+A. aPromise and bPromise run sequentially.
+B. Neither aPromise or bPromise runs.
+C. aPromise and bPromise run in parallel.
+D. Only aPromise runs.
+
+- 
+    
+    b
+    
+
+NO.150 A developer writers the code below to calculate the factorial of a given number.
+Function factorial(number) {
+Return number + factorial(number -1);
+}
+factorial(3);
+What is the result of executing line 04?
+A. 0
+B. 6
+C. -Infinity
+D. RuntimeErro
+
+- 
+    
+    factorial 은 재귀 함수이기 때문에 조건을 잘못걸면 메모리초과 오류를 발생 시킨다. 
+    
+    factorial 함수를 한번 실행할 때 마다 execution context 가 생성되기 때문에, 재귀 함수는 이전 execution context 를 끝내지 못하고 계속해서 쌓이게 된다 . 
+    
+
+NO.151 Given the following code:
+Let x =null;
+console.log(typeof x);
+What is the output of the line 02?
+A. "Null"
+B. "X"
+C. "Object"
+D. "undefined"
+
+- 
+    
+    object
+    
+
+NO.152 Which statement accurately describes the behaviour of the async/ await keyworks ?
+A. The associated class contains some asynchronous functions.
+B. The associated function will always return a promise
+C. The associated function can only be called via asynchronous methods
+D. The associated sometimes returns a promise.
+
+- 
+    
+    b
+    
+
+NO.153  Refer to the code below : 
+
+```jsx
+let o = {
+    get js () {
+        let city1 = String("st.Louis");
+        let city2  = String ("new York");
+        return {
+            firstCity: city1.toLowerCase(),
+            secondCity: city2.toLowerCase(),
+        }
+    }
+}
+```
+
+What value can a developer expect when referencing o.js.secondCity?
+A. Undefined
+B. ' new york '
+C. ' New York '
+D. An error
+
+- 
+    
+    b
+    
+
+NO.154 Given the requirement to refactor the code above to JavaScript class format, which class
+definition is correct?
+A. console.log(10/ Number('5'));
+B. console.log(parseInt('two'));
+C. console.log(10/ ''five);
+D. console.log(10/0);
+
+- 
+    
+    b → NaN
+    
+    c → NaN
+    
+    d → Infinity 
+    a (o)
+    
+
+NO.156
+
+function myFunction (reassign) {
+let x=1;
+var y = 1;
+if(reassign){
+let x = 2;
+var y = 2;
+console.log(x);
+console.log(y);
+}
+console.log(x);
+console.log(y);
+
+}
+what is displayed when myFunction (true) is called ?
+
+A. 2 2 1 1
+B. 2 2 undefined undefined
+C. 2 2 1 2
+D. 2 2 2 2
+
+- 
+    
+    let은 변수 재 선언 불가능, 변수 재할당 가능. 
+    
+    블록스코프란, 변수가 선언된 {블록} 이 해당 변수를 사용할 수 있는 영역(스코프) 라는 뜻이다. 
+    
+    ```jsx
+    let name = 'yoy'
+    if(name ) {
+    	let name = "rooney";
+    	console.log("블록안에서",name);}
+    console.log("블록 밖에서 ", name);
+    ```
+    
+    이렇게 if문을 감싸고 있는 {블락} 이 변수를 사용할 수 있는 영역이 되어 변수가 구분되어 진다. 
+    
+    let을 쓰면 if 안과 밖으로 스코프가 달라지지만, (블록 안과 밖의 스코프가 달라져서 변수 이름이 같아도 대체되지 않아 스코프에는 같은 이름 사용이 불가하다) name 을 var로 선언했을 경우에는 안과 밖이 같은 스코프로 되어서 ‘Identifier ‘ name’ has already been declared ’라는 오류가 발생 
+    
+    그래서 결론은, 첫번째 와 두번째콘솔은 괄호 안에 있고  let x는 저안의 스코프로 잡아서 2출력, var는 호이스팅이 되어서 이제 안이든 밖이든 2로 출력되고, 3번째 콘솔은 x는 let x = 2의 영역 밖이기 때문에 2말고 1출력, 마지막 콘솔은  y이가 var hoisting 으로 2로 잡혀버림.
+    
+    NO.157 Given the following code:
+    Counter = 0;
+    const logCounter = () => {
+    console.log(counter);
+    );
+    logCounter();
+    setTimeout(logCOunter, 1100);
+    setInterval(() => {
+    Counter++
+    logCounter();
+    }, 1000);
+    What is logged by the first four log statements?
+    A. 0 0 1 2
+    B. 0 1 2 3
+    C. 0 1 1 2
+    D. 0 1 2 2
+    
+    NO.158
+    
+    A developer is creating a simple webpage with a button. When a user clicks this button for
+    the first time, a message is displayed.
+    The developer wrote the JavaScript code below, but something is missing. The message gets
+    displayed every time a user clicks the button, instead of just the first time
+    
+    ```jsx
+    function listen (event){
+    	alert('hey ! iam john doe');
+    button.addEventListerner('click;, listen);
+    }
+    ```
+    
+
+A. On line 02, use event.first to test if it is the first execution.
+B. On line 04, use event.stopPropagation ( ),
+C. On line 04, use button.removeEventListener(' click" , listen);
+D. On line 06, add an option called once to button.addEventListener()
+
+- 
+    
+    이벤트 한번 발생시키고 지워버리기, 
+    or 이벤트 걸때 옵션을 한번만 걸기 button.addEventListener('click', listen, {once : true});
+    
+
+NO.159 a developer creates a generic function to log custom messages in the console.
+To do this, the function below is implemented.
+
+```jsx
+function logStatus(status) {
+	console./*answer*/{'Item status: %s', status}
+}
+```
+
+which three console loggging methods allow the use of string substitution in line 2?
+
+A. Assert
+B. Log
+C. Message
+D. Info
+E. Error
+
+- 
+    
+    a는console.assert()는 지정한 조건이 false인 조건에만 로그가 출력된다고 한다. ㅇㅅㅇ
+    
+     , message는 존재하는것인가? 
+    
+    anyway 
+    사용 예시를 보면 쉽다
+    
+    ```jsx
+    var user = new Object(); 
+    user.first = "Fred"; user.last = "Smith";
+     user.age = 10.01; console.log("Hi, %s %s!", user.first, user.last); 
+    console.log("%s is %i years old!", user.first, user.age);
+     console.log("%s is %f years old!", user.first, user.age);
+     // Output: // Hi, Fred Smith!
+     // Fred is 10 years old! 
+    // Fred is 10.01 years old!
+    
+    ```
+    
+    지원되는 패턴 
+    
+     
+    
+    %s - 문자열
+    
+     %i - 정수 
+    
+    %d - 정수 
+    
+    %f - float 
+    
+    %o - 개체 
+    
+    %b - 이진 
+    
+    %x - 16진수
+    
+     %e - 지수
+    
+    console.log
+    console.Info
+    
+    console.Error는 잘 출력됨 
+    
+    NO.160 Which code statement correctly retrieves and returns an object from localStorage?
+    A. const retrieveFromLocalStorage = () =>{
+    return JSON.stringify(window.localStorage.getItem(storageKey));
+    }
+    B. const retrieveFromLocalStorage = (storageKey) =>{
+    return window.localStorage.getItem(storageKey);
+    }
+    C. const retrieveFromLocalStorage = (storageKey) =>{
+    return JSON.parse(window.localStorage.getItem(storageKey));
+    }
+    D. const retrieveFromLocalStorage = (storageKey) =>{
+    return window.localStorage[storageKey];
+    }
+    
+    - 
+        
+        c
+        
+    
+    JS flat( ) 함수 
+    
+    js flat 함수는 arr 배열 구조안에 또 다른 arr를 가질때 이 arr을 평평하게 만드는 함수이다. 
+    
+    예를 들어 arr1이라는 arr에 [ 1 , 2 , 3  , [4 , 5 , 6]] 값이 있을 때, arr1.flat()을 실행 시키면 
+    
+    [1 , 2 , 3 , 4 , 5,  6]을 반환한다. 
+    만약  arr안의 arr값에 도 다른 arr가 존재할 경우, flat()을 실행시키면 2번째 하위에 있는 arr을 평평하게 한다. 
+    
+    예를 들어, arr1 이라는 arr에 [ 1 , 2 , 3  , [4 , [5 , 6]]]값이 있을때, arr1.flat( ) 을 실행시키면, 
+    
+    [ 1 , 2 , 3  , 4 ,[ 5 , 6]] 를 리턴
