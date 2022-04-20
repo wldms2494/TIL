@@ -1,12 +1,6 @@
 # js crt 600
 
-**기출**
 
-잘 모르겠는 문제
-
-계속 틀리는 문제
-
-기출이나 계속틀리는 문제
 
 NO1. Refer to following code block : 
 
