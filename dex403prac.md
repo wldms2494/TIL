@@ -1,5 +1,258 @@
 # js crt 600
 
+**기출**
+
+잘 모르겠는 문제
+
+계속 틀리는 문제
+
+기출이나 계속틀리는 문제
+
+NO1. Refer to following code block : 
+
+let array = [1,2,3,4,5,6,7,8,9,10,11];
+
+let output = 0;
+
+for ( let num of array) {
+
+if(output > 10) {
+
+break;
+
+}
+
+if(num%2 ==0) {
+
+continue;
+
+}
+
+output += num;
+
+}
+What is the value of output after the code executes
+
+A. 16
+B. 36
+C. 11
+D. 25
+
+- 
+    
+    break 문에 걸리면 for문이 아예 종료되고, 
+    
+    continue문에 걸리면 밑의 함수나 내용을 실행 안함.
+    
+    +=연산자는 
+    왼쪽과 오른쪽을 더한 값을 왼쪽에 대입한다. 
+    
+    if(output>0){  break; }라면 1 들어가자마자  break걸리니까 답은 1이고, 
+    
+    output>10 이라면 
+    
+    1,3,5,7까지 홀수는 다 들어가고 
+    여기서 아웃풋이 16까지 완성되고 다음에는 걸림
+    그래서 16ㅋ
+    
+
+NO.2 A developer wants to set up a secure web server with Node.js. The developer creates a
+directory locally called app-server, and the first file is app-server/index.js Without using any thirdparty libraries, what should the developer add to index.js to create the secure web server?
+A. const tls = require('tls');
+B. const https =require('https');
+C. const server =require('secure-server');
+D. const http =require('http');
+
+- 
+    
+    b
+    
+
+NO.3 Refer to the following code that performs a basic mathematical operation on a provided input:
+function calculate(num) {
+Return (num +10) / 3;
+}
+How should line 02 be written to ensure that x evaluates to 6 in the line below?
+Let x = calculate (8);
+A. Return Number((num +10) /3 );
+B. Return (Number (num +10 ) / 3);
+C. Return Integer(num +10) /3;
+D. Return Number(num + 10) / 3;
+
+- 
+    
+    abd전부 6 나옴
+    
+
+**NO.4 Teams at Universal Containers (UC) work on multiple JavaScript projects at the same time.
+UC is thinking about reusability and how each team can benefit from the work of others.
+Going open-source or public is not an option at this time.
+Which option is available to UC with npm?**
+A. Private packages can be scored, and scopes can be associated to a private registries.
+
+B. Private registries are not supported by npm, but packages can be installed via URL.
+C. Private packages are not supported, but they can use another package manager like yarn.
+D. Private registries are not supported by npm, but packages can be installed via git.
+
+- 
+    
+    A
+    
+    registry 기재 
+    
+
+NO.5 a developer has an ErrorHandler module that contains multiple functions.
+
+what kind of export be leverages so that multiple functions can be used? 
+
+A. Named
+B. All
+C. Multi
+D. Default
+
+- 
+    
+    leverage : use to maximum advantage , exploit, make full use of and derive benifit from 
+    
+    A
+    
+
+**NO.6 Which option is a core Node,js module?**
+A. Path
+B. Ios
+C. Memory
+D. locate
+
+- 
+    
+    node.js core modules  → http, url, querystring path, fs, util 
+    
+    A
+    
+
+NO.7 a developer has code that calculates a restaurant bill, but generates incorrect answers while testing the code, : 
+
+```jsx
+function caculateBill(items) {
+let total = 0; 
+total += findSubTotal(items);
+total += addTax(items);
+total += addTip(total);
+
+return total;
+}
+```
+
+which option allows the developer to step into each function execution within calculateBill?
+
+Which option allows the developer to step into each function execution within calculateBill?
+A. Using the debugger command on line 05.
+B. Using the debugger command on line 03
+C. Calling the console.trace (total) method on line 03.
+D. Wrapping findSubtotal in a console.log() method.
+
+- 
+    
+    a
+    
+
+NO.8 refer to the code below : 
+
+```jsx
+const exec = (item, delay) => {
+	 new Promise (resolve => setTimeout(()=> resolve(item), delay);)
+}
+
+async function runParallel(){
+const(resul1,resul2, resul3) = await Promise.all{
+[exec('x','100'), exec('y', 500), exec('z', '100')]
+
+return `parallel is done: $(result1) $(result2)$(result3)`;
+}}
+```
+
+ which two statements coreectly execute the runParallel ( ) function ?
+
+choose 2 answers
+
+A. Async runParallel () .then(data);
+B. runParallel ( ). done(function(data){
+return data;
+});
+C. runParallel () .then(data);
+D. runParallel () .then(function(data)
+return data
+
+- 
+    
+    b , d
+    콜백을 같이 넣어줘란 말인듯
+    
+
+NO.9 Which three statements are true about promises ?
+Choose 3 answers
+A. The executor of a new Promise runs automatically.
+B. A Promise has a .then() method.
+C. A fulfilled or rejected promise will not change states .
+D. A settled promise can become resolved.
+E. A pending promise can become fulfilled, settled, or rejected.
+
+- 
+    
+    a b c
+    e → a pending promise can becom fulfilled or rejected
+    
+
+NO.10 Refer to the following array : 
+
+```jsx
+let arr1 = [ 1, 2, 3, 4, 5];
+```
+
+Which two lines of code result in a second array, arr2 being created such that arr2 is not a reference
+to arr1?
+A. Let arr2 = arr1.slice(0, 5);
+B. Let arr2 = Array.from(arr1);
+C. Let arr2 = arr1;
+D. Let arr2 = arr1.sort();
+
+- 
+    
+    arr2 가 arr1을 참조하지 않고 arr2가 만들어지는거..?
+    arr1을 건들지 않는것을 말하는 듯
+    a랑 b는 arr1의 배열을 복제해서 만든것이기 때문에 arr1는 건들이지 않음
+    전부다 [1,2,3,4,5]는 출력
+    a,b
+    
+
+**NO.11 refer to the code below :** 
+
+```jsx
+function changeValue(param) {
+	param = 5;
+}
+let a = 10;
+let b = a;
+changeValue(b);
+const result = a+ "-" + b;
+
+```
+
+A. 10 -10
+B. 5 -5
+C. 5 - 10
+D. 10 - 5
+
+- 
+    
+    왜 a값은 5로 변하지 않았는가? let의 scope때문이다.
+    
+    param은 function 안에서만 쓸 수 있다. 
+    그래서 let a= 10 그대로 쓴다. 
+    
+    a
+    
+
 NO.69 
 setTimeout (() => (
 
@@ -15,6 +268,1321 @@ console.log(4);
 ));
 console.log(5);
 What is logged to the console?
+
+A. 2 1 4 3 5
+B. 2 5 1 3 4
+C. 1 2 4 3 5
+D. 1 2 5 3 4
+
+- 
+    
+    b
+    
+
+NO.12 refer to the code
+
+```jsx
+function animal(size, type) {
+    this.size = size || "small";
+    this.type = type || "animal";
+    this.canTalk = false;
+}
+
+let Pet = function (size, type, name, owner) {
+    animal.call(this, size, type);
+    this.name = name;
+    this.owner = owner;
+}
+
+Pet.prototype = Object.create(animal.prototype);
+let pet1 = new Pet();
+console.log(pet1);
+```
+
+given the code above, which three properties are set pet1 ?
+
+choose 3
+A. Name
+
+B. canTalk
+
+C. Type
+
+D. Owner
+E. size
+
+- 
+    1. **canTalk**: false
+    2. **name**: undefined
+    3. **owner**: undefined
+    4. **size**: "small"
+    5. **type**: "animal"
+    BCE
+
+NO.13 a developer creates a class that represents a blog post based on the requirement that a Post should have a body author and view count.
+the code shown below : 
+
+```jsx
+class Post {
+//inser code here
+this.body = body;
+this.author = author; 
+this.vewCount  = viewCount;
+}
+```
+
+which statement should be inserted in the placeHolder on line 02 to allow for a variable to be set to a new instance of a Post with the three attribues correctly populated?
+
+A. super(body, author, viewCount) { ... }
+
+B. Function Post ( body, author, viewCount) { ... }
+
+C. constructor ( body, author, viewCount) { ... }
+
+D. constructor( ) { ... }
+
+- 
+    
+    c
+    
+
+NO.15 A developer creates an object where its properties should be immutable and prevent
+properties from being added or modified.
+Which method should be used to execute this business requirement ?
+A. Object.const()
+B. Object.eval()
+C. Object.lock()
+D. Object.freeze()
+
+- 
+    
+    d
+    
+
+NO.16  A developer wants to iterate throught an array of objects and count the objects and count the objects whose property value, name , starts with the letter N.
+
+```jsx
+const arrObj = [
+{ "name" :"Zach"},
+{"name" : "Kate"},
+{ "name" : "Alise"},
+{"name":"bob"},
+{"name" : "Natham"},
+{"name" : "nathaniel"}
+]
+```
+
+refer to the code snippet below : 
+
+```jsx
+arrObj. reduce((acc, curr) => {
+//missing line 2
+//missing line 3
+}, 0);
+```
+
+which missing linew 2, 3 return the correct count?
+
+A. Const sum = curr.startsWith('N') ? 1: 0;
+
+Return acc +sum
+B. Const sum = curr.name.startsWith('N') ? 1: 0;
+Return acc +sum
+C. Const sum = curr.startsWIth('N') ? 1: 0;
+Return curr+ sum
+D. Const sum = curr.name.startsWIth('N') ? 1: 0;
+Return curr+ sum
+
+- 
+    
+    reduce ( ) 함수에 대해서 정확히 알아야 한다고 !! 일단
+    
+    커런트 밸류랑 썸이랑 쓸꺼면 acc는 왜 필요하겠냐 
+    
+    accumulator 는 누산기란 말이고, 컴퓨터 cpu에서 중간 산술 논리 장치 결과가
+    저장 되는 레지스터임 
+    누산기는 처음엔 0으로 설정되며, 각 숫자는 차례로 누산기 내에 있는 값에 더해진다.
+    그리고 모든 숫자들이 다 더해졌을 때에만 그 결과가 주 기억장치로 기억된다. 
+    
+    B
+    
+
+**NO.17 Refer to the following object :** 
+
+```jsx
+const cat = {
+firstName : 'Fancy',
+lastName : 'Whiskers',
+get fullName() {
+	return this.firstName + ' ' + this.lastName;
+}
+}
+```
+
+How can a developer access the fullName property for cat ?
+
+A. cat.fullName
+B. cat.fullName()
+C. cat.get.fullName
+D. cat.function.fullName()
+
+- 
+    
+    A
+    
+    b 는 fullName( ) is not a function 뜸ㅋ
+    c 는 cannot read properties of undefined ( reading ‘fullName’)
+    d.는 c랑 같은 맥락
+    
+
+NO.18 A developer needs to test this function : 
+
+```jsx
+const sum3 = (arr) => (
+if(!arr.length) return 0,
+if(arr.length ===1) return arr[0],
+if(arr.length ===2) return arr[0]+arr[1],
+return arr[0]+arr[1] + arr[2],
+
+);
+```
+
+Choose 2 answers
+A. console.assert(sum3(1, '2')) == 12);
+B. console.assert(sum3(0)) == 0);
+C. console.assert(sum3(-3, 2 )) == -1);
+D. console.assert(sum3('hello', 2, 3, 4)) === NaN);
+
+- 
+    
+    A. console.assert(sum3(1,’2’)==’12’); 스트링이 들어가기땜에 스트링으로 출력되어야 함
+    
+    B. console.assert(sum3(0) ==0);
+    
+    C. console.assert ( sum3 (-3, 2) =-1 맞음
+    
+    d는 정확하겐 모르겠음  근데 조건이 있다면 스트링으로 출력되겠는데..
+    
+    bc
+    
+
+No. 19 why would a developer specify a package.json as developed forge instead of a dependency?
+A. it is required by the application in production
+
+B. it is only needed for local development and testing
+
+C. Other required packages depend on it for development
+
+D. it should be bundled when the package is published 
+
+- 
+    
+    b
+    
+
+**NO.20 A developer wrote the following code to test a sum3 function that takes in an array of numbers and returns the sum of the first three number in the arr, the test passes :** 
+
+```jsx
+let res = sum2([1,2,3]);
+console.assert(res===6);
+Res = sum3([1,2,3,4]);
+console.assert(res == 6);
+```
+
+a different developer made changes to the behavior of sum3 to instead sum all of the numbers present in the array . 
+
+The test passes : 
+
+which 2 results occur when running the test on the updated 3 function ? 
+
+A. The line 02 assertion passes.
+B. The line 02 assertion fails
+C. The line 05 assertion passes.
+D. The line 05 assertion fails.
+
+- 
+    
+    a d ㅋ  assertion 문제는 다 쉬운둣 ㅋ
+    
+
+NO. 21 refer to  code below : 
+
+```jsx
+async funct on functionUnderTest(isOK){
+if(isOk) return 'Ok';
+throw new Error('notOk');
+}
+```
+
+A) console.assert( functionUnderTest(true), ‘OK’)
+B) console.assert( await functionUnderTest(true), ‘not Ok’)
+C) console.assert( await functionUnderTest(true), ‘not Ok’)
+D) console.assert( await functionUnderTest(true), ‘OK’)
+
+- 
+    
+    async 함수와 짝꿍 await를 붙혀줘야 하고 true라면 ok출력 맞음 D
+    
+
+NO. 22 Refer to the following code : 
+
+```jsx
+let sampleText = 'The quick brown fox jumps';
+```
+
+ a developer needs to determine if a certain substring is part of a string.
+
+which three expressions return ture for the given substring
+
+A. sampleText.includes('fox');
+B. sampleText.includes(' quick ', 4);
+C. sampleText.includes(' Fox ', 3)
+D. sampleText.includes(' fox ');
+E. sampleText.includes(' quick ') !== -1;
+
+- 
+    
+    includes()  배열이 특정 값을 포함하고 있는지의 여부를 boolean값으로 반환함.
+    arr.includes( valueToFind [ fromIndex ])
+    b는 띄어쓰기 포함 되어 있으니까 3 임
+    
+    A, D, E
+    
+    text.include( ) 
+    indexof( ) →
+    
+    배열안에서 찾으려난 값 (searchElement) 과 정확하게 일치(===)하는 첫번째 element의 index를 리턴한다. 
+    만약, 찾으려는 값이 배열에 없으면 -1을 리턴한다. 
+    arr.indexOf(searchElement[, fromIndex])
+    arr = [’a’, ‘b’, ‘a’, ‘b’];
+    
+    arr.indexOf(’a’, 1); 
+    하면 아웃풋은 2가 나온다 arr[1]부터 a를 찾는 것이고 arr[2]자리에 a가 있기 떄문에 2를 토해냄
+    
+
+NO.23 refer to the code below? 
+
+```jsx
+let searchString =' look for this ';
+```
+
+which 2 options remove the whitespace from the beginning of searchString ?
+
+Choose 2 answers
+A. searchString.trimEnd();
+B. searchString.trimStart();
+C. trimStart(searchString);
+D. searchString.replace(/*\s\s*/, '');
+
+- 
+    
+    searchString.trimEnd() = ‘look for this ‘ 마지막에 한자리 잘라버림
+    seartchString.trinStart() = 첫번째 한자리 잘라버림
+    c - not defined
+    D는 js 정규식인데 몬가 잘못된것 같은데 나도 정확하게는 몰겠다. 
+    
+
+NO.25 Universal Container(UC) just launched a new landing page, but users complain that the
+website is slow. A developer found some functions that cause this problem. To verify this, the
+developer decides to do everything and log the time each of these three suspicious functions
+consumes.
+console.time('Performance');
+maybeAHeavyFunction();
+thisCouldTakeTooLong();
+orMaybeThisOne();
+console.endTime('Performance');
+Which function can the developer use to obtain the time spent by every one of the three functions?
+A. console.timeLog()
+B. console.getTime()
+C. console.trace()
+D. console.timeStamp()
+
+- 
+    
+    A
+    
+
+NO.26
+
+Refer to the code below:
+let greeting = 'Goodbye';
+let salutation = 'Hello, hello, hello';
+try{
+greeting = 'Hello';
+decodeURI('%%%'); // error 발생
+salutation = 'Goodbye';
+} catch(err) {
+salutation = 'I say hello';
+} finally {
+salutation = 'Hello, Hello';
+}
+Line 05 causes an error.
+What are the values of greeting and salutation once code completes?
+
+(A). Greeting is Hello and salutation is Hello, Hello.
+(B). Greeting is Goodbye and salutation is Hello, Hello.
+(C). Greeting is Goodbye and salutation is I say Hello.
+(D). Greeting is Hello and salutation is I say hello.
+
+- 
+    
+    A
+    
+
+NO.27 Refer to the expression below:
+Let x = ('1' + 2) == (6 * 2);
+How should this expression be modified to ensure that evaluates to false?
+A. Let x = ('1' + ' 2') ===( 6 * 2);
+B. Let x = ('1' + 2) == ( 6 * 2);
+C. Let x = (1 + 2) == ( '6' / 2);
+D. Let x = (1 + 2 ) == ( 6 / 2);
+
+- 
+    
+    A
+    
+
+NO.28 developer creates a new web server that uses Node.js. It imports a server library that uses events and callbacks for handling server functionality. The server library is imported with require and is made available to the code by a variable named server. The developer wants to log any issues that the server has while booting up.
+
+given the code and the info the developer has, which code logs an error at boost with an evernt?
+
+A. Server.catch ((server) => {
+console.log('ERROR', error);
+});
+B. Server.error ((server) => {
+console.log('ERROR', error);
+});
+C. Server.on ('error', (error) => {
+console.log('ERROR', error);
+});
+D. Try{
+server.start();
+} catch(error) {
+console.log('ERROR', error);
+}
+
+- 
+    
+    c
+    
+
+NO.29 Given the following code:
+document.body.addEventListener(' click ', (event) => {
+if (/* CODE REPLACEMENT HERE */) {
+console.log('button clicked!');
+)
+});
+Which replacement for the conditional statement on line 02 allows a developer to correctly
+determine that a button on page is clicked?
+A. Event.clicked
+
+B. e.nodeTarget ==this
+C. event.target.nodeName == 'BUTTON'
+D. button.addEventListener('click')
+
+- 
+    
+    c
+    
+
+NO.30 The developer wants to test this code:
+Const toNumber =(strOrNum) => strOrNum;
+Which two tests are most accurate for this code?
+Choose 2 answers
+A. console.assert(toNumber('2') === 2);
+B. console.assert(Number.isNaN(toNumber()));
+C. console.assert(toNumber('-3') < 0);
+D. console.assert(toNumber () === NaN);
+
+- 
+    
+    a, c
+    
+    NaN을 반환하는 연산 종류 
+    b는 function toNumber() 에다가 아무것도 안넣은것인데 그렇게 되면 undefined 가 떠서 정확하게 값을 알 수가 없다. 
+    
+    - 숫자로서 읽을 수 없음 (`parseInt("어쩌구")`, `Number(undefined)`)
+    - 결과가 허수인 수학 계산식 (`Math.sqrt(-1)`)
+    - 피연산자가 `NaN` (`7 ** NaN`)
+    - 정의할 수 없는 계산식 (`0 * Infinity`)
+    - 문자열을 포함하면서 덧셈이 아닌 계산식 (`"가" / 3`)
+
+NO.31 A developer wants to use a module named universalContainersLib and then call functions
+from it.
+How should a developer import every function from the module and then call the functions foo and
+bar?
+A. import * from '/path/universalContainersLib.js';
+universalContainersLib. foo ()7
+universalContainersLib.bar ();
+B. import {foo,bar} from '/path/universalCcontainersLib.js';
+foo():
+bar()?
+C. import all from '/path/universalContainersLib.js';
+universalContainersLib.foo();
+universalContainersLib.bar ();
+D. import * as lib from '/path/universalContainersLib.js';
+lib.foo();
+lib. bar ();
+
+- 
+    
+    d
+    
+
+NO.32 Universal Containers recently launched its new landing page to host a crowd-funding
+campaign. The page uses an external library to display some third-party ads. Once the page is fully
+loaded, it creates more than 50 new HTML items placed randomly inside the DOM, like the one in the
+code below
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c6f53d8-3323-4a00-88b3-35804fd9a17b/Untitled.png)
+
+코드 안보임..
+
+All the elements includes the same ad-library-item class, They are hidden by default, and they are
+randomly displayed while the user navigates through the page.
+A. Use the DOM inspector to prevent the load event to be fired.
+B. Use the browser to execute a script that removes all the element containing the class ad-libraryitem.
+
+C. Use the DOM inspector to remove all the elements containing the class ad-library-item.
+D. Use the browser console to execute a script that prevents the load event to be fired.
+
+- 
+    
+    b
+    third -party is self-contained components, typically small scripts or widgets that add functionality to websiteds.써드파티 광고를 넣었는데 html 안에 50개의 아이템 생성? 그래서 다 직여라는 말인듯.
+    
+
+NO.33 Refer to the code below:
+Const pi = 3.1415326,
+What is the data type of pi?
+A. Double
+B. Number
+C. Decimal
+D. Float
+
+- 
+    
+    b
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/089ad30b-471a-4447-b4f8-f746e73b56bb/Untitled.png)
+    
+
+**NO.34 developer is wondering whether to use , Promise.then or Promise.catch especially when a promise throws an error**
+
+which 2 promises are rejected ? 
+
+which 2 are correct? 
+
+A. Promise.reject('cool error here').then(error => console.error(error));
+B. Promise.reject('cool error here').catch(error => console.error(error));
+C. New Promise((resolve, reject) => (throw 'cool error here'}).catch(error => console.error(error)) ;
+D. New Promise(() => (throw 'cool error here'}).then(null, error => console.error(error)));
+
+- 
+    
+    b,c
+    
+
+NO.35 given the following code : 
+
+```jsx
+let x = null;
+console.log(typeof x);
+```
+
+is the output of line 02?
+A. ''x''
+B. ''null'''
+C. ''object''
+D. ''undefined''
+
+- 
+    
+    c
+    
+
+**NO.36 Refer to the following code that imports a module named utils:
+import (foo, bar) from '/path/Utils.js';
+foo() ;
+bar() ;
+Which two implementations of Utils.js export foo and bar such that the code above runs without
+error?
+Choose 2 answers**
+A. // FooUtils.js and BarUtils.js exist
+Import (foo) from '/path/FooUtils.js';
+Import (boo) from ' /path/NarUtils.js';
+
+B. const foo = () => { return 'foo' ; }
+const bar = () => { return 'bar' ; }
+export { bar, foo }
+C. Export default class {
+foo() { return 'foo' ; }
+bar() { return 'bar' ; }
+}
+D. const foo = () => { return 'foo';}
+const bar = () => {return 'bar'; }
+Export default foo, bar;
+
+- 
+    
+    b, c ****
+    
+
+NO.37 Refer to the code below:
+Function changeValue(obj) {
+Obj.value = obj.value/2;
+}
+Const objA = (value: 10);
+Const objB = objA;
+changeValue(objB);
+Const result = objA.value;
+What is the value of result after the code executes?
+A. 10
+B. Nan
+C. 5
+D. Undefined
+
+- 
+    
+    c
+    근데 왜 c인지..
+    
+
+NO.38 Refer to the following code:
+
+```jsx
+function Tiger() {
+    this.type = 'cat';
+    this.size = 'large';
+}
+
+let tony = new Tiger();
+tony.roar = () => {
+console.log('they\'re great');
+    
+};
+
+function Lion() {
+    this.type = 'cat';
+    this.size = 'large';
+}
+let leo = new Lion();
+//insert code here
+leo.roar();
+```
+
+Which two statements could be inserted at line 17 to enable the function call on line 18?
+Choose 2 answers.
+A. Leo.roar = () => { console.log('They\'re pretty good:'); };
+B. Object.assign(leo,Tiger);
+C. Object.assign(leo,tony);
+D. Leo.prototype.roar = () => { console.log('They\'re pretty good:'); };
+
+- 
+    
+    ac
+    
+    .protoType.은 typeError : Cannot set properties of undefined(”setting’roar’)
+    prototype을 정의하려면 저기서 만들게 아니라 만들어져 있는것을 넣어야 할 듯
+    
+
+NO.39 Which function should a developer use to repeatedly execute code at a fixed interval ?
+A. setIntervel
+B. setTimeout
+C. setPeriod
+D. setInteria
+
+- 
+    
+    a
+    
+
+**NO.40 A developer wants to leverage a module to print a price in pretty format, and has imported a
+method as shown below:**
+Import printPrice from '/path/PricePrettyPrint.js';
+Based on the code, what must be true about the printPrice function of the PricePrettyPrint module
+for this import to work ?
+A. printPrice must be be a named export
+B. printPrice must be an all export
+C. printPrice must be the default export
+D. printPrice must be a multi exportc
+
+- 
+    
+    c
+    
+
+**NO.41 Refer to code below:
+Let first = 'who';
+Let second = 'what';
+Try{
+Try{
+Throw new error('Sad trombone');
+}catch (err){
+First ='Why';
+}finally {
+Second ='when';
+} catch (err) {
+Second ='Where';
+}**
+What are the values for first and second once the code executes ?
+A. First is Who and second is When
+B. First is why and second is where
+C. First is who and second is where
+
+D. First is why and second is when
+
+- 
+    
+    d
+    
+
+NO.42 In which situation should a developer include a try .. catch block around their function call ?
+A. The function has an error that should not be silenced.
+B. The function results in an out of memory issue.
+C. The function might raise a runtime error that needs to be handled.
+D. The function contains scheduled code.
+
+- 
+    
+    d
+    
+
+NO.43 A developer is leading the creation of a new browser application that will serve a single page
+application. The team wants to use a new web framework Minimalsit.js. The Lead developer wants to
+advocate for a more seasoned web framework that already has a community around it.
+Which two frameworks should the lead developer advocate for?
+Choose 2 answers
+A. Vue
+B. Angular
+C. Koa
+D. Express
+
+- 
+    
+    b, d
+    
+
+NO.44 A developer has two ways to write a function:
+Option A:
+function Monster() {
+This.growl = () => {
+Console.log ("Grr!");
+}
+}
+Option B:
+function Monster() {};
+Monster.prototype.growl =() => {
+console.log("Grr!");
+}
+After deciding on an option, the developer creates 1000 monster objects.
+How many growl methods are created with Option A Option B?
+A. 1 growl method is created for Option A. 1000 growl methods are created for Option B.
+B. 1000 growl method is created for Option A. 1 growl methods are created for Option B.
+C. 1000 growl methods are created regardless of which option is used.
+D. 1 growl method is created regardless of which option is used.
+
+- 
+    
+    b
+    프로토 타입을 사용하면 클래스나 객체를 복사하지 않고도 상속의 효과를 구현할 수 있게 해줌 
+    
+
+NO.45 A developer wants to define a function log to be used a few times on a single-file JavaScript
+script.
+01 // Line 1 replacement
+
+02 console.log('"LOG:', logInput);
+03 }
+Which two options can correctly replace line 01 and declare the function for use?
+Choose 2 answers
+A. function leg(logInput) {
+B. const log(loginInput) {
+C. const log = (logInput) => {
+D. function log = (logInput) {
+
+- 
+    
+    ac
+    
+
+**NO.46 Refer to HTML below:
+<p> The current status of an Order: <span id ="status"> In Progress </span> </p>.
+Which JavaScript statement changes the text 'In Progress' to 'Completed' ?**
+A. document.getElementById("status").Value = 'Completed' ;
+B. document.getElementById("#status").innerHTML = 'Completed' ;
+C. document.getElementById("status").innerHTML = 'Completed' ;
+D. document.getElementById(".status").innerHTML = 'Completed' ;
+
+- 
+    
+    c ,
+    .getElementById(’id’). 문자전환 innerHTML
+    
+
+NO.47 Which two console logs output NaN?
+Choose 2 answers | |
+A. console.log(10 / Number('5) ) ;
+B. console.log(parseInt ' ("two')) ;
+C. console.log(10 / 0);
+D. console.loeg(10 / 'five');
+
+- 
+    
+    b,d
+    
+
+NO.48 Universal Containers (UC) notices that its application that allows users to search for accounts
+makes a network request each time a key is pressed. This results in too many requests for the server
+to handle.
+
+- Address this problem, UC decides to implement a debounce function on string change handler.
+What are three key steps to implement this debounce function?
+Choose 3 answers:
+
+A. If there is an existing setTimeout and the search string change, allow the existing setTimeout to
+finish, and do not enqueue a new setTimeout.
+B. When the search string changes, enqueue the request within a setTimeout.
+C. Ensure that the network request has the property debounce set to true.
+D. If there is an existing setTimeout and the search string changes, cancel the existing setTimeout
+using the persisted timerId and replace it with a new setTimeout.
+E. Store the timeId of the setTimeout last enqueued by the search string change handle
+
+- 
+    
+    debounce? DOM 이벤트를 기반으로 실행하는 자바스크립트를 성능상의 이유로 JS의 양적인 측면, 즉 이벤트(event)를 제어(제한)하는 방법이다 
+    디바운스는 이벤트를 그룹화 하여 특정시간이 지난 후 하나의 이벤트만 발생하도록 하는 기술, 
+    순차적 호출을 하나의 그룹으로 그룹화 한다.
+    so 연이어 호출되는 함수들 중 마지막 함수 ( 또는 제일 처음) 만 호출하도록 하는 것.
+    
+    A, B, C
+    
+
+NO.49 Which two console logs outputs NaN ?
+Choose 2 answers
+
+A. console.log(10/ Number('5'));
+B. console.log(parseInt('two'));
+C. console.log(10/ ''five);
+D. console.log(10/0);
+
+- 
+    
+    B, C
+    
+
+NO.50 Refer to the code below:
+console.log(''start);
+Promise.resolve('Success') .then(function(value){
+console.log('Success');
+});
+console.log('End');
+What is the output after the code executes successfully?
+A. End
+Start
+Success
+B. Start
+Success
+End
+C. Start
+End
+Success
+D. Success
+Start
+End
+
+- 
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4854c5bd-cf22-4c1a-aa21-37cbaacd5874/Untitled.png)
+    
+
+**NO.51 Refer to the following code:
+function test (val) {
+If (val === undefined) {
+return 'Undefined values!' ;
+}
+if (val === null) {
+return 'Null value! ';
+}
+return val;
+}
+Let x;
+test(x);**
+What is returned by the function call on line 13?
+A. Undefined
+B. Line 13 throws an error.
+C. 'Undefined values!'
+D. 'Null value!'
+
+- 
+    
+    c
+    
+
+**NO.52 A developer implements and calls the following code when an application state change
+occurs:
+Const onStateChange =innerPageState) => {
+window.history.pushState(newPageState, ' ', null);
+}
+If the back button is clicked after this method is executed, what can a developer expect?**
+A. A navigate event is fired with a state property that details the previous application state.
+B. The page is navigated away from and the previous page in the browser's history is loaded.
+C. The page reloads and all Javascript is reinitialized.
+D. A popstate event is fired with a state property that details the application's last state.
+
+- 
+    
+    history.pushState (  ) 페이지를 reload 하지 않고, url만 변경할 경우 사용한다. 
+    history.pushState( state, title, url);
+    
+    state : 세션 히스토리에 넣을 데이터, object 형식, 사용하지 않거나 마땅히 넣을것이 없다면 null로 해도 괜춘.
+    
+    title : 변경할 브라우저 제목 ( 변경 하지 않을거면 null로 입력)
+    
+    url :  변경할 브라우저 URL
+    
+    ```jsx
+    var state  = {'page_id' = 1, 'user_id' : 5};
+    var title = 'hello world';
+    var url = 'hello-world.html';
+    
+    history.pushState ( state, title, url );
+    ```
+    
+    위와 같이 적용하면 hello-world.html이라는 문서가 없어도 주소가 hello-world.html와 같이 변경 된다. 실제 페이지를 로드하는 것이 아니기 때문에 실제 문서 존재 여부는 중요하지 앟ㄴ음. 
+    새로고침을 하면 없는 문서이니 페이지 못찾는다고 에러 뿜고, 뒤로가기 하면 원래 문서가 뜬다. 
+    
+    B
+    
+
+NO.53 Given the following code:
+Let x =('15' + 10)*2;
+What is the value of a?
+A. 3020
+B. 1520
+C. 50
+D. 35
+
+- 
+    
+    a
+    
+
+NO.54 Which option is true about the strict mode in imported modules?
+A. Add the statement use non-strict, before any other statements in the module to enable not-strict
+mode.
+B. You can only reference notStrict() functions from the imported module.
+C. Imported modules are in strict mode whether you declare them as such or not.
+D. Add the statement use strict =false; before any other statements in the module to enable notstrict mode
+
+- 
+    
+    c
+    
+
+NO.55 developer is trying to convince management that their team will benefit from using Node.js
+for a backend server that they are going to create. The server will be a web server that handles API
+requests from a website that the team has already built using HTML, CSS, and JavaScript.
+Which three benefits of Node.js can the developer use to persuade their manager?
+Choose 3 answers:
+A. Performs a static analysis on code before execution to look for runtime errors.
+B. I nstalls with its own package manager to install and manage third-party libraries.
+C. Ensures stability with one major release every few years.
+D. User non blocking functionality for performant request handling .
+E. Executes server-side JavaScript code to avoid learning a new language.
+
+- 
+    
+    a, b, d
+    
+
+NO.56 A developer has a web server running with Node.js. The command to start the web server is
+
+node server.js. The web server started having latency issues. Instead of a one second turnaround for
+web requests, the developer now sees a five second turnaround.
+Which command can the web developer run to see what the module is doing during the latency
+period?
+A. NODE_DEBUG=true node server.js
+B. DEBUG=http, https node server.js
+C. NODE_DEBUG=http,https node server.js
+D. DEBUG=true node server.js
+
+- 
+    
+    c
+    
+
+**NO. 57 developer publishes a new version of a packaage with new features that do not break backward compatibility . the previous version number was 1.1.3
+following semantic versioning format, what should the new package version number be?** 
+
+A. 2.0.0
+B. 1.2.3
+C. 1.1.4
+D. 1.2.0
+
+- 
+    
+    버전을 주.부.수 숫자로 하고
+    1. 기존 버전과 호환되지 않게 API가 바꾸면 주 버전을 올리고, last digits to zero
+    2. 기존 버전과 호환되면서 새로운 기능을 추가할 때는 부 버전을 올리고,  reset last digit to zero
+    3. 기존 버전과 호환되면서 버그를 수정한 것이라면 수 버전을 올린다. 
+    여기서는 기능 추가인데 백앤드 호환은 안건드리는 거니까 중간 숫자를 올린다. 그래서 D
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c2dd01c4-0a44-4bac-90b8-5efcd05afd12/Untitled.png)
+    
+
+**NO. 58 refer to the code below :** 
+
+```jsx
+function changeValue(param){
+	param = 5;
+}
+let a = 10;
+let b = a;
+
+changeValue (b) ;
+const result = a + '-' + b;
+
+```
+
+What is the value of result when the code executes?
+
+A. 10-10
+B. 5-5
+C. 10-5
+D. 5-10
+
+- 
+    
+    a
+    
+
+NO.59 Refer to the code below:
+Let car1 = new Promise((_ , reject) =>
+setTimeout(reject, 2000, "car 1 crashed in" =>
+Let car2 =new Promise(resolve => setTimeout(resolve, 1500, "car 2 completed") Let car3 =new
+Promise(resolve => setTimeout(resolve, 3000, "car 3 completed") Promise.race(( car1, car2, car3))
+.then (value => (
+
+Let result = '$(value) the race.';)}
+.catch(arr => {
+console.log("Race is cancelled.", err);
+});
+What is the value of result when Promise.race executes?
+A. Car 3 completes the race
+B. Car 2 completed the race.
+C. Car 1 crashed in the race.
+D. Race is cancelled
+
+- 
+    
+    b
+    
+    아핫 promise.race() 는 프로미스 객체를 반환하는디, 그 중에  iterable 안에서 가장 먼저 완료된 것의 결과값으로 이행하거나 거부(reject) 합니당.
+    
+
+NO.60 Refer to the code below:
+Let str = 'javascript';
+Str[0] = 'J';
+Str[4] = 'S';
+After changing the string index values, the value of str is 'javascript'. What is the reason for this value:
+A. Non-primitive values are mutable.
+B. Non-primitive values are immutable.
+C. Primitive values are mutable.
+D. Primitive values are immutable
+
+- 
+    
+    원시값 ( primitive value) 
+    String, Numbers, undefined, null, boolean, symbol 로 이루어 져있다. 
+    이 원시값들은 자바스크립트에서는 영구적이다. 
+    즉 가져갈 수는 있지만 변경하거나 삭제할 수는 없다. 
+    
+    참조값(  Reference Value)
+    원시값을 제외하고 나머지 값들이다. 
+    Object 포함,functions 포함
+    
+    원시값은 아주 멀어서 보고 꺼내 쓸 수만 있고
+    참조값은 그나마 가까워서 보고 꺼내고 조작도 가능하다고 함..’’’
+    
+    D
+    
+    ![자바스크립트의 우주...](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec75ea8f-7b61-487e-9c52-551f869e78d0/Untitled.png)
+    
+    자바스크립트의 우주...
+    
+
+**NO.61 Refer to the code below:
+for(let number =2 ; number <= 5 ; number += 1 ) {
+// insert code statement here
+}
+The developer needs to insert a code statement in the location shown. The code statement has these
+requirements:**
+
+1. Does require an import
+2. Logs an error when the boolean statement evaluates to false
+3. Works in both the browser and Node.js
+Which meet the requirements?
+A. assert (number % 2 === 0);
+B. console.error(number % 2 === 0);
+C. console.debug(number % 2 === 0);
+D. console.assert(number % 2 === 0);
+- 
+    
+    console.error()는 true 와 false 값을 반환하고, 
+    console.assert()는 false인 경우에만 콘솔에 오류 메세지를 출력합니다. 참인 경우 아무것도 출력하지 않음
+    
+    2. Logs an error when the boolean statement evaluates to false
+    
+    false 인 경우에 에러를 출력하는 조건이니  console.assert()가 맞습니다. d
+    
+- 
+    
+    b
+    
+    console.table
+    The **`console.table()`** method displays tabular data as a table.
+    console.group()
+    새로운 인라인 그룹을 생성해 , 이후 모든 출력을 한 단계 들여쓴다. 
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6f00c97-10e8-4208-aced-f3cba9425af5/Untitled.png)
+    
+    console.grouptCollapsed( ) 
+     웹콘솔에서 새로운 인라인 그룹을 생성한다. 
+    collapsed 무너진...;;;
+    however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
+    
+    console.info( ) 
+    **`console.info()`** method outputs an informational message to the Web console.
+    
+    ```
+    info(obj1)
+    info(obj1, /* ..., */ objN)
+    info(msg)
+    info(msg, subst1, /* ..., */ substN])
+    ```
+    
+
+NO.62 Refer to the code below:
+Let textValue = '1984';
+Which code assignment shows a correct way to convert this string to an integer?
+A. let numberValue = Number(textValue);
+B. Let numberValue = (Number)textValue;
+C. Let numberValue = textValue.toInteger();
+
+D. Let numberValue = Integer(textValue);
+
+- 
+    
+    no integer !! ㅋㅋ자바랑 헷갈리지 않기 
+    타입변환 Number( ) , String ( ) or parseInt( ) , parseFloat( ), A
+    
+
+**NO.63 A developer at Universal Containers creates a new landing page based on HTML, CSS, and
+JavaScript TO ensure that visitors have a good experience, a script named personaliseContext needs
+to be executed when the webpage is fully loaded (HTML content and all related files ), in order to do
+some custom initialization.**
+Which statement should be used to call personalizeWebsiteContent based on the above business
+requirement?
+A. document.addEventListener(''onDOMContextLoaded', personalizeWebsiteContext);
+B. window.addEventListener('load',personalizeWebsiteContext);
+C. window.addEventListener('onload', personalizeWebsiteContext);
+D. Document.addEventListener('''DOMContextLoaded' , personalizeWebsiteContext);
+
+- 
+    
+    b
+    
+
+NO.64 Given HTML below:
+<div>
+<div id ="row-uc"> Universal Container</div>
+<div id ="row-aa">Applied Shipping</div>
+<div id ="row-bt"> Burlington Textiles </div>
+</div>
+Which statement adds the priority = account CSS class to the universal COntainers row ?
+A. Document .querySelector('#row-uc').classes.push('priority-account');
+B. Document .queryElementById('row-uc').addclass('priority-account');
+C. Document .querySelector('#row-uc').classList.add('priority-account');
+D. Document .querySelectorALL('#row-uc').classList.add('priority-account');
+
+- 
+    
+    c, querySelector(’#’) 자세히 보세요ㅗ
+    
+
+**NO.65 Refer to the code below :** 
+
+**function foo( ) {
+const a = 2;**
+
+**function bart() { 
+console.log(a);
+}**
+
+**return bar;
+}**
+
+**why does the function bar have access to variable a ?** 
+
+A. Inner function's scope
+B. Hoisting
+C. Outer function's scope
+D. Prototype chain
+
+- 
+    
+     
+    
+    anyway let과 const의 유효범위는 블록 스코프이다. C
+    문제는 좀 이상ㅎㄴ것 같음 . . 나의 추축 코드
+    
+    ```
+    function foo(){
+    const a = 2;
+    function bar(){
+    console.log(a);
+    }
+    return bar()
+    }
+    console.log(foo());
+    
+    ```
+    
+    일단 var은 function scope를 가지게 되고, 함수 안에서만 사용이 가능 하다. 
+     
+    
+    ```jsx
+    
+    function () {
+    var a = 10;
+    function ( ) {
+     var = 20;
+    console.log(a) ; // 20 
+    
+    }
+    
+    console.log(a) //10
+    
+    }
+    console.log(a) //ReferenceError : a is not defined
+    ```
+    
+    ```jsx
+    function hawsValue(p){
+    console.log(v); // undefined  호이스팅 되서 선언은 완료된 상태임
+    if(p){
+    	var v = 'blue'
+    	console.log(v) // blue
+    	} else {
+    			var v = 'red'
+    			console.log(v) 
+    	}
+    
+    	console.log(v) //blue
+    
+    }
+    ```
+    
+    let !
+    block - scope(블록 유효 범위) 를 갖는 지역 변수를 선언하는데 사용 . 
+    재선언이 불가능 
+    
+    ```jsx
+    {let a = 10
+    {
+    
+        let a =20
+        console.log(a)
+    }
+    console.log(a)
+    
+    }
+    console.log(a)
+    
+    //instrument.ts:113 20
+    //instrument.ts:113 10
+    //VM237:10 Uncaught ReferenceError: a is not defined
+        at <anonymous>:10:13
+    (anonymous) @ VM237:10
+    ```
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26f404db-4c1f-475a-852d-d71573ba7924/Untitled.png)
+    
+
+**NO.66 Refer to the following  code:** 
+
+```jsx
+<html lang = “en”>
+<body>
+	<div onclick  = "console.log('Outer message');">
+<button id = "myButton"> click me</button>
+	</div>
+</body>
+<script>
+function displayMessage(ev) {
+ ev.stopPropagation();
+	console.log('inner message');
+}
+const elem = document.getElementById('myButton');
+elem.addEventListener('click', displayMessage);
+</script>
+</html>
+
+```
+
+What will the console show when the button is clicked?
+A. Outer message
+B. Outer message
+Inner message
+C. Inner message
+Outer message
+D. Inner message
+
+- 
+    
+    스크립트  부터 먼저 실행된다고 생각해랏
+    근데 저기서 stopPropagation( ) 이 걸리기 때문에 html의 onclick은 실행되지 않고 inner Message만 출력한다. 
+    만약에 stopPropagation( )이 없으면 inner message 다음에 outer Message 를 출력 함 
+    
+
+NO. 67 a team that works on a big project uses npm to deal with projects dependencies. 
+
+a developer added a dependency does not get downloaded when they execute npm install.
+
+which two reasons could be possible explanations for this?
+choose 2 answer 
+
+A. the developer missed the option —add when adding dependecy.
+
+B. the developer added the dependency as a dev dependency, and NODE_ENV is set to production . 
+
+C. The developer missed the option —save when adding the dependency
+
+- 
+    
+    b,c
+    
+
+NO.69  given code below : 
+
+```jsx
+setTimeout( ()=>
+(console.log(1);),0
+);
+console.log(2);
+New Promise (()=>{
+setTimeout(() => (
+	reject(console.log(3));,1000
+	);
+	.catch(()=>
+console.log(4);
+)
+
+);
+})
+console.log(5)
+```
 
 A. 2 1 4 3 5
 B. 2 5 1 3 4
@@ -42,9 +1610,14 @@ B. Class ClothingItem {
 C. Class ClothingItem super Item {
 D. Class ClothingItem extends Item {
 
-NO.71 A class was written to represent items for purchase in an online store, and a second class
+- 
+    
+    d
+    
+
+**NO.71 A class was written to represent items for purchase in an online store, and a second class
 Representing items that are on sale at a discounted price. THe constructor sets the name to the first
-value passed in. The pseudocode is below:
+value passed in. The pseudocode is below:**
 
 class Item {
 constructor(name, price) {
@@ -105,7 +1678,7 @@ This is a did counted Shirt
 NO.72 developer wants to use a module named universalContainersLib and them call functions from it.
 How should a developer import every function from the module and then call the fuctions foo and
 bar ?
-A. import * ad lib from '/path/universalContainersLib.js';
+A. import * as lib from '/path/universalContainersLib.js';
 lib.foo();
 lib.bar();
 B. import (foo, bar) from '/path/universalContainersLib.js';
@@ -124,7 +1697,7 @@ universalContainersLib.bar();
     a
     
 
-NO.73 Refer to following code:
+**NO.73 Refer to following code:
 class Vehicle {
 constructor(plate) {
 This.plate =plate;
@@ -138,7 +1711,7 @@ This.weight = weight;
 displayWeight() {
 console.log('The truck ${this.plate} has a weight of ${this.weight} lb.');}} Let myTruck = new
 Truck('123AB', 5000); myTruck.displayWeight(); Which statement should be added to line 09 for the
-code to display 'The truck 123AB has a weight of 5000lb.'?
+code to display 'The truck 123AB has a weight of 5000lb.'?**
 A. Super.plate =plate;
 B. super(plate);
 C. This.plate =plate;
@@ -149,8 +1722,8 @@ D. Vehicle.plate = plate;
     b
     
 
-NO.74 Given two expressions var1 and var2. What are two valid ways to return the logical AND of
-the two expressions and ensure it is data type Boolean ?
+**NO.74 Given two expressions var1 and var2. What are two valid ways to return the logical AND of
+the two expressions and ensure it is data type Boolean ?**
 Choose 2 answers:
 A. Boolean(var1 && var2)
 B. var1 && var2
@@ -200,6 +1773,11 @@ elem.addEventListener('click', printMessage, false);
 
 Which code change should be made for the console to log only Row log when 'Click me! ' is clicked?
 
+A. Add.event.stopPropagation(); to window.onLoad event handler.
+B. Add event.stopPropagation(); to printMessage function.
+C. Add event.removeEventListener(); to window.onLoad event handler.
+D. Add event.removeEventListener(); toprintMessage function.
+
 - 
     
     이벤트 리스너 - 
@@ -208,11 +1786,11 @@ Which code change should be made for the console to log only Row log when 'Click
     B
     
 
-NO.77 Refer to HTML below:
+**NO.77 Refer to HTML below:
 <div id ="main">
 <div id = " card-00">This card is smaller.</div>
 <div id = "card-01">The width and height of this card is determined by its contents.</div>
-</div>
+</div>**
 Which expression outputs the screen width of the element with the ID card-01?
 A. document.getElementById(' card-01 ').getBoundingClientRest().width
 B. document.getElementById(' card-01 ').style.width
@@ -240,6 +1818,8 @@ D. [ ]. concat ( [ ....inArray ] );
     
     c랑 d는 
     > Array [Array [1, 2], Array [3, 4, 5]] 이렇게 출력함. 
+    
+    concat() 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환합니다. 
     
 
 NO.79 Which two code snippets show working examples of a recursive function?
@@ -2148,3 +3728,12 @@ E. Error
     예를 들어, arr1 이라는 arr에 [ 1 , 2 , 3  , [4 , [5 , 6]]]값이 있을때, arr1.flat( ) 을 실행시키면, 
     
     [ 1 , 2 , 3  , 4 ,[ 5 , 6]] 를 리턴
+    
+    - **'=='**는 비교하는 두 개의 값(피연산자)을 강제로 같은 형으로 변환한 후, 비교를 수행합니다.즉, 두 값의 타입이 다르더라도, 형 변환된 값이 같다면 true를 리턴합니다.
+    - **'==='**는 비교하는 두 개의 값(피연산자)의 타입과 값이 모두 같을 경우에만, true를 리턴합니다.
+    
+    출처:
+    
+    [https://hianna.tistory.com/375](https://hianna.tistory.com/375)
+    
+    [어제 오늘 내일]
